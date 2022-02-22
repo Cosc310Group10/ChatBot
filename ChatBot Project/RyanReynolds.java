@@ -1,13 +1,9 @@
 public class RyanReynolds {
 
-    private int stuff;
-    private String name;
-
-    private string somethingNew;
-    private string homeCity;
-
-    private int kids;
-    private int wife;
-    private Movie deadpool;
+    // This is an example of how to access a movie that ryan reynolds is in
+    private Movie deadpool = new Movie("Deadpool","R","Action");
     
+    public Movie getDeadpool(){
+        return deadpool;
+    }
 }

@@ -2,17 +2,27 @@ import java.util.ArrayList;
 
 public class Movie {
 
-    
+    // private attributes for the movie class
+    //IMDb rating
     private int imdbStars;
+    //title of movie
     private String title;
+    //year movie was released
     private int year;
+    //rating of the movie, ex: PG-13, R, etc
     private String rating;
+    //Arraylist of all the cast memebers
     private ArrayList<String> cast;
+    //main director name
     private String director;
+    //genre of movie
     private String genre;
+    //array list of the awards the movie has recieved
     private ArrayList<String> awards;
+    //box office amount, i.e gross earnings of the movie
     private int boxOffice;
 
+    //First constructor which contains initialization for every attribute
     Movie(int imdbStars, String title, int year, String rating, ArrayList<String>cast, String director,String genre,ArrayList<String>awards,int boxOffice){
         this.imdbStars = imdbStars;
         this.title = title;
@@ -25,11 +35,26 @@ public class Movie {
         this.boxOffice = boxOffice;
     }
 
-    Movie(){
+    //Second constructor which initializes only the title, rating, and genre
+    //and sets a default setting for all of the other attributes
+    Movie(String title, String rating, String genre){
+        this.title = title;
+        this.rating = rating;
+        this.genre = genre;
 
     }
 
-    //getters and setters below
+    //Third constructor which...
+
+    //Fourth constructor which...
+
+    //Fifth constructor which...
+
+    //Sixth constructor which...
+
+    //Seventh constructor which...
+
+    //getters and setters below for each attribute
 
 	public int getImdbStars() {
 		return imdbStars;
