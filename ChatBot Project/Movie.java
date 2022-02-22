@@ -1,3 +1,4 @@
+// Movie Class - Lance
 import java.util.ArrayList;
 
 public class Movie {
@@ -22,6 +23,8 @@ public class Movie {
     //box office amount, i.e gross earnings of the movie
     private int boxOffice;
 
+    //Below are various constructors for creating movie objects
+
     //First constructor which contains initialization for every attribute
     Movie(int imdbStars, String title, int year, String rating, ArrayList<String>cast, String director,String genre,ArrayList<String>awards,int boxOffice){
         this.imdbStars = imdbStars;
@@ -44,15 +47,33 @@ public class Movie {
 
     }
 
-    //Third constructor which...
+    //Third constructor which initializes the imdb rating, title, rating, and genre
+    Movie(int imdb, String title, String rating, String genre){
+        this.imdb = imdb;
+        this.title = title;
+        this.rating = rating;
+        this.genre = genre;
 
-    //Fourth constructor which...
+    }
 
-    //Fifth constructor which...
+    //Fourth constructor which only intitializes the title
+    Movie(String title){
+        this.title = title;
+    }
 
-    //Sixth constructor which...
+    //Fifth constructor which initializes the title and genre
+    Movie(String title, String genre){
+        this.title = title;
+        this.genre = genre;
+    }
 
-    //Seventh constructor which...
+    //Sixth constructor which only initializes the title, imdb, box office
+    Movie(String title, int imdb, int boxOffice){
+        this.title = title;
+        this.imdb = imdb;
+        this.boxOffice = boxOffice;
+    }
+
 
     //getters and setters below for each attribute
 
@@ -128,7 +149,13 @@ public class Movie {
 		this.boxOffice = boxOffice;
 	}
 
-    
+
+    //toString method for the movies
+    public String toString(){
+
+        return "Movie: " + this.title +"\n"+"IMDb Rating: " +this.imdbStars + "\n"+"Genre: " + this.genre + "\n" + "Rating: " + this.rating +  "Director: " + this.director + "\n" + "Cast: "+ this.cast+ "\n" 
+        + "\n" + "Awards: " + this.awards + "Box Office: " + this.boxOffice;
+    }
 
 
 }
