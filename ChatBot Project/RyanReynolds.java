@@ -3,7 +3,18 @@ import java.util.Arrays;
 
 public class RyanReynolds {
 
-  // Attributes below
+  // Attributes below(referring to physical characteristics)
+    //height
+    private String height;
+    //weight
+    private int weight;
+    //hair colour
+    private String haircolour;
+    //eye colour
+    private String eyecolour;
+    //gender
+    private String gender;
+
 
 
     // ****IN PROGRESS BELOW, NOT FINISHED***
@@ -138,11 +149,49 @@ public class RyanReynolds {
     }
 
     // Constructors below
+    //RyanReynolds Constructor for all physical attributes
 
+    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender){
+        this.height = height;
+        this.weight = weight;
+        this.eyecolour = eyecolour;
+        this.haircolour = haircolour;
+        this.gender = gender;
+    }
 
 
     //getters and setters below
+    public String getheight(){
+        return height;
+    }
+    public void setheight(String height){
+        this.height = height;
+    }
+    public int getweight(){
+        return weight;
+    }
 
+    public void setweight(int weight){
+        this.weight = weight;
+    }
+    public String geteyecolour(){
+        return eyecolour;
+    }
+    public void seteyecolour(String eyecolour){
+        this.eyecolour = eyecolour;
+    }
+    public String gethaircolour(){
+        return haircolour;
+    }
+    public void sethaircolour(String haircolour){
+        this.haircolour = haircolour;
+    }
+    public String getgender(){
+        return gender;
+    }
+    public void setgender(String gender){
+        this.gender = gender;
+    }
 
 
 }
