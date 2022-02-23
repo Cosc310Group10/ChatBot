@@ -5,7 +5,7 @@ public class Movie {
 
     // private attributes for the movie class
     //IMDb rating
-    private int imdbStars;
+    private double imdbStars;
     //title of movie
     private String title;
     //year movie was released
@@ -26,7 +26,7 @@ public class Movie {
     //Below are various constructors for creating movie objects
 
     //First constructor which contains initialization for every attribute
-    Movie(int imdbStars, String title, int year, String rating, ArrayList<String>cast, String director,String genre,ArrayList<String>awards,String boxOffice){
+    Movie(double imdbStars, String title, int year, String rating, ArrayList<String>cast, String director,String genre,ArrayList<String>awards,String boxOffice){
         this.imdbStars = imdbStars;
         this.title = title;
         this.year = year;
@@ -48,7 +48,7 @@ public class Movie {
     }
 
     //Third constructor which initializes the imdb rating, title, rating, and genre
-    Movie(int imdb, String title, String rating, String genre){
+    Movie(double imdb, String title, String rating, String genre){
         this.imdb = imdb;
         this.title = title;
         this.rating = rating;
@@ -68,7 +68,7 @@ public class Movie {
     }
 
     //Sixth constructor which only initializes the title, imdb, box office
-    Movie(String title, int imdb, String boxOffice){
+    Movie(String title, double imdb, String boxOffice){
         this.title = title;
         this.imdb = imdb;
         this.boxOffice = boxOffice;
@@ -77,11 +77,11 @@ public class Movie {
 
     //getters and setters below for each attribute
 
-	public int getImdbStars() {
+	public double getImdbStars() {
 		return imdbStars;
 	}
 
-	public void setImdbStars(int imdbStars) {
+	public void setImdbStars(double imdbStars) {
 		this.imdbStars = imdbStars;
 	}
 
