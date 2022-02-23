@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class RyanReynolds {
 
-  // Space for attributes and other info.....
+  // Attributes below
 
 
     // ****IN PROGRESS BELOW, NOT FINISHED***
@@ -136,4 +136,13 @@ public class RyanReynolds {
     public Movie getTheProposal(){
         return theProposal;
     }
+
+    // Constructors below
+
+
+
+    //getters and setters below
+
+
+
 }
