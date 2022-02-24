@@ -159,6 +159,10 @@ public class RyanReynolds {
         this.gender = gender;
     }
 
+    RyanReynolds(){
+        
+    }
+
 
     //getters and setters below
     public String getheight(){
