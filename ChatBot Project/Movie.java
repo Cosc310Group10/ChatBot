@@ -150,7 +150,7 @@ public class Movie {
 		return boxOffice;
 	}
 
-	public void setBoxOffice(int boxOffice) {
+	public void setBoxOffice(String boxOffice) {
 		this.boxOffice = boxOffice;
 	}
 
