@@ -74,6 +74,11 @@ public class Movie {
         this.boxOffice = boxOffice;
     }
 
+    //Seventh constructor which is a deafault
+    Movie(){
+        
+    }
+
 
     //getters and setters below for each attribute
 
