@@ -48,8 +48,8 @@ public class Movie {
     }
 
     //Third constructor which initializes the imdb rating, title, rating, and genre
-    Movie(double imdb, String title, String rating, String genre){
-        this.imdb = imdb;
+    Movie(double imdbStars, String title, String rating, String genre){
+        this.imdbStars = imdbStars;
         this.title = title;
         this.rating = rating;
         this.genre = genre;
@@ -68,9 +68,9 @@ public class Movie {
     }
 
     //Sixth constructor which only initializes the title, imdb, box office
-    Movie(String title, double imdb, String boxOffice){
+    Movie(String title, double imdbStars, String boxOffice){
         this.title = title;
-        this.imdb = imdb;
+        this.imdbStars = imdbStars;
         this.boxOffice = boxOffice;
     }
 
