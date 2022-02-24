@@ -76,7 +76,7 @@ public class Movie {
 
     //Seventh constructor which is a deafault
     Movie(){
-        
+
     }
 
 
@@ -150,7 +150,7 @@ public class Movie {
 		return boxOffice;
 	}
 
-	public void setBoxOffice(int boxOffice) {
+	public void setBoxOffice(String boxOffice) {
 		this.boxOffice = boxOffice;
 	}
 
