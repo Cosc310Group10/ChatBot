@@ -15,6 +15,22 @@ public class RyanReynolds {
     //gender
     private String gender;
 
+  // Information below
+    //birth place
+    private String birthPlace;
+    //birth date
+    private String birthDate;
+    //wife
+    private String wifeName;
+    //social media handle
+    private String socialMediaHandle;
+    //Net Worth
+    private String netWorth;
+    //previous marriage
+    private String previousMarriage;
+    //other awards
+    private ArrayList<String> otherAwards;
+
 
 
     // ****IN PROGRESS BELOW, NOT FINISHED***
@@ -159,10 +175,38 @@ public class RyanReynolds {
         this.gender = gender;
     }
 
-    RyanReynolds(){
-        
+    //RyanReynolds Constructor for all personal information
+
+    RyanReynolds(String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+        this.birthPlace = birthPlace;
+        this.birthDate = birthDate;
+        this.wifeName = wifeName;
+        this.haircolour = socialMediaHandle;
+        this.netWorth = netWorth;
+        this.previousMarriage = previousMarriage;
+        this.otherAwards = otherAwards;
     }
 
+    //RyanReynolds Constructor for all physical attributes and personal information (i.e, full RyanReynolds constructor)
+
+    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+        this.height = height;
+        this.weight = weight;
+        this.eyecolour = eyecolour;
+        this.haircolour = haircolour;
+        this.gender = gender;
+        this.birthPlace = birthPlace;
+        this.birthDate = birthDate;
+        this.wifeName = wifeName;
+        this.haircolour = socialMediaHandle;
+        this.netWorth = netWorth;
+        this.previousMarriage = previousMarriage;
+        this.otherAwards = otherAwards;
+    }
+
+    RyanReynolds(){
+
+    }
 
     //getters and setters below
     public String getheight(){
@@ -197,5 +241,61 @@ public class RyanReynolds {
         this.gender = gender;
     }
 
+    //getters and setters for information
+    public String getbirthPlace(){
+        return birthPlace;
+    }
+
+    public void setbirthPlace(String birthPlace){
+        this.birthPlace = birthPlace;
+    }
+
+    public String getbirthDate(){
+        return birthDate;
+    }
+
+    public void setbirthDate(String birthDate){
+        this.birthDate = birthDate;
+    }
+
+    public String getwifeName(){
+        return wifeName;
+    }
+
+    public void setwifeName(String wifeName){
+        this.wifeName = wifeName;
+    }
+
+    public String getsocialMediaHandle(){
+        return socialMediaHandle;
+    }
+
+    public void setsocialMediaHandle(String socialMediaHandle){
+        this.socialMediaHandle = socialMediaHandle;
+    }
+
+    public String getnetWorth(){
+        return netWorth;
+    }
+
+    public void setnetWorth(String netWorth){
+        this.netWorth = netWorth;
+    }
+
+    public String getpreviousMarriage(){
+        return previousMarriage;
+    }
+
+    public void setpreviousMarriageh(String previousMarriage){
+        this.previousMarriage = previousMarriage;
+    }
+
+    public ArrayList<String> getotherAwards(){
+        return otherAwards;
+    }
+
+    public void setotherAwards(ArrayList<String> otherAwards){
+        this.otherAwards = otherAwards;
+    }
 
 }
