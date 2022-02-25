@@ -95,12 +95,12 @@ public class RyanReynolds {
         return sixUnderground;
     }
 
-    //Red Notice**
-    ArrayList<String> redNoticeCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> redNoticeAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie redNotice = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000");
+    //Red Notice
+    ArrayList<String> redNoticeCast = new ArrayList<>(Arrays.asList("Me", "Dwayne Johnson", "Gal Gadot","Ritu Arya", "Chris Diamantopoulos", "Ivan Mbakop", "Vincenzo Amato", "Rafael Petardi","Seth Michaels","Sebastien Large", "Guy Nardulli", "Andrew Hunter","George Tsai", "Rawson Marshall Thurber", "Robert Mata", "Anthony Belevtsov", "Daniel Bernhardt", "Yosef Podolski"));
+    ArrayList<String> redNoticeAwards = new ArrayList<>(Arrays.asList("N/A"));
+    private Movie redNotice = new Movie(6.3,"Red Notice",2021,"PG-13",redNoticeCast,"Rawson Marshall Thurber","Action, Comedy, and Thriller",redNoticeAwards,"2,000,000");
 
-    //getter for red notice movie**
+    //getter for red notice movie
     public Movie getRedNotice(){
         return redNotice;
     }
