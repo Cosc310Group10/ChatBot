@@ -81,20 +81,42 @@ public class Main{
 
       public static void greetingResponse(String userInput){
 
-        int randomNumber = (int)Math.random()*10;
+        int randomNumber = (int)(Math.random()*11);
 
         switch(randomNumber){
           case 0:
+          System.out.println("Hello!");
+          break;
           case 1:
+          System.out.println("Hey Hey!");
+          break;
           case 2:
+          System.out.println("Hi there");
+          break;
           case 3:
+          System.out.println("Bon.. jo.. jour.. haha, Hi how are ya!");
+          break;
           case 4:
+          System.out.println("Hello there");
+          break;
           case 5:
+          System.out.println("Hey! I am Ryan Reynolds, nice to meet you!");
+          break;
           case 6:
+          System.out.println("What a beautiful day to meet someone as great as me hey?");
+          break;
           case 7:
+          System.out.println("Yo!");
+          break;
           case 8:
+          System.out.println("Hey there");
+          break;
           case 9:
+          System.out.println("Hi, nice to meet you!");
+          break;
           case 10:
+          System.out.println("Hola!");
+          break;
           default:
         }
 
