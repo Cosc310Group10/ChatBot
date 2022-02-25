@@ -24,6 +24,12 @@ public class RyanReynolds {
     private String wifeName;
     //social media handle
     private String socialMediaHandle;
+    //twitter following
+    private int twitterFollowers;
+    //instagram following
+    private int instagramFollowers;
+    //tiktok following
+    private int tiktokFollowers;
     //Net Worth
     private String netWorth;
     //previous marriage
@@ -273,6 +279,31 @@ public class RyanReynolds {
     public void setsocialMediaHandle(String socialMediaHandle){
         this.socialMediaHandle = socialMediaHandle;
     }
+
+    public int gettwitterFollowers(){
+        return twitterFollowers;
+    }
+
+    public void setinstagramFollowers(int instagramFollowers){
+        this.instagramFollowers = instagramFollowers;
+    }
+
+    public int getinstagramFollowers(){
+        return instagramFollowers;
+    }
+
+    public void settiktokFollowers(int tiktokFollowers){
+        this.tiktokFollowers = tiktokFollowers;
+    }
+
+    public int gettiktokFollowers(){
+        return tiktokFollowers;
+    }
+
+    public void settwitterFollowers(int twitterFollowers){
+        this.twitterFollowers = twitterFollowers;
+    }
+
 
     public String getnetWorth(){
         return netWorth;
