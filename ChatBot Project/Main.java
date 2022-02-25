@@ -1,8 +1,10 @@
 import java.util.Scanner;
 public class Main{
+  //creating a static ryan reynolds object so its accessible by all methods
+  static RyanReynolds r = new RyanReynolds();
     public static void main(String[] args){
        //This is an example of how to access a movie that ryan reynolds is in
-        RyanReynolds r = new RyanReynolds();
+        
         System.out.println("Hello, this is an example: \n" + r.getDeadpool().toString());
 
         //prompt for user and creating scanner
@@ -39,6 +41,34 @@ public class Main{
     // this method takes in the users input and directs how the robot is going to respond by creating sub problems
     // with other methods
     public static void analyzeInput(String userInput){
+     
+        if(userInput.contains("Who") || userInput.contains("who")){
+        whoResponse(userInput);
+        
+        } else if(userInput.contains("What")|| userInput.contains("what")){
+        whatResponse(userInput);
+        
+        } else if(userInput.contains("Where")|| userInput.contains("where")){
+        whereResponse(userInput);
+        
+         } else if(userInput.contains("When")|| userInput.contains("when")){
+        whenResponse(userInput);
+        
+         }else if (userInput.contains("How")|| userInput.contains("how")){
+        howResponse(userInput);
+        
+         }else{
+        defaultResponse(userInput);
+        
+         }
+
+      }
+    
+    
+
+
+    /*
+    public static void analyzeInput(String userInput){
       switch(userInput){
         case (userInput.contains("Who") || userInput.contains("who")):
         whoResponse(userInput);
@@ -66,7 +96,7 @@ public class Main{
         // break;
 
         // case (userInput.contains("?")):
-        // questionResponse(userInput);
+        // askAQuestionResponse(userInput);
         // break;
 
         default:
@@ -76,12 +106,16 @@ public class Main{
       }
 
     }
+    */
 
     public static void whoResponse(String userInput){
+
+
 
     }
 
     public static void whatResponse(String userInput){
+      System.out.println("Deadpool earned $" + r.getDeadpool().getBoxOffice());
 
     }
 
@@ -101,7 +135,7 @@ public class Main{
 
     }
 
-    public static void questionResponse(String userInput){
+    public static void askAQuestionResponse(String userInput){
 
     }
 
