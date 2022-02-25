@@ -236,6 +236,32 @@ public class Main{
 
     public static void whoMovieResponse(String userInput){
 
+      if(userInput.contains("movie") || userInput.contains("movies")){
+
+      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+
+
+      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+
+
+      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+
+
+      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
+
+
+      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
+
+
+      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
+
+
+      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
+
+
+      }else{
+        defaultResponse(userInput);
+      }
     }
 
 
@@ -271,14 +297,92 @@ public class Main{
     }
 
     public static void whereMovieResponse(String userInput){
+      if(userInput.contains("movie") || userInput.contains("movies")){
+
+      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+
+
+      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+
+
+      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+
+
+      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
+
+
+      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
+
+
+      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
+
+
+      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
+
+
+      }else{
+        defaultResponse(userInput);
+      }
 
     }
 
     public static void whenMovieResponse(String userInput){
+      if(userInput.contains("movie") || userInput.contains("movies")){
+
+      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+
+
+      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+
+
+      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+
+
+      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
+
+
+      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
+
+
+      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
+
+
+      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
+
+
+      }else{
+        defaultResponse(userInput);
+      }
 
     }
 
     public static void howMovieResponse(String userInput){
+      if(userInput.contains("movie") || userInput.contains("movies")){
+
+      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+
+
+      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+
+
+      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+
+
+      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
+
+
+      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
+
+
+      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
+
+
+      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
+
+
+      }else{
+        defaultResponse(userInput);
+      }
 
     }
 
