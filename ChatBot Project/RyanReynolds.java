@@ -64,23 +64,23 @@ public class RyanReynolds {
         return ripd;
     }
 
-    // Getting groups opinion for the rest of detail below: 
+  
     //Green Lantern
     ArrayList<String> greenLanternCast = new ArrayList<>(Arrays.asList("Me", "Blake Lively", "Peter Sarsgaard","Mark Strong", "Tim Robbins", "Jay O. Sanders", "Taika Waititi", "Angela Bassett","Mike Doyle","Nick Jandl", "Dylan James", "Gattlin Griffith","Jon Tenney", "Leanne Cochran", "Temuera Morrison", "Jeff Wolfe", "Lena Clark", "Jenna Craig"));
     ArrayList<String> greenLanternAwards = new ArrayList<>(Arrays.asList("ASCAP Award", "Golden Schmoes", "HPA Awards"));
     private Movie greenLantern = new Movie(5.5,"Green Lantern",2011,"PG-13",greenLanternCast,"Martin Campbell","Action and Sci-Fi",greenLanternAwards,"219,900,000");
 
-    //getter for green lantern movie**
+    //getter for green lantern movie
     public Movie getGreenLantern(){
         return greenLantern;
     }
 
-    //Buried**
-    ArrayList<String> buriedCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> buriedAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie buried = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000");
+    //Buried
+    ArrayList<String> buriedCast = new ArrayList<>(Arrays.asList("Me", "Jose Luis Garcia Perez", "Robert Paterson","Stephen Tobolowsky", "Samantha Mathis", "Ivana Mino", "Warner Loughlin", "Erik Palladino","Kali Rocha","Chris William Martin", "Cade Dundish", "Mary Birdsong","Kirk Baily", "Anne Lockhart", "Robert Clotworthy", "Mitchalla Petersen", "Juan Hidalgo", "Abdelilah Ben Massou"));
+    ArrayList<String> buriedAwards = new ArrayList<>(Arrays.asList("ASECAN Award", "Bronze Frog", "CEC Award", "Critics Award","Chainsaw Award","Prix Nouveau Genre", "Gaudi Award","Goya", "Jose Maria Forque Award","NBR Award","Georges Award","Sant Jordi","Grand Prize of European Fantasy Film in Gold"));
+    private Movie buried = new Movie(7.0,"Buried",2010,"R",buriedCast,"Rodrigo Cortes","Drama, Mystery, and Thriller",buriedAwards,"21,300,000");
 
-    //getter for buried movie**
+    //getter for buried movie
     public Movie getBuried(){
         return buried;
     }
