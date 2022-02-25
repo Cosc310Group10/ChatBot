@@ -24,11 +24,88 @@ public class Main{
             sc.close();
             engaged = true;
             break;
+
+          //otherwise, analyze the input and this method figures out how the chat bot responds
+          }else{
+            analyzeInput(userInput);
           }
 
         }
 
 
+
+    }
+
+    // this method takes in the users input and directs how the robot is going to respond by creating sub problems
+    // with other methods
+    public static void analyzeInput(String userInput){
+      switch(userInput){
+        case (userInput.contains("Who") || userInput.contains("who")):
+        whoResponse(userInput);
+        break;
+
+        case (userInput.contains("What")|| userInput.contains("what")):
+        whatResponse(userInput);
+        break;
+
+        case (userInput.contains("Where")|| userInput.contains("where")):
+        whereResponse(userInput);
+        break;
+
+        case (userInput.contains("When")|| userInput.contains("when")):
+        whenResponse(userInput);
+        break;
+
+        case (userInput.contains("How")|| userInput.contains("how")):
+        howResponse(userInput);
+        break;
+
+        //add these into the who what where when how as another filtering mechanism
+        // case (userInput.contains("Personal")):
+        // personalResponse(userInput);
+        // break;
+
+        // case (userInput.contains("?")):
+        // questionResponse(userInput);
+        // break;
+
+        default:
+        defaultResponse(userInput);
+        break;
+
+      }
+
+    }
+
+    public static void whoResponse(String userInput){
+
+    }
+
+    public static void whatResponse(String userInput){
+
+    }
+
+    public static void whereResponse(String userInput){
+
+    }
+
+    public static void whenResponse(String userInput){
+
+    }
+
+    public static void howResponse(String userInput){
+
+    }
+
+    public static void personalResponse(String userInput){
+
+    }
+
+    public static void questionResponse(String userInput){
+
+    }
+
+    public static void defaultResponse(String userInput){
 
     }
 }
