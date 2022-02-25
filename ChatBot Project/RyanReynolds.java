@@ -34,7 +34,7 @@ public class RyanReynolds {
     }
 
     //Deadpool 2
-    ArrayList<String> deadpool2Cast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
+    ArrayList<String> deadpool2Cast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", "T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
     ArrayList<String> deadpool2Awards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
     private Movie deadpool2 = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000");
 
@@ -65,14 +65,14 @@ public class RyanReynolds {
     }
 
     // Getting groups opinion for the rest of detail below: 
-    //Green Lantern**
-    ArrayList<String> greenLaternCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> greenLaternAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie greenLatern = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000");
+    //Green Lantern
+    ArrayList<String> greenLanternCast = new ArrayList<>(Arrays.asList("Me", "Blake Lively", "Peter Sarsgaard","Mark Strong", "Tim Robbins", "Jay O. Sanders", "Taika Waititi", "Angela Bassett","Mike Doyle","Nick Jandl", "Dylan James", "Gattlin Griffith","Jon Tenney", "Leanne Cochran", "Temuera Morrison", "Jeff Wolfe", "Lena Clark", "Jenna Craig"));
+    ArrayList<String> greenLanternAwards = new ArrayList<>(Arrays.asList("ASCAP Award", "Golden Schmoes", "HPA Awards"));
+    private Movie greenLantern = new Movie(5.5,"Green Lantern",2011,"PG-13",greenLanternCast,"Martin Campbell","Action and Sci-Fi",greenLanternAwards,"219,900,000");
 
     //getter for green lantern movie**
-    public Movie getGreenLatern(){
-        return greenLatern;
+    public Movie getGreenLantern(){
+        return greenLantern;
     }
 
     //Buried**
