@@ -8,7 +8,7 @@ public class Main{
         System.out.println("Hello, this is an example: \n" + r.getDeadpool().toString());
 
         //prompt for user and creating scanner
-        System.out.println("Hello how are you?");
+        System.out.println("Hello! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
         Scanner sc = new Scanner(System.in);
 
         //initializing user input string
@@ -35,6 +35,13 @@ public class Main{
         }
 
 
+        //example questions:
+        /*
+        1.) What are some movies you have been in?
+        2.) What is your highest rated movie
+        3.) How many deadpool movies are there?
+        */
+
 
     }
 
@@ -42,7 +49,10 @@ public class Main{
     // with other methods
     public static void analyzeInput(String userInput){
      
-        if(userInput.contains("Who") || userInput.contains("who")){
+      if(userInput.contains("Hi") || userInput.contains("hi")|| userInput.contains("Hey") || userInput.contains("hey") || userInput.contains("Hello") || userInput.contains("hello")){
+          greetingResponse(userInput);
+
+      }else if(userInput.contains("Who") || userInput.contains("who")){
         whoResponse(userInput);
         
         } else if(userInput.contains("What")|| userInput.contains("what")){
@@ -67,79 +77,216 @@ public class Main{
     
 
 
-    /*
-    public static void analyzeInput(String userInput){
-      switch(userInput){
-        case (userInput.contains("Who") || userInput.contains("who")):
-        whoResponse(userInput);
-        break;
+    //------------------------------------------------------------------------------------------------------------------
 
-        case (userInput.contains("What")|| userInput.contains("what")):
-        whatResponse(userInput);
-        break;
+      public static void greetingResponse(String userInput){
 
-        case (userInput.contains("Where")|| userInput.contains("where")):
-        whereResponse(userInput);
-        break;
+        int randomNumber = (int)Math.random()*10;
 
-        case (userInput.contains("When")|| userInput.contains("when")):
-        whenResponse(userInput);
-        break;
+        switch(randomNumber){
+          case 0:
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+          case 5:
+          case 6:
+          case 7:
+          case 8:
+          case 9:
+          case 10:
+          default:
+        }
 
-        case (userInput.contains("How")|| userInput.contains("how")):
-        howResponse(userInput);
-        break;
-
-        //add these into the who what where when how as another filtering mechanism
-        // case (userInput.contains("Personal")):
-        // personalResponse(userInput);
-        // break;
-
-        // case (userInput.contains("?")):
-        // askAQuestionResponse(userInput);
-        // break;
-
-        default:
-        defaultResponse(userInput);
-        break;
 
       }
 
-    }
-    */
 
     public static void whoResponse(String userInput){
+       // Here we check if the who question contains any of the movie names, if so,
+      // then we respond using the who responses for movie questions
+      whoMovieReponse(userInput);
+
+      // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
+      // what responses for personal questions
+      whoPersonalResponse(userInput);
+
+      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
+      // asking a different question to the user
+      askAQuestionResponse(userInput);
 
 
 
     }
 
     public static void whatResponse(String userInput){
-      System.out.println("Deadpool earned $" + r.getDeadpool().getBoxOffice());
+
+      // Here we check if the what question contains any of the movie names, if so,
+      // then we respond using the what responses for movie questions
+      whatMovieReponse(userInput);
+
+      // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
+      // what responses for personal questions
+      whatPersonalResponse(userInput);
+
+      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
+      // asking a different question to the user
+      askAQuestionResponse(userInput);
+      
 
     }
 
     public static void whereResponse(String userInput){
 
+       // Here we check if the where question contains any of the movie names, if so,
+      // then we respond using the where responses for movie questions
+      whereMovieReponse(userInput);
+
+      // Otherwise, we check if the where question is about his personal attributes and if so we respond with the
+      // where responses for personal questions
+      whatPersonalResponse(userInput);
+
+      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
+      // asking a different question to the user
+      askAQuestionResponse(userInput);
+
     }
 
     public static void whenResponse(String userInput){
+       // Here we check if the when question contains any of the movie names, if so,
+      // then we respond using the when responses for movie questions
+      whenMovieReponse(userInput);
+
+      // Otherwise, we check if the when question is about his personal attributes and if so we respond with the
+      // when responses for personal questions
+      whenPersonalResponse(userInput);
+
+      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
+      // asking a different question to the user
+      askAQuestionResponse(userInput);
 
     }
 
     public static void howResponse(String userInput){
+       // Here we check if the how question contains any of the movie names, if so,
+      // then we respond using the how responses for movie questions
+      howMovieReponse(userInput);
+
+      // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
+      // what responses for personal questions
+      howPersonalResponse(userInput);
+
+      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
+      // asking a different question to the user
+      askAQuestionResponse(userInput);
 
     }
 
-    public static void personalResponse(String userInput){
-
-    }
+    
 
     public static void askAQuestionResponse(String userInput){
+      int random = (int) Math.random()*1;
+
+      if(random == 1){
+        System.out.println("\nHow about you?");
+      }else{
+        return;
+      }
 
     }
+
+    
 
     public static void defaultResponse(String userInput){
+      //If all else fails and the chat bot does not not how to respond, we have this statement set as
+      // the chat bot's default response to a question it does not know
+
+      System.out.println("Sorry, I am unsure of how to respond to this question");
+      System.out.println("Please ask me another question about my life or my movies, I would be happy to answer!");
 
     }
+
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    //below are the movie responses depending if the question asked from the user contains who what where when and how
+
+
+    public static void whoMovieResponse(String userInput){
+
+    }
+
+
+    public static void whatMovieReponse(String userInput){
+
+
+      if(userInput.contains("movie") || userInput.contains("movies")){
+
+      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+
+
+      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+
+
+      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+
+
+      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
+
+
+      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
+
+
+      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
+
+
+      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
+
+
+      }else{
+        defaultResponse(userInput);
+      }
+    }
+
+    public static void whereMovieResponse(String userInput){
+
+    }
+
+    public static void whenMovieResponse(String userInput){
+
+    }
+
+    public static void howMovieResponse(String userInput){
+
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+    //below are the personal responses depending if the question asked from the user contains who what where when and how
+
+
+    public static void whoPersonalResponse(String userInput){
+
+    }
+
+
+    public static void whatPersonalResponse(String userInput){
+
+
+     
+    }
+
+    public static void wherePersonalResponse(String userInput){
+
+    }
+
+    public static void whenPersonalResponse(String userInput){
+
+    }
+
+    public static void howPersonalResponse(String userInput){
+
+    }
+
+
+
 }
