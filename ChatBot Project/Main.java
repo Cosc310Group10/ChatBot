@@ -127,7 +127,7 @@ public class Main{
     public static void whoResponse(String userInput){
        // Here we check if the who question contains any of the movie names, if so,
       // then we respond using the who responses for movie questions
-      whoMovieReponse(userInput);
+      whoMovieResponse(userInput);
 
       // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
       // what responses for personal questions
@@ -207,7 +207,7 @@ public class Main{
     
 
     public static void askAQuestionResponse(String userInput){
-      int random = (int) Math.random()*1;
+      int random = (int) (Math.random()*3); //1/3 of the time the chat bot asks a question back to the user
 
       if(random == 1){
         System.out.println("\nHow about you?");
@@ -260,7 +260,7 @@ public class Main{
 
 
       }else{
-        defaultResponse(userInput);
+        return;
       }
     }
 
