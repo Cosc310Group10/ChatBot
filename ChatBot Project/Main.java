@@ -37,6 +37,14 @@ public class Main{
 
         //example questions:
         /*
+        Testing questions:
+        1.) Who is your wife?
+        2.) How many kids do you have?
+        3.) What are some of the movies you have been in?
+        4.) Have you ever acted in a movie with your current wife?
+        5.) What was deadpools box office profit?
+        6.) 
+
         1.) What are some movies you have been in?
         2.) What is your highest rated movie
         3.) How many deadpool movies are there?
@@ -132,6 +140,14 @@ public class Main{
       // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
       // what responses for personal questions
       whoPersonalResponse(userInput);
+
+
+
+// ***************************************
+// I am thinking to move the askAQuestion into the personal questions considering the user or fan will have not been in any movies
+//but could respond to the personal questions
+
+
 
       // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
       // asking a different question to the user
@@ -391,6 +407,10 @@ public class Main{
 
 
     public static void whoPersonalResponse(String userInput){
+
+      if(userInput.contains("Wife") || userInput.contains("wife")){
+        System.out.println("My wife is ");
+      }
 
     }
 
