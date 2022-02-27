@@ -6,7 +6,7 @@ public class Main{
         System.out.println("Hello, this is an example: \n" + r.getDeadpool().toString());
 
         //prompt for user and creating scanner
-        System.out.println("Hello how are you?");
+        System.out.println("Ask your question:");
         Scanner sc = new Scanner(System.in);
 
         //initializing user input string
@@ -25,7 +25,6 @@ public class Main{
             engaged = true;
             break;
           }
-
         }
 
 

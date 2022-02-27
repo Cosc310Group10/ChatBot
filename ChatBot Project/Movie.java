@@ -22,11 +22,13 @@ public class Movie {
     private ArrayList<String> awards;
     //box office amount, i.e gross earnings of the movie
     private String boxOffice;
+    //filming location
+    private String location;
 
     //Below are various constructors for creating movie objects
 
     //First constructor which contains initialization for every attribute
-    Movie(double imdbStars, String title, int year, String rating, ArrayList<String>cast, String director,String genre,ArrayList<String>awards,String boxOffice){
+    Movie(double imdbStars, String title, int year, String rating, ArrayList<String>cast, String director,String genre,ArrayList<String>awards,String boxOffice,String location){
         this.imdbStars = imdbStars;
         this.title = title;
         this.year = year;
@@ -36,6 +38,7 @@ public class Movie {
         this.genre = genre;
         this.awards = awards;
         this.boxOffice = boxOffice;
+        this.location = location;
     }
 
     //Second constructor which initializes only the title, rating, and genre
@@ -153,13 +156,20 @@ public class Movie {
 	public void setBoxOffice(String boxOffice) {
 		this.boxOffice = boxOffice;
 	}
+    public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
 
 
     //toString method for the movies
     public String toString(){
 
         return "Movie: " + this.title +"\n"+"IMDb Rating: " +this.imdbStars + "\n"+"Genre: " + this.genre + "\n" + "Rating: " + this.rating + "\n"+  "Director: " + this.director + "\n"+ "Box Office: $" + this.boxOffice 
-        +"\n"+"\n" + "Cast: "+ this.cast+ "\n"+ "\n" + "Awards: " + this.awards;
+        +"\n"+"\n" + "Cast: "+ this.cast+ "\n"+ "\n" + "Awards: " + this.awards + "Filming Location:" + this.location;
     }
 
 
