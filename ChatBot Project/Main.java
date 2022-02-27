@@ -1,17 +1,27 @@
+// GROUP 10 COSC 310 Main Class
+
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
 public class Main{
 
 
   //creating a static ryan reynolds object so its accessible by all methods
-  static RyanReynolds r = new RyanReynolds("6'2", 185,"Brown","Brown","Male","N/A","2022-02-06","Blake Lively","social media handle","NetWorth","ex wife",null);
+  static RyanReynolds r = new RyanReynolds();
     public static void main(String[] args){
-       //This is an example of how to access a movie that ryan reynolds is in
-        
-        System.out.println("Hello, this is an example: \n" + r.getDeadpool().toString());
 
-        //prompt for user and creating scanner
-        System.out.println("Hello! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
+       
+        // a cool feature saying the chatbot is booting up for a delay of 2 seconds
+        System.out.println("Ryan Reynolds Chat bot booting up...");
+        try{
+        TimeUnit.SECONDS.sleep(2); //delaying the program for 2 seconds
+        }catch (Exception e){
+          System.out.println("Error Occurred"); //catching an error 
+        }
+         //prompt for user and creating scanner
+        System.out.println("Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
         Scanner sc = new Scanner(System.in);
+        
 
         //initializing user input string
         String userInput;

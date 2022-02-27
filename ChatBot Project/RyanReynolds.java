@@ -1,3 +1,4 @@
+// GROUP 10 COSC 310 Ryan Reynolds Class
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -22,6 +23,8 @@ public class RyanReynolds {
     private String birthDate;
     //wife
     private String wifeName;
+    //kids
+    private ArrayList<String> kidNames;
     //social media handle
     private String socialMediaHandle;
     //twitter following
@@ -37,18 +40,10 @@ public class RyanReynolds {
     //other awards
     private ArrayList<String> otherAwards;
 
-
-
-    // ****IN PROGRESS BELOW, NOT FINISHED***
-    // --> Lance creating movie objects below
-    //Creating 12 different movie objects for Ryan Reynolds
-    //NOTE: These movies include either contain the full cast and all awards, or either a sample of the cast and awards and
-    //do not include all of the awards or the entire cast
-
     //Deadpool
     ArrayList<String> deadpoolCast = new ArrayList<>(Arrays.asList("Me","Morena Baccarin", " T.J. Miller","Ed Skrein","Karan Soni","Michael Benyaer","Stefan Kapicic", "Brianna Hildebrand", "Style Dayne","Kyle Cassie", "Taylor Hickson", "Ayzee", "Naika Toussaint", "Randal Reeder", "Isaac C. Singleton Jr.", "Justyn Shippelt","Donna Tamamotot", "Jed Rees"));
     ArrayList<String> deadpoolAwards = new ArrayList<>(Arrays.asList("Saturn Award","All Def Movie Award","ACCA","Critics Choice Award", "Artios Award","DFCS Award","Dragon Award","Empire Award","Golden Schmoes","Golden Trailer","HFCS Award","IGN People's Choice Award","MTV Movie Award","OFTA Film Award","Maxwell Weinberg Award","Teen Choice Award"));
-    private Movie deadpool = new Movie(8,"Deadpool",2016,"R",deadpoolCast,"Tim Miller","Action and Comedy",deadpoolAwards,"783,100,000");
+    private Movie deadpool = new Movie(8,"Deadpool",2016,"R",deadpoolCast,"Tim Miller","Action and Comedy",deadpoolAwards,"783,100,000","Vancouver");
 
     //getter for deadpool movie
     public Movie getDeadpool(){
@@ -58,7 +53,7 @@ public class RyanReynolds {
     //Deadpool 2
     ArrayList<String> deadpool2Cast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", "T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
     ArrayList<String> deadpool2Awards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie deadpool2 = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000");
+    private Movie deadpool2 = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000","Vancouver");
 
     //getter for deadpool 2 movie
     public Movie getDeadpool2(){
@@ -69,20 +64,20 @@ public class RyanReynolds {
     //Free guy
     ArrayList<String> freeGuyCast = new ArrayList<>(Arrays.asList("Me","Jodie Comer","Taika Waititi","Lil Rel Howery","Joe Keery","Utkarsh Ambudkar","Channing Tatum","Aaron W Reed","Britne Oldford","Camille Kostek", "Mark Lainer","Mike Devine","Sophie Levy","Vernon Scott","Naheem Garcia","Anabel Graetz","Ric Plamenco","Kenneth Israel"));
     ArrayList<String> freeGuyAwards = new ArrayList<>(Arrays.asList("Golden Angel Award", "SFC Award","WFCC Award"));
-    private Movie freeGuy = new Movie(7.2,"Free Guy",2021,"PG-13",freeGuyCast,"Shawn Levy","Action and Comedy",freeGuyAwards,"331,500,000");
+    private Movie freeGuy = new Movie(7.2,"Free Guy",2021,"PG-13",freeGuyCast,"Shawn Levy","Action and Comedy",freeGuyAwards,"331,500,000","Boston");
 
     //getter for free guy movie
-    public Movie freeGuy(){
+    public Movie getFreeGuy(){
         return freeGuy;
     }
 
     //R.I.P.D
     ArrayList<String> ripdCast = new ArrayList<>(Arrays.asList("Me", "Jeff Bridges", "Mary-Lousie Parker","Kevin Bacon", "Stephanie Szostak", "James Hong", "Marisa Miller", "Robert Knepper","Mike O'Malley","Devin Ratray", "Larry Joe Campbell", "Michael Coons","Chris Everett", "Michael Tow", "Lonnie Farmer", "Piper Mackenzie", "Ben Sloane", "Duncan B. Putney"));
     ArrayList<String> ripdAwards = new ArrayList<>(Arrays.asList("None"));
-    private Movie ripd = new Movie(5.6,"R.I.P.D",2013,"PG-13",ripdCast,"Robert Schwentke","Action and Comedy",ripdAwards,"78,300,000");
+    private Movie ripd = new Movie(5.6,"R.I.P.D",2013,"PG-13",ripdCast,"Robert Schwentke","Action and Comedy",ripdAwards,"78,300,000","Boston");
 
     //getter for ripd movie
-    public Movie ripd(){
+    public Movie getRIPD(){
         return ripd;
     }
 
@@ -90,7 +85,7 @@ public class RyanReynolds {
     //Green Lantern
     ArrayList<String> greenLanternCast = new ArrayList<>(Arrays.asList("Me", "Blake Lively", "Peter Sarsgaard","Mark Strong", "Tim Robbins", "Jay O. Sanders", "Taika Waititi", "Angela Bassett","Mike Doyle","Nick Jandl", "Dylan James", "Gattlin Griffith","Jon Tenney", "Leanne Cochran", "Temuera Morrison", "Jeff Wolfe", "Lena Clark", "Jenna Craig"));
     ArrayList<String> greenLanternAwards = new ArrayList<>(Arrays.asList("ASCAP Award", "Golden Schmoes", "HPA Awards"));
-    private Movie greenLantern = new Movie(5.5,"Green Lantern",2011,"PG-13",greenLanternCast,"Martin Campbell","Action and Sci-Fi",greenLanternAwards,"219,900,000");
+    private Movie greenLantern = new Movie(5.5,"Green Lantern",2011,"PG-13",greenLanternCast,"Martin Campbell","Action and Sci-Fi",greenLanternAwards,"219,900,000","Los Angeles");
 
     //getter for green lantern movie
     public Movie getGreenLantern(){
@@ -100,7 +95,7 @@ public class RyanReynolds {
     //Buried
     ArrayList<String> buriedCast = new ArrayList<>(Arrays.asList("Me", "Jose Luis Garcia Perez", "Robert Paterson","Stephen Tobolowsky", "Samantha Mathis", "Ivana Mino", "Warner Loughlin", "Erik Palladino","Kali Rocha","Chris William Martin", "Cade Dundish", "Mary Birdsong","Kirk Baily", "Anne Lockhart", "Robert Clotworthy", "Mitchalla Petersen", "Juan Hidalgo", "Abdelilah Ben Massou"));
     ArrayList<String> buriedAwards = new ArrayList<>(Arrays.asList("ASECAN Award", "Bronze Frog", "CEC Award", "Critics Award","Chainsaw Award","Prix Nouveau Genre", "Gaudi Award","Goya", "Jose Maria Forque Award","NBR Award","Georges Award","Sant Jordi","Grand Prize of European Fantasy Film in Gold"));
-    private Movie buried = new Movie(7.0,"Buried",2010,"R",buriedCast,"Rodrigo Cortes","Drama, Mystery, and Thriller",buriedAwards,"21,300,000");
+    private Movie buried = new Movie(7.0,"Buried",2010,"R",buriedCast,"Rodrigo Cortes","Drama, Mystery, and Thriller",buriedAwards,"21,300,000","Barcelona");
 
     //getter for buried movie
     public Movie getBuried(){
@@ -110,7 +105,7 @@ public class RyanReynolds {
     //6 Underground
     ArrayList<String> sixUndergroundCast = new ArrayList<>(Arrays.asList("Me", "Melanie Laurent", "Manuel Garcia-Rulfo","Ben Hardy", "Adira Arjona", "Dave Franco", "Corey Hawkins", "Lior Raz","Payman Maadi","Yuri Kolokolnikov", "Kim Kold", "Lidia Franco","James Murray", "Lukhanyo Bele", "George Kareman", "James Carroll Jordan", "Ron Funches", "Daniel Adegboyega"));
     ArrayList<String> sixUndergroundAwards = new ArrayList<>(Arrays.asList("Taurus World Stunt Award"));
-    private Movie sixUnderground = new Movie(6.1,"6 Underground",2019,"R",sixUndergroundCast,"Michael Bay","Action and Thriller",sixUndergroundAwards,"N/A");
+    private Movie sixUnderground = new Movie(6.1,"6 Underground",2019,"R",sixUndergroundCast,"Michael Bay","Action and Thriller",sixUndergroundAwards,"N/A","Abu Dhabi");
 
     //getter for 6 Underground movie
     public Movie getSixUnderground(){
@@ -120,52 +115,52 @@ public class RyanReynolds {
     //Red Notice
     ArrayList<String> redNoticeCast = new ArrayList<>(Arrays.asList("Me", "Dwayne Johnson", "Gal Gadot","Ritu Arya", "Chris Diamantopoulos", "Ivan Mbakop", "Vincenzo Amato", "Rafael Petardi","Seth Michaels","Sebastien Large", "Guy Nardulli", "Andrew Hunter","George Tsai", "Rawson Marshall Thurber", "Robert Mata", "Anthony Belevtsov", "Daniel Bernhardt", "Yosef Podolski"));
     ArrayList<String> redNoticeAwards = new ArrayList<>(Arrays.asList("N/A"));
-    private Movie redNotice = new Movie(6.3,"Red Notice",2021,"PG-13",redNoticeCast,"Rawson Marshall Thurber","Action, Comedy, and Thriller",redNoticeAwards,"2,000,000");
+    private Movie redNotice = new Movie(6.3,"Red Notice",2021,"PG-13",redNoticeCast,"Rawson Marshall Thurber","Action, Comedy, and Thriller",redNoticeAwards,"2,000,000","Atlanta");
 
     //getter for red notice movie
     public Movie getRedNotice(){
         return redNotice;
     }
 
-    //Self/Less**
+    //Self/Less
     ArrayList<String> selfLessCast = new ArrayList<>(Arrays.asList("Me", "Natalie Martinez", "Matthew Goode","Ben Kingsley", "Victor Garber", "Derek Luke", "Jaynee-Lynne Kinchen", "Melora Hardin","Michelle Dockery","Sam Page", "Brendan McCarthy", "Thomas Francis Murphy","Sandra Ellis Lafferty", "Emily Tremaine", "Griff Furst", "Cedric Palmisano", "Tom Waite", "Douglas M. Griffin"));
     ArrayList<String> selfLessAwards = new ArrayList<>(Arrays.asList("N/A"));
-    private Movie selfLess = new Movie(6.5,"Self/Less",2015,"PG-13",selfLessCast,"Tarsem Singh","Action, Mystery, and Sci-Fi",selfLessAwards,"785,000,000");
+    private Movie selfLess = new Movie(6.5,"Self/Less",2015,"PG-13",selfLessCast,"Tarsem Singh","Action, Mystery, and Sci-Fi",selfLessAwards,"30,500,000","New Orleans");
 
-    //getter for self/less movie**
+    //getter for self/less movie
     public Movie getSelfLess(){
         return selfLess;
     }
 
 
-    //The Hitman's Bodyguard**
+    //The Hitman's Bodyguard
     ArrayList<String> theHitmansBodyguardCast = new ArrayList<>(Arrays.asList("Me", "Samuel L. Jackson", "Gary Oldman","Elodie Yung", "Tsuwayuki Saotome", "Roy Hill", "Richard E. Grant", "Rod Hallett","Yuri Kolokolnikov","Nadia Konakchieva", "Valentin Stojanov", "Noortje Herlaar","Georgie Glen", "Michael Gor", "Barry Atsma", "Ralitsa Vassileva", "Abigail McLoughlin", "Bradley John"));
     ArrayList<String> theHitmansBodyguardAwards = new ArrayList<>(Arrays.asList("Golden Trailer"));
-    private Movie theHitmansBodyguard = new Movie(6.9,"The Hitman's Bodyguard",2017,"R",theHitmansBodyguardCast,"Patrick Hughes","Action, Comedy, and Crime",theHitmansBodyguardAwards,"785,000,000");
+    private Movie theHitmansBodyguard = new Movie(6.9,"The Hitman's Bodyguard",2017,"R",theHitmansBodyguardCast,"Patrick Hughes","Action, Comedy, and Crime",theHitmansBodyguardAwards,"176,600,000","Amsterdam");
 
-    //getter for the hitmans bodyguard movie**
+    //getter for the hitmans bodyguard movie
     public Movie getTheHitmansBodyguard(){
         return theHitmansBodyguard;
     }
 
 
-    //Change up**
+    //Change up
     ArrayList<String> changeUpCast = new ArrayList<>(Arrays.asList("Me", "Jason Bateman", "Olivia Wilde","Leslie Mann", "Alan Arkin", " Mircea Monroe", "Gregory Itzin", "Ned Schmidtke","Ming Lo","Sydney Rouviere", "Craig Bierko", "Dax Griffin","Andrea Moore", "Matthew Cornwell", "Taaffe O'Connell", "Fred Stoller", "Faith Alhadeff", "Luke Bain"));
     ArrayList<String> changeUpAwards = new ArrayList<>(Arrays.asList("N/A"));
-    private Movie changeUp = new Movie(6.3,"The Change-up",2011,"R",changeUpCast,"David Dobkin","Comedy and Fantasy",changeUpAwards,"785,000,000");
+    private Movie changeUp = new Movie(6.3,"The Change-up",2011,"R",changeUpCast,"David Dobkin","Comedy and Fantasy",changeUpAwards,"75,500,000","Alpharetta, Georgia");
 
-    //getter for change up movie**
+    //getter for change up movie
     public Movie getChangeUp(){
         return changeUp;
     }
 
 
-    //The Proposal**
+    //The Proposal
     ArrayList<String> theProposalCast = new ArrayList<>(Arrays.asList("Me", "Sandra Bullock", "Mary Steenburgen","Craig T. Nelson", "Betty White", "Denis O'Hare", "Oscar Nuñez", "Aasif Mandvi","Michael Nouri","Michael Mosley", "Dale Place", "Alicia Hunt","Alexis Garcia", "Kortney Adams", "Chris Whitney", "	Lee Wesley", "Gregg Edelman", "Phyllis Kay"));
     ArrayList<String> theProposalAwards = new ArrayList<>(Arrays.asList("BMI Film Music Award", "People's Choice Award", "Rembrandt Award", "Teen Choice Award", "WIN Award"));
-    private Movie theProposal = new Movie(6.7,"The Proposal",2009,"PG-13",theProposalCast,"Anne Fletcher","Comedy, Drama, Romance",theProposalAwards,"785,000,000");
+    private Movie theProposal = new Movie(6.7,"The Proposal",2009,"PG-13",theProposalCast,"Anne Fletcher","Comedy, Drama, Romance",theProposalAwards,"317,400,000","Sitka, Alaska");
 
-    //getter for the proposal movie**
+    //getter for the proposal movie
     public Movie getTheProposal(){
         return theProposal;
     }
@@ -183,11 +178,15 @@ public class RyanReynolds {
 
     //RyanReynolds Constructor for all personal information
 
-    RyanReynolds(String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+    RyanReynolds(String birthPlace, String birthDate,String wifeName,ArrayList<String> kidNames,String socialMediaHandle,int twitterFollowers,int instagramFollowers,int tiktokFollowers, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
+        this.kidNames = kidNames;
         this.haircolour = socialMediaHandle;
+        this.twitterFollowers = twitterFollowers;
+        this.instagramFollowers = instagramFollowers;
+        this.tiktokFollowers = tiktokFollowers;
         this.netWorth = netWorth;
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
@@ -195,7 +194,7 @@ public class RyanReynolds {
 
     //RyanReynolds Constructor for all physical attributes and personal information (i.e, full RyanReynolds constructor)
 
-    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,ArrayList<String> kidNames,String socialMediaHandle,int twitterFollowers,int instagramFollowers,int tiktokFollowers, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
         this.height = height;
         this.weight = weight;
         this.eyecolour = eyecolour;
@@ -204,7 +203,11 @@ public class RyanReynolds {
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
+        this.kidNames = kidNames;
         this.haircolour = socialMediaHandle;
+        this.twitterFollowers = twitterFollowers;
+        this.instagramFollowers = instagramFollowers;
+        this.tiktokFollowers = tiktokFollowers;
         this.netWorth = netWorth;
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
@@ -272,6 +275,14 @@ public class RyanReynolds {
         this.wifeName = wifeName;
     }
 
+    public ArrayList<String> getkidNames(){
+        return kidNames;
+    }
+
+    public void setkidNames(ArrayList<String> kidNames){
+        this.kidNames = kidNames;
+    }
+
     public String getsocialMediaHandle(){
         return socialMediaHandle;
     }
@@ -317,7 +328,7 @@ public class RyanReynolds {
         return previousMarriage;
     }
 
-    public void setpreviousMarriageh(String previousMarriage){
+    public void setpreviousMarriage(String previousMarriage){
         this.previousMarriage = previousMarriage;
     }
 
