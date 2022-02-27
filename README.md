@@ -7,7 +7,13 @@
   
  <p align = "center"><a href="https://www.imdb.com/name/nm0005351/">Learn more about Ryan Reynolds</a>
  <h3>About the Project:</h3>
+ <p>Ben's text here</p>
  <br>
  <h3>Class Organization:</h3>
+ <p>Lance's text here</p>
  <br>
  <h3>How to Compile and Run Code:</h3>
+ <p>Griffin's text here</p>
+ 
+  <h3>Additional Information:</h3>
+ <p>additional text here</p>
