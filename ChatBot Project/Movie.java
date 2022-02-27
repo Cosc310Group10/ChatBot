@@ -1,4 +1,5 @@
-// Movie Class - Lance
+// GROUP 10 COSC 310 Movie Class
+
 import java.util.ArrayList;
 
 public class Movie {

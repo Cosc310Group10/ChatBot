@@ -1,3 +1,4 @@
+// GROUP 10 COSC 310 Ryan Reynolds Class
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -39,11 +40,6 @@ public class RyanReynolds {
     //other awards
     private ArrayList<String> otherAwards;
 
-    // ****IN PROGRESS BELOW, NOT FINISHED***
-    // --> Lance creating movie objects below
-    //Creating 12 different movie objects for Ryan Reynolds
-    //NOTE: These movies include either contain the full cast and all awards, or either a sample of the cast and awards and
-    //do not include all of the awards or the entire cast
 
     //Deadpool
     ArrayList<String> deadpoolCast = new ArrayList<>(Arrays.asList("Me","Morena Baccarin", " T.J. Miller","Ed Skrein","Karan Soni","Michael Benyaer","Stefan Kapicic", "Brianna Hildebrand", "Style Dayne","Kyle Cassie", "Taylor Hickson", "Ayzee", "Naika Toussaint", "Randal Reeder", "Isaac C. Singleton Jr.", "Justyn Shippelt","Donna Tamamotot", "Jed Rees"));
@@ -72,7 +68,7 @@ public class RyanReynolds {
     private Movie freeGuy = new Movie(7.2,"Free Guy",2021,"PG-13",freeGuyCast,"Shawn Levy","Action and Comedy",freeGuyAwards,"331,500,000","Boston");
 
     //getter for free guy movie
-    public Movie freeGuy(){
+    public Movie getFreeGuy(){
         return freeGuy;
     }
 
@@ -82,7 +78,7 @@ public class RyanReynolds {
     private Movie ripd = new Movie(5.6,"R.I.P.D",2013,"PG-13",ripdCast,"Robert Schwentke","Action and Comedy",ripdAwards,"78,300,000","Boston");
 
     //getter for ripd movie
-    public Movie ripd(){
+    public Movie getRIPD(){
         return ripd;
     }
 
@@ -127,45 +123,52 @@ public class RyanReynolds {
         return redNotice;
     }
 
-    //Self/Less**
-    ArrayList<String> selfLessCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> selfLessAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie selfLess = new Movie(6.5,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000","New Orleans");
 
-    //getter for self/less movie**
+    //Self/Less
+    ArrayList<String> selfLessCast = new ArrayList<>(Arrays.asList("Me", "Natalie Martinez", "Matthew Goode","Ben Kingsley", "Victor Garber", "Derek Luke", "Jaynee-Lynne Kinchen", "Melora Hardin","Michelle Dockery","Sam Page", "Brendan McCarthy", "Thomas Francis Murphy","Sandra Ellis Lafferty", "Emily Tremaine", "Griff Furst", "Cedric Palmisano", "Tom Waite", "Douglas M. Griffin"));
+    ArrayList<String> selfLessAwards = new ArrayList<>(Arrays.asList("N/A"));
+    private Movie selfLess = new Movie(6.5,"Self/Less",2015,"PG-13",selfLessCast,"Tarsem Singh","Action, Mystery, and Sci-Fi",selfLessAwards,"30,500,000","New Orleans");
+
+
+    //getter for self/less movie
     public Movie getSelfLess(){
         return selfLess;
     }
 
 
-    //The Hitman's Bodyguard**
-    ArrayList<String> theHitmansBodyguardCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> theHitmansBodyguardAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie theHitmansBodyguard = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000","Amsterdam");
 
-    //getter for the hitmans bodyguard movie**
+    //The Hitman's Bodyguard
+    ArrayList<String> theHitmansBodyguardCast = new ArrayList<>(Arrays.asList("Me", "Samuel L. Jackson", "Gary Oldman","Elodie Yung", "Tsuwayuki Saotome", "Roy Hill", "Richard E. Grant", "Rod Hallett","Yuri Kolokolnikov","Nadia Konakchieva", "Valentin Stojanov", "Noortje Herlaar","Georgie Glen", "Michael Gor", "Barry Atsma", "Ralitsa Vassileva", "Abigail McLoughlin", "Bradley John"));
+    ArrayList<String> theHitmansBodyguardAwards = new ArrayList<>(Arrays.asList("Golden Trailer"));
+    private Movie theHitmansBodyguard = new Movie(6.9,"The Hitman's Bodyguard",2017,"R",theHitmansBodyguardCast,"Patrick Hughes","Action, Comedy, and Crime",theHitmansBodyguardAwards,"176,600,000","Amsterdam");
+
+
+    //getter for the hitmans bodyguard movie
     public Movie getTheHitmansBodyguard(){
         return theHitmansBodyguard;
     }
 
 
-    //Change up**
-    ArrayList<String> changeUpCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> changeUpAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie changeUp = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000","Alpharetta, Georgia");
+    //Change up
+    ArrayList<String> changeUpCast = new ArrayList<>(Arrays.asList("Me", "Jason Bateman", "Olivia Wilde","Leslie Mann", "Alan Arkin", " Mircea Monroe", "Gregory Itzin", "Ned Schmidtke","Ming Lo","Sydney Rouviere", "Craig Bierko", "Dax Griffin","Andrea Moore", "Matthew Cornwell", "Taaffe O'Connell", "Fred Stoller", "Faith Alhadeff", "Luke Bain"));
+    ArrayList<String> changeUpAwards = new ArrayList<>(Arrays.asList("N/A"));
+    private Movie changeUp = new Movie(6.3,"The Change-up",2011,"R",changeUpCast,"David Dobkin","Comedy and Fantasy",changeUpAwards,"75,500,000","Alpharetta, Georgia");
 
-    //getter for change up movie**
+
+    //getter for change up movie
     public Movie getChangeUp(){
         return changeUp;
     }
 
 
-    //The Proposal**
-    ArrayList<String> theProposalCast = new ArrayList<>(Arrays.asList("Me", "Josh Brolin", "Morena Baccarin","Julian Dennison", "Zazie Beetz", " T.J. Miller", "Leslie Uggams", "Karan Soni","Brianna Hildebrand","Jack Kesy", "Eddie Marsan", "Shioli Kutsuna","Stefan Kapicic", "Randal Reeder", "Nikolai Witschl", "Thayr Harris", "Rob Delaney", "Lewis Tan"));
-    ArrayList<String> theProposalAwards = new ArrayList<>(Arrays.asList("Golden Schmoes", "Golden Trailer", "Aurora Award"));
-    private Movie theProposal = new Movie(7.7,"Deadpool 2",2018,"R",deadpool2Cast,"David Leitch","Action and Comedy",deadpool2Awards,"785,000,000","Sitka, Alaska");
 
-    //getter for the proposal movie**
+    //The Proposal
+    ArrayList<String> theProposalCast = new ArrayList<>(Arrays.asList("Me", "Sandra Bullock", "Mary Steenburgen","Craig T. Nelson", "Betty White", "Denis O'Hare", "Oscar Nuñez", "Aasif Mandvi","Michael Nouri","Michael Mosley", "Dale Place", "Alicia Hunt","Alexis Garcia", "Kortney Adams", "Chris Whitney", "	Lee Wesley", "Gregg Edelman", "Phyllis Kay"));
+    ArrayList<String> theProposalAwards = new ArrayList<>(Arrays.asList("BMI Film Music Award", "People's Choice Award", "Rembrandt Award", "Teen Choice Award", "WIN Award"));
+    private Movie theProposal = new Movie(6.7,"The Proposal",2009,"PG-13",theProposalCast,"Anne Fletcher","Comedy, Drama, Romance",theProposalAwards,"317,400,000","Sitka, Alaska");
+
+
+    //getter for the proposal movie
     public Movie getTheProposal(){
         return theProposal;
     }
