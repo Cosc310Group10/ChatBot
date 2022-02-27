@@ -22,6 +22,8 @@ public class RyanReynolds {
     private String birthDate;
     //wife
     private String wifeName;
+    //kids
+    private ArrayList<String> kidNames;
     //social media handle
     private String socialMediaHandle;
     //twitter following
@@ -183,11 +185,15 @@ public class RyanReynolds {
 
     //RyanReynolds Constructor for all personal information
 
-    RyanReynolds(String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+    RyanReynolds(String birthPlace, String birthDate,String wifeName,ArrayList<String> kidNames,String socialMediaHandle,int twitterFollowers,int instagramFollowers,int tiktokFollowers, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
+        this.kidNames = kidNames;
         this.haircolour = socialMediaHandle;
+        this.twitterFollowers = twitterFollowers;
+        this.instagramFollowers = instagramFollowers;
+        this.tiktokFollowers = tiktokFollowers;
         this.netWorth = netWorth;
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
@@ -195,7 +201,7 @@ public class RyanReynolds {
 
     //RyanReynolds Constructor for all physical attributes and personal information (i.e, full RyanReynolds constructor)
 
-    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,ArrayList<String> kidNames,String socialMediaHandle,int twitterFollowers,int instagramFollowers,int tiktokFollowers, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
         this.height = height;
         this.weight = weight;
         this.eyecolour = eyecolour;
@@ -204,7 +210,11 @@ public class RyanReynolds {
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
+        this.kidNames = kidNames;
         this.haircolour = socialMediaHandle;
+        this.twitterFollowers = twitterFollowers;
+        this.instagramFollowers = instagramFollowers;
+        this.tiktokFollowers = tiktokFollowers;
         this.netWorth = netWorth;
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
@@ -270,6 +280,14 @@ public class RyanReynolds {
 
     public void setwifeName(String wifeName){
         this.wifeName = wifeName;
+    }
+
+    public ArrayList<String> getkidNames(){
+        return kidNames;
+    }
+
+    public void setkidNames(ArrayList<String> kidNames){
+        this.kidNames = kidNames;
     }
 
     public String getsocialMediaHandle(){
