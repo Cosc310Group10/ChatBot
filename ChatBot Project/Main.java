@@ -177,7 +177,7 @@ public class Main{
 
        // Here we check if the where question contains any of the movie names, if so,
       // then we respond using the where responses for movie questions
-      whereMovieReponse(userInput);
+      whereMovieResponse(userInput);
 
       // Otherwise, we check if the where question is about his personal attributes and if so we respond with the
       // where responses for personal questions
@@ -189,7 +189,7 @@ public class Main{
     public static void whenResponse(String userInput){
        // Here we check if the when question contains any of the movie names, if so,
       // then we respond using the when responses for movie questions
-      whenMovieReponse(userInput);
+      whenMovieResponse(userInput);
 
       // Otherwise, we check if the when question is about his personal attributes and if so we respond with the
       // when responses for personal questions
