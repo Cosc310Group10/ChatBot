@@ -22,6 +22,8 @@ public class RyanReynolds {
     private String birthDate;
     //wife
     private String wifeName;
+    //kids
+    private ArrayList<String> kidNames;
     //social media handle
     private String socialMediaHandle;
     //twitter following
@@ -36,6 +38,9 @@ public class RyanReynolds {
     private String previousMarriage;
     //other awards
     private ArrayList<String> otherAwards;
+
+    //question asked
+    private String question;
 
 
 
@@ -195,7 +200,7 @@ public class RyanReynolds {
 
     //RyanReynolds Constructor for all physical attributes and personal information (i.e, full RyanReynolds constructor)
 
-    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+    RyanReynolds(String height, int weight,String eyecolour,String haircolour, String gender,String birthPlace, String birthDate,String wifeName,ArrayList<String> kidNames,String socialMediaHandle,int twitterFollowers,int instagramFollowers,int tiktokFollowers, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
         this.height = height;
         this.weight = weight;
         this.eyecolour = eyecolour;
@@ -204,10 +209,18 @@ public class RyanReynolds {
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
+        this.kidNames = kidNames;
         this.haircolour = socialMediaHandle;
+        this.twitterFollowers = twitterFollowers;
+        this.instagramFollowers = instagramFollowers;
+        this.tiktokFollowers = tiktokFollowers;
         this.netWorth = netWorth;
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
+    }
+
+    RyanReynolds(String question){
+        this.question = question;
     }
 
     RyanReynolds(){
@@ -272,6 +285,14 @@ public class RyanReynolds {
         this.wifeName = wifeName;
     }
 
+    public ArrayList<String> getkidNames(){
+        return kidNames;
+    }
+
+    public void setkidNames(ArrayList<String> kidNames){
+        this.kidNames = kidNames;
+    }
+
     public String getsocialMediaHandle(){
         return socialMediaHandle;
     }
@@ -317,7 +338,7 @@ public class RyanReynolds {
         return previousMarriage;
     }
 
-    public void setpreviousMarriageh(String previousMarriage){
+    public void setpreviousMarriage(String previousMarriage){
         this.previousMarriage = previousMarriage;
     }
 
@@ -329,4 +350,20 @@ public class RyanReynolds {
         this.otherAwards = otherAwards;
     }
 
+    public String getquestion(){
+        return question;
+    }
+
+    public void setquestion(String question){
+        this.question = question;
+    }
+
+    //analyze function
+
+    String input = getquestion();
+    String[] words = input.split("[\\s']");{
+        for (int i = 0; i < words.length; i++) {
+            words[i] = words[i].replaceAll("[^\\w]", "");
+        }
+    }   
 }
