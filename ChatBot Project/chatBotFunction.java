@@ -24,7 +24,7 @@ public class chatBotFunction extends JFrame implements KeyListener{
         //standard greetings 
         {"hi", "hello","howdy", "hey"},
         {"hi", "hello", "hey"},
-        //genaric responses
+        //genaric responses for how are you
         {"how are you", "how r you", "how r u", "how are u"},
         {"good", "doing well"},
         //questions movies
@@ -33,7 +33,9 @@ public class chatBotFunction extends JFrame implements KeyListener{
         //questions personal
         {},
         {},
-        
+        //genaric reposnes for bye
+        {},
+        {},
     };
 
     public static void main(String args[]){
