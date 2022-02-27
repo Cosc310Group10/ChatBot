@@ -30,7 +30,7 @@ public class Main{
 
           //otherwise, analyze the input and this method figures out how the chat bot responds
           }else{
-            analyzeInput(userInput);
+            chatBot(userInput);
           }
 
         }
@@ -52,6 +52,10 @@ public class Main{
         */
 
 
+    }
+
+    public static void chatBot(String userInput){
+      analyzeInput(userInput);
     }
 
     // this method takes in the users input and directs how the robot is going to respond by creating sub problems
