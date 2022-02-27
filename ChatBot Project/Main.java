@@ -287,6 +287,7 @@ public class Main{
       if(userInput.contains("movie") || userInput.contains("movies")){
 
       }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+        System.out.println("Deadpools box office is $" + r.getDeadpool().getBoxOffice());
 
 
       }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
