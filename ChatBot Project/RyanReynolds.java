@@ -39,11 +39,6 @@ public class RyanReynolds {
     //other awards
     private ArrayList<String> otherAwards;
 
-    //question asked
-    private String question;
-
-
-
     // ****IN PROGRESS BELOW, NOT FINISHED***
     // --> Lance creating movie objects below
     //Creating 12 different movie objects for Ryan Reynolds
@@ -219,10 +214,6 @@ public class RyanReynolds {
         this.otherAwards = otherAwards;
     }
 
-    RyanReynolds(String question){
-        this.question = question;
-    }
-
     RyanReynolds(){
 
     }
@@ -350,20 +341,86 @@ public class RyanReynolds {
         this.otherAwards = otherAwards;
     }
 
-    public String getquestion(){
-        return question;
-    }
-
-    public void setquestion(String question){
-        this.question = question;
-    }
-
     //analyze function
-
-    String input = getquestion();
+    public String respond(String input){
+    boolean searching = true;
+    String movieName;
+    String answer;
     String[] words = input.split("[\\s']");{
         for (int i = 0; i < words.length; i++) {
             words[i] = words[i].replaceAll("[^\\w]", "");
         }
-    }   
+    }
+    while(searching){ //check movie title
+        for (int i = 0; i < words.length; i++) {
+            if(words[i]=="Deadpool"&&i+1==words.length){
+                movieName = "Deadpool";
+                searching = false;
+                break;
+            }
+            if(words[i]=="Deadpool"&&words[i+1]!="2"){
+                movieName = "Deadpool";
+                break;
+            }
+            if(words[i]=="Deadpool"&&words[i+1]=="2"){
+                movieName = "Deadpool 2";
+                searching = false;
+                break;
+            }
+            if(words[i]=="Free"&&words[i+1]=="Guy"){
+                movieName = "Free Guy";
+                searching = false;
+                break;
+            }
+            if(words[i]=="R.I.P.D."||words[i]=="RIPD"||words[i]=="ripd"){
+                movieName = "R.I.P.D.";
+                searching = false;
+                break;
+            }
+            if(words[i]=="Green"&&words[i+1]=="Lantern"){
+                movieName = "Green Lantern";
+                searching = false;
+                break;
+            }
+            if(words[i]=="6"&&words[i+1]=="Underground"){
+                movieName = "6 Underground";
+                searching = false;
+                break;
+            }
+            if(words[i]=="Red"&&words[i+1]=="Notice"){
+                movieName = "Red Notice";
+                searching = false;
+                break;
+            }
+            if(words[i]=="Self/Less"||(words[i]=="Self"&&words[i+1]=="Less")){
+                movieName = "Self/Less";
+                searching = false;
+                break;
+            }
+            if((words[i]=="Hitman's"&&words[i+1]=="Bodyguard")||(words[i]=="Hitmans"&&words[i+1]=="Bodyguard")){
+                movieName = "Hitman's Bodyguard";
+                searching = false;
+                break;
+            }
+            if((words[i]=="Change"&&words[i+1]=="Up")||(words[i]=="Change"&&words[i+1]=="up")){
+                movieName = "Change up";
+                searching = false;
+                break;
+            }
+            if(words[i]=="The"&&words[i+1]=="Proposal"){
+                movieName = "The Proposal";
+                searching = false;
+                break;
+            }
+            else{
+                answer = "I'm sorry I didn't get that.";
+                searching = false;
+            }
+        }
+        answer = "yes I was in " + movieName;
+    }
+    return "I'm sorry I didn't get that.";
+    }
+
 }
+
