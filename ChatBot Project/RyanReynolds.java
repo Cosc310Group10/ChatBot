@@ -86,7 +86,9 @@ public class RyanReynolds {
     //Green Lantern
     ArrayList<String> greenLanternCast = new ArrayList<>(Arrays.asList("Me", "Blake Lively", "Peter Sarsgaard","Mark Strong", "Tim Robbins", "Jay O. Sanders", "Taika Waititi", "Angela Bassett","Mike Doyle","Nick Jandl", "Dylan James", "Gattlin Griffith","Jon Tenney", "Leanne Cochran", "Temuera Morrison", "Jeff Wolfe", "Lena Clark", "Jenna Craig"));
     ArrayList<String> greenLanternAwards = new ArrayList<>(Arrays.asList("ASCAP Award", "Golden Schmoes", "HPA Awards"));
+
     private Movie greenLantern = new Movie(5.5,"Green Lantern",2011,"PG-13",greenLanternCast,"Martin Campbell","Action and Sci-Fi",greenLanternAwards,"219,900,000","Los Angeles");
+
 
     //getter for green lantern movie
     public Movie getGreenLantern(){
@@ -96,7 +98,9 @@ public class RyanReynolds {
     //Buried
     ArrayList<String> buriedCast = new ArrayList<>(Arrays.asList("Me", "Jose Luis Garcia Perez", "Robert Paterson","Stephen Tobolowsky", "Samantha Mathis", "Ivana Mino", "Warner Loughlin", "Erik Palladino","Kali Rocha","Chris William Martin", "Cade Dundish", "Mary Birdsong","Kirk Baily", "Anne Lockhart", "Robert Clotworthy", "Mitchalla Petersen", "Juan Hidalgo", "Abdelilah Ben Massou"));
     ArrayList<String> buriedAwards = new ArrayList<>(Arrays.asList("ASECAN Award", "Bronze Frog", "CEC Award", "Critics Award","Chainsaw Award","Prix Nouveau Genre", "Gaudi Award","Goya", "Jose Maria Forque Award","NBR Award","Georges Award","Sant Jordi","Grand Prize of European Fantasy Film in Gold"));
+
     private Movie buried = new Movie(7.0,"Buried",2010,"R",buriedCast,"Rodrigo Cortes","Drama, Mystery, and Thriller",buriedAwards,"21,300,000","Barcelona");
+
 
     //getter for buried movie
     public Movie getBuried(){
@@ -105,8 +109,9 @@ public class RyanReynolds {
 
     //6 Underground
     ArrayList<String> sixUndergroundCast = new ArrayList<>(Arrays.asList("Me", "Melanie Laurent", "Manuel Garcia-Rulfo","Ben Hardy", "Adira Arjona", "Dave Franco", "Corey Hawkins", "Lior Raz","Payman Maadi","Yuri Kolokolnikov", "Kim Kold", "Lidia Franco","James Murray", "Lukhanyo Bele", "George Kareman", "James Carroll Jordan", "Ron Funches", "Daniel Adegboyega"));
-    ArrayList<String> sixUndergroundAwards = new ArrayList<>(Arrays.asList("Taurus World Stunt Award"));
+
     private Movie sixUnderground = new Movie(6.1,"6 Underground",2019,"R",sixUndergroundCast,"Michael Bay","Action and Thriller",sixUndergroundAwards,"N/A","Abu Dhabi");
+
 
     //getter for 6 Underground movie
     public Movie getSixUnderground(){
@@ -116,7 +121,9 @@ public class RyanReynolds {
     //Red Notice
     ArrayList<String> redNoticeCast = new ArrayList<>(Arrays.asList("Me", "Dwayne Johnson", "Gal Gadot","Ritu Arya", "Chris Diamantopoulos", "Ivan Mbakop", "Vincenzo Amato", "Rafael Petardi","Seth Michaels","Sebastien Large", "Guy Nardulli", "Andrew Hunter","George Tsai", "Rawson Marshall Thurber", "Robert Mata", "Anthony Belevtsov", "Daniel Bernhardt", "Yosef Podolski"));
     ArrayList<String> redNoticeAwards = new ArrayList<>(Arrays.asList("N/A"));
+
     private Movie redNotice = new Movie(6.3,"Red Notice",2021,"PG-13",redNoticeCast,"Rawson Marshall Thurber","Action, Comedy, and Thriller",redNoticeAwards,"2,000,000","Atlanta");
+
 
     //getter for red notice movie
     public Movie getRedNotice(){
@@ -186,19 +193,19 @@ public class RyanReynolds {
 
     //RyanReynolds Constructor for all personal information
 
-    RyanReynolds(String birthPlace, String birthDate,String wifeName,ArrayList<String> kidNames,String socialMediaHandle,int twitterFollowers,int instagramFollowers,int tiktokFollowers, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
+
+    RyanReynolds(String birthPlace, String birthDate,String wifeName,String socialMediaHandle, String netWorth, String previousMarriage, ArrayList<String> otherAwards){
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
-        this.kidNames = kidNames;
         this.haircolour = socialMediaHandle;
-        this.twitterFollowers = twitterFollowers;
-        this.instagramFollowers = instagramFollowers;
-        this.tiktokFollowers = tiktokFollowers;
         this.netWorth = netWorth;
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
     }
+
+
+
 
     //RyanReynolds Constructor for all physical attributes and personal information (i.e, full RyanReynolds constructor)
 
@@ -220,6 +227,7 @@ public class RyanReynolds {
         this.previousMarriage = previousMarriage;
         this.otherAwards = otherAwards;
     }
+
 
     RyanReynolds(){
 
@@ -347,6 +355,7 @@ public class RyanReynolds {
     public void setotherAwards(ArrayList<String> otherAwards){
         this.otherAwards = otherAwards;
     }
+
 
 }
 

@@ -10,6 +10,7 @@ public class Main{
   static RyanReynolds r = new RyanReynolds();
     public static void main(String[] args){
 
+
        
         // a cool feature saying the chatbot is booting up for a delay of 2 seconds
         System.out.println("Ryan Reynolds Chat bot booting up...");
@@ -20,6 +21,7 @@ public class Main{
         }
          //prompt for user and creating scanner
         System.out.println("Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
+
 
         Scanner sc = new Scanner(System.in);
         
@@ -47,6 +49,7 @@ public class Main{
           }else{
             chatBot(userInput);
           }
+
         }
 
 
@@ -142,6 +145,7 @@ public class Main{
           break;
           default:
           return;
+
         }
 
 
