@@ -1,16 +1,18 @@
 import java.util.Scanner;
 public class Main{
-    public static void main(String[] args){
-       //This is an example of how to access a movie that ryan reynolds is in
-        RyanReynolds r = new RyanReynolds();
+ 
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    //This is an example of how to access a movie that ryan reynolds is in
+        RyanReynolds r = new RyanReynolds("6'5",220, "blue","blonde","male");
         System.out.println("Hello, this is an example: \n" + r.getDeadpool().toString());
-
+        
         //prompt for user and creating scanner
         System.out.println("Hello how are you?");
-        Scanner sc = new Scanner(System.in);
+       
 
         //initializing user input string
-        String userInput;
+        String userInput = null;
         //initializing engaged boolean to continually get user input until user is not engaged and ends conversation
         boolean engaged = false;
 
@@ -24,11 +26,22 @@ public class Main{
             sc.close();
             engaged = true;
             break;
+          }else if(userInput.contains("who") || userInput.contains("Who")){
+            System.out.println(r.whresp(userInput)); 
+            
+
           }
 
         }
 
+       
+      
 
 
+    }
+    
+
+    public static void textresponse(String string){
+        System.out.println("Ryan: " + string);
     }
 }

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
 public class RyanReynolds {
 
   // Attributes below(referring to physical characteristics)
@@ -160,9 +161,20 @@ public class RyanReynolds {
     }
 
     RyanReynolds(){
-        
+
     }
 
+    //Analyze Function
+    
+    public String whresp(String s){
+        String resp = null;
+        if(s.contains("Deadpool") && (s.contains("actor") || s.contains("actress"))){
+            resp = deadpoolCast.get(0);
+        }
+       
+       
+        return resp;
+    }
 
     //getters and setters below
     public String getheight(){
