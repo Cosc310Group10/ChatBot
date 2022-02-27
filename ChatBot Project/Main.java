@@ -23,6 +23,7 @@ public class Main{
           //if the user input equals end, then engaged is set to true, the scanner closes, and we break from the loop to end conversation
           //otherwise we continually ask for user input
           if (userInput.equals("End")) {
+            System.out.println("Goodbye! Nice meeting you!");
             sc.close();
             engaged = true;
             break;
@@ -208,7 +209,7 @@ public class Main{
     public static void howResponse(String userInput){
        // Here we check if the how question contains any of the movie names, if so,
       // then we respond using the how responses for movie questions
-      howMovieReponse(userInput);
+      howMovieResponse(userInput);
 
       // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
       // what responses for personal questions
@@ -398,7 +399,7 @@ public class Main{
 
 
       }else{
-        defaultResponse(userInput);
+        return;
       }
 
     }
@@ -431,8 +432,9 @@ public class Main{
     }
 
     public static void howPersonalResponse(String userInput){
-      if(userInput.contains("Kids") || userInput("kids")){
-        System.out.println("I have " + r.getKids());
+      if(userInput.contains("Kids") || userInput.contains("kids")){
+        System.out.println("I have __ kids");
+        // System.out.println("I have 2 kids" + r.getKids());
       }
 
     }
