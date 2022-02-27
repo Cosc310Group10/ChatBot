@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main{
   //creating a static ryan reynolds object so its accessible by all methods
-  static RyanReynolds r = new RyanReynolds();
+  static RyanReynolds r = new RyanReynolds("6'2", 185,"Brown","Brown","Male","N/A","2022-02-06","Blake Lively","social media handle","NetWorth","ex wife",null);
     public static void main(String[] args){
        //This is an example of how to access a movie that ryan reynolds is in
         
@@ -409,7 +409,7 @@ public class Main{
     public static void whoPersonalResponse(String userInput){
 
       if(userInput.contains("Wife") || userInput.contains("wife")){
-        System.out.println("My wife is ");
+        System.out.println("My wife is " + r.getwifeName());
       }
 
     }
@@ -430,6 +430,9 @@ public class Main{
     }
 
     public static void howPersonalResponse(String userInput){
+      if(userInput.contains("Kids") || userInput("kids")){
+        System.out.println("I have " + r.getKids());
+      }
 
     }
 
