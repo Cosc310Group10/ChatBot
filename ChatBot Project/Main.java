@@ -1,5 +1,7 @@
 import java.util.Scanner;
 public class Main{
+
+
   //creating a static ryan reynolds object so its accessible by all methods
   static RyanReynolds r = new RyanReynolds("6'2", 185,"Brown","Brown","Male","N/A","2022-02-06","Blake Lively","social media handle","NetWorth","ex wife",null);
     public static void main(String[] args){
@@ -19,7 +21,8 @@ public class Main{
         //while engaged, continually ask for user input and store it
         while (!engaged) {
           //grab user input
-          userInput = sc.nextLine();
+          userInput = sc.nextLine().toLowerCase();
+          
           //if the user input equals end, then engaged is set to true, the scanner closes, and we break from the loop to end conversation
           //otherwise we continually ask for user input
           if (userInput.equals("End")) {
@@ -28,7 +31,8 @@ public class Main{
             engaged = true;
             break;
 
-          //otherwise, analyze the input and this method figures out how the chat bot responds
+          //otherwise, call the chatbot function which calls the analyze function
+          // which analyzes the input and then the method figures out how the chat bot responds
           }else{
             chatBot(userInput);
           }
@@ -36,48 +40,39 @@ public class Main{
         }
 
 
-        //example questions:
-        /*
-        Testing questions:
-        1.) Who is your wife?
-        2.) How many kids do you have?
-        3.) What are some of the movies you have been in?
-        4.) Have you ever acted in a movie with your current wife?
-        5.) What was deadpools box office profit?
-        6.) 
-
-        1.) What are some movies you have been in?
-        2.) What is your highest rated movie
-        3.) How many deadpool movies are there?
-        */
 
 
     }
 
+    //------------------------------------------------------------------------------------------------------------------
+    //below is the chatbot and analyze function methods to determine chatbots reponse
+
+    // this method is the chatbot method which calls the analyze function method to determine the chatbot response
     public static void chatBot(String userInput){
       analyzeInput(userInput);
     }
 
-    // this method takes in the users input and directs how the robot is going to respond by creating sub problems
+
+    // this method takes in the users input and directs how the robot is going to respond by creating sub problems to solve
     // with other methods
     public static void analyzeInput(String userInput){
      
-      if(userInput.contains("Hi") || userInput.contains("hi")|| userInput.contains("Hey") || userInput.contains("hey") || userInput.contains("Hello") || userInput.contains("hello")){
+      if(userInput.contains("hi")|| userInput.contains("hey") || userInput.contains("hello")){
           greetingResponse(userInput);
 
-      }else if(userInput.contains("Who") || userInput.contains("who")){
+      }else if(userInput.contains("who")){
         whoResponse(userInput);
         
-        } else if(userInput.contains("What")|| userInput.contains("what")){
+        } else if(userInput.contains("what")){
         whatResponse(userInput);
         
-        } else if(userInput.contains("Where")|| userInput.contains("where")){
+        } else if(userInput.contains("where")){
         whereResponse(userInput);
         
-         } else if(userInput.contains("When")|| userInput.contains("when")){
+         } else if(userInput.contains("when")){
         whenResponse(userInput);
         
-         }else if (userInput.contains("How")|| userInput.contains("how")){
+         }else if (userInput.contains("how")){
         howResponse(userInput);
         
          }else{
@@ -91,11 +86,16 @@ public class Main{
 
 
     //------------------------------------------------------------------------------------------------------------------
+      //below is the greeting method
 
+    // this is the greeting method, this method generates a randopm number from 0 to 10 and determines how the chatbot would
+    // respond to the user saying hello
       public static void greetingResponse(String userInput){
 
+        //generate random number from 0 to 10
         int randomNumber = (int)(Math.random()*11);
 
+        //switch statement to determine responses
         switch(randomNumber){
           case 0:
           System.out.println("Hello!");
@@ -107,7 +107,7 @@ public class Main{
           System.out.println("Hi there");
           break;
           case 3:
-          System.out.println("Bon.. jo.. jour.. haha, Hi how are ya!");
+          System.out.println("Hi how are ya!");
           break;
           case 4:
           System.out.println("Hello there");
@@ -116,7 +116,7 @@ public class Main{
           System.out.println("Hey! I am Ryan Reynolds, nice to meet you!");
           break;
           case 6:
-          System.out.println("What a beautiful day to meet someone as great as me hey?");
+          System.out.println("What a beautiful day to meet someone as great as me hey? Haha, Hi nice to meet you!");
           break;
           case 7:
           System.out.println("Yo!");
@@ -128,14 +128,17 @@ public class Main{
           System.out.println("Hi, nice to meet you!");
           break;
           case 10:
-          System.out.println("Hola!");
+          System.out.println("Hey!");
           break;
           default:
+          return;
         }
 
 
       }
 
+ //------------------------------------------------------------------------------------------------------------------
+ //below are the methods to determine if the question being asked is a who what where when or how question
 
     public static void whoResponse(String userInput){
        // Here we check if the who question contains any of the movie names, if so,
@@ -145,20 +148,6 @@ public class Main{
       // Otherwise, we check if the what question is about his personal attributes and if so we respond with the
       // what responses for personal questions
       whoPersonalResponse(userInput);
-
-
-
-// ***************************************
-// I am thinking to move the askAQuestion into the personal questions considering the user or fan will have not been in any movies
-//but could respond to the personal questions
-
-
-
-      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
-      // asking a different question to the user
-      askAQuestionResponse(userInput);
-
-
 
     }
 
@@ -172,11 +161,6 @@ public class Main{
       // what responses for personal questions
       whatPersonalResponse(userInput);
 
-      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
-      // asking a different question to the user
-      askAQuestionResponse(userInput);
-      
-
     }
 
     public static void whereResponse(String userInput){
@@ -189,9 +173,6 @@ public class Main{
       // where responses for personal questions
       whatPersonalResponse(userInput);
 
-      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
-      // asking a different question to the user
-      askAQuestionResponse(userInput);
 
     }
 
@@ -204,9 +185,6 @@ public class Main{
       // when responses for personal questions
       whenPersonalResponse(userInput);
 
-      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
-      // asking a different question to the user
-      askAQuestionResponse(userInput);
 
     }
 
@@ -219,16 +197,15 @@ public class Main{
       // what responses for personal questions
       howPersonalResponse(userInput);
 
-      // This methods lets the chat bot have a 50/50 chance of asking the user the same question back or
-      // asking a different question to the user
-      askAQuestionResponse(userInput);
 
     }
 
     
+  //------------------------------------------------------------------------------------------------------------------
+    //below is the ask a question method which determines if the bot asks the question back to the user
 
     public static void askAQuestionResponse(String userInput){
-      int random = (int) (Math.random()*3); //1/3 of the time the chat bot asks a question back to the user
+      int random = (int) (Math.random()*3); // 1/3 of the time the chat bot asks a question back to the user
 
       if(random == 1){
         System.out.println("\nHow about you?");
@@ -238,8 +215,10 @@ public class Main{
 
     }
 
-    
+     //------------------------------------------------------------------------------------------------------------------
+    //below are is the deafult response depending if the question asked from the user is not understandable by the chatbot
 
+     //this is a method that is called as a default response if the chat bot is unable to determine how to respond
     public static void defaultResponse(String userInput){
       //If all else fails and the chat bot does not not how to respond, we have this statement set as
       // the chat bot's default response to a question it does not know
@@ -254,153 +233,162 @@ public class Main{
     //------------------------------------------------------------------------------------------------------------------
     //below are the movie responses depending if the question asked from the user contains who what where when and how
 
-
+    // This is the who movie response method which determines responses for who questions about movies
     public static void whoMovieResponse(String userInput){
 
       if(userInput.contains("movie") || userInput.contains("movies")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+      }else if(userInput.contains("deadpool")){
+        // add your content here
 
+      }else if(userInput.contains("deadpool 2")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+      }else if(userInput.contains("free guy")){
+        // add your content here
 
+      }else if(userInput.contains("r.i.p.d")){
+        // add your content here
 
-      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+      }else if(userInput.contains("green lantern")){
+        // add your content here
 
+      }else if(userInput.contains("6 underground")){
+        // add your content here
 
-      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
-
-
-      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
-
-
-      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
-
-
-      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
-
+      }else if(userInput.contains("red notice")){
+        // add your content here
 
       }else{
         return;
       }
     }
 
-
+// This is the what movie response method which determines responses for what questions about movies
     public static void whatMovieReponse(String userInput){
 
 
       if(userInput.contains("movie") || userInput.contains("movies")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
-        System.out.println("Deadpools box office is $" + r.getDeadpool().getBoxOffice());
+      }else if(userInput.contains("deadpool")){
+        // add your content here
 
+      }else if(userInput.contains("deadpool 2")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+      }else if(userInput.contains("free guy")){
+        // add your content here
 
+      }else if(userInput.contains("r.i.p.d")){
+        // add your content here
 
-      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+      }else if(userInput.contains("green lantern")){
+        // add your content here
 
+      }else if(userInput.contains("6 underground")){
+        // add your content here
 
-      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
-
-
-      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
-
-
-      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
-
-
-      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
-
+      }else if(userInput.contains("red notice")){
+        // add your content here
 
       }else{
-        defaultResponse(userInput);
+        return;
       }
     }
 
+    // This is the where movie response method which determines responses for where questions about movies
     public static void whereMovieResponse(String userInput){
+
       if(userInput.contains("movie") || userInput.contains("movies")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+      }else if(userInput.contains("deadpool")){
+        // add your content here
 
+      }else if(userInput.contains("deadpool 2")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+      }else if(userInput.contains("free guy")){
+        // add your content here
 
+      }else if(userInput.contains("r.i.p.d")){
+        // add your content here
 
-      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+      }else if(userInput.contains("green lantern")){
+        // add your content here
 
+      }else if(userInput.contains("6 underground")){
+        // add your content here
 
-      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
-
-
-      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
-
-
-      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
-
-
-      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
-
+      }else if(userInput.contains("red notice")){
+        // add your content here
 
       }else{
-        defaultResponse(userInput);
+        return;
       }
 
     }
 
+    // This is the when movie response method which determines responses for when questions about movies
     public static void whenMovieResponse(String userInput){
-      if(userInput.contains("movie") || userInput.contains("movies")){
+     if(userInput.contains("movie") || userInput.contains("movies")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+      }else if(userInput.contains("deadpool")){
+        // add your content here
 
+      }else if(userInput.contains("deadpool 2")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+      }else if(userInput.contains("free guy")){
+        // add your content here
 
+      }else if(userInput.contains("r.i.p.d")){
+        // add your content here
 
-      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+      }else if(userInput.contains("green lantern")){
+        // add your content here
 
+      }else if(userInput.contains("6 underground")){
+        // add your content here
 
-      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
-
-
-      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
-
-
-      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
-
-
-      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
-
+      }else if(userInput.contains("red notice")){
+        // add your content here
 
       }else{
-        defaultResponse(userInput);
+        return;
       }
 
     }
 
+
+    // This is the how movie response method which determines responses for how questions about movies
     public static void howMovieResponse(String userInput){
       if(userInput.contains("movie") || userInput.contains("movies")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool") || userInput.contains("Deadpool")){
+      }else if(userInput.contains("deadpool")){
+        // add your content here
 
+      }else if(userInput.contains("deadpool 2")){
+        // add your content here
 
-      }else if(userInput.contains("deadpool 2") || userInput.contains("Deadpool 2")){
+      }else if(userInput.contains("free guy")){
+        // add your content here
 
+      }else if(userInput.contains("r.i.p.d")){
+        // add your content here
 
-      }else if(userInput.contains("free guy") || userInput.contains("Free Guy")){
+      }else if(userInput.contains("green lantern")){
+        // add your content here
 
+      }else if(userInput.contains("6 underground")){
+        // add your content here
 
-      }else if(userInput.contains("r.i.p.d") || userInput.contains("R.I.P.D")){
-
-
-      }else if(userInput.contains("green lantern") || userInput.contains("buried")){
-
-
-      }else if(userInput.contains("6 underground") || userInput.contains("6 Underground")){
-
-
-      }else if(userInput.contains("red notice") || userInput.contains("Red Notice")){
-
+      }else if(userInput.contains("red notice")){
+        // add your content here
 
       }else{
         return;
@@ -412,34 +400,85 @@ public class Main{
     //below are the personal responses depending if the question asked from the user contains who what where when and how
 
 
+    // This is the who personal response method which determines responses for who questions about the chat bots personal life
     public static void whoPersonalResponse(String userInput){
 
-      if(userInput.contains("Wife") || userInput.contains("wife")){
-        System.out.println("My wife is " + r.getwifeName());
+      if(userInput.contains("Your text here")){
+        //add your content here
+      } else if(userInput.contains("Your text here")){
+        //add your content here
+      }else{
+        return;
       }
+
+      //this calls the ask a question response for the chatbot to ask a question back to the user
+      askAQuestionResponse(userInput);
 
     }
 
 
+    // This is the what personal response method which determines responses for what questions about the chat bots personal life
     public static void whatPersonalResponse(String userInput){
 
+      if(userInput.contains("Your text here")){
+        //add your content here
+      } else if(userInput.contains("Your text here")){
+        //add your content here
+      }else{
+        return;
+      }
+
+      //this calls the ask a question response for the chatbot to ask a question back to the user
+      askAQuestionResponse(userInput);
 
      
     }
 
+    // This is the where personal response method which determines responses for where questions about the chat bots personal life
     public static void wherePersonalResponse(String userInput){
 
+      if(userInput.contains("Your text here")){
+        //add your content here
+      } else if(userInput.contains("Your text here")){
+        //add your content here
+      }else{
+        return;
+      }
+
+      //this calls the ask a question response for the chatbot to ask a question back to the user
+      askAQuestionResponse(userInput);
+
     }
 
+    // This is the when personal response method which determines responses for when questions about the chat bots personal life
     public static void whenPersonalResponse(String userInput){
 
+      if(userInput.contains("Your text here")){
+        //add your content here
+      } else if(userInput.contains("Your text here")){
+        //add your content here
+      }else{
+        return;
+      }
+
+      //this calls the ask a question response for the chatbot to ask a question back to the user
+      askAQuestionResponse(userInput);
+
     }
 
+    // This is the how personal response method which determines responses for how questions about the chat bots personal life
     public static void howPersonalResponse(String userInput){
-      if(userInput.contains("Kids") || userInput.contains("kids")){
-        System.out.println("I have __ kids");
-        // System.out.println("I have 2 kids" + r.getKids());
+
+       if(userInput.contains("Your text here")){
+        //add your content here
+      } else if(userInput.contains("Your text here")){
+        //add your content here
+      }else{
+        return;
       }
+
+      //this calls the ask a question response for the chatbot to ask a question back to the user
+      askAQuestionResponse(userInput);
 
     }
 
