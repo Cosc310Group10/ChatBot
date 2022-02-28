@@ -736,6 +736,13 @@ public class Main{
 
       } else if(userInput.contains("kid")){
         //Chat bots response asking how many kids Ryan Reynolds has
+        int count =0;
+        for(int i=0; i<r.getkidNames().size(); i++){
+          count++;
+        }
+
+        System.out.println("I have " + count + " kids");
+
       }else{
         return;
       }
