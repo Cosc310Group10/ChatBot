@@ -19,6 +19,7 @@ public class Main {
   // creating a static ryan reynolds object so its accessible by all methods
   static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
       "Blake Lively", "@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
+  static boolean askAQuestion = false; // this indicates if the bot asked a question back
 
   public static void main(String[] args) {
 
@@ -43,13 +44,20 @@ public class Main {
 
     // while engaged, continually ask for user input and store it
     while (!engaged) {
+      //if the bot asked a question, reply with cool and take the input
+      if(askAQuestion == true){
+        userInput = sc.nextLine();
+        System.out.println("Cool!");
+      }
+      //then reset question to false
+      askAQuestion = false;
       // grab user input
       userInput = sc.nextLine().toLowerCase();
 
       // if the user input equals end, then engaged is set to true, the scanner
       // closes, and we break from the loop to end conversation
       // otherwise we continually ask for user input
-      if (userInput.equals("End")) {
+      if (userInput.equals("goodbye")) {
         System.out.println("Goodbye! Nice meeting you!");
         sc.close();
         engaged = true;
@@ -234,6 +242,8 @@ public class Main {
 
     if (random == 1) {
       System.out.println("\nHow about you?");
+     askAQuestion = true;
+      
     } else {
       return;
     }
