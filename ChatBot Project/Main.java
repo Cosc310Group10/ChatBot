@@ -1,5 +1,10 @@
 // GROUP 10 COSC 310 Main Class
-// Updated at 309PM Feb 28
+/*
+By:
+LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054 
+GRIFFIN WILCHUK, STUDENT #75303370 CARLA MATHER, STUDENT #22779193
+*/
+// Updated at 325PM Feb 28
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -301,13 +306,13 @@ public class Main {
   }
 
   // This is the what movie response method which determines responses for what
-  // questions about movies
+  // questions about the different movies
   public static void whatMovieReponse(String userInput) {
 
     if (userInput.contains("movie")) {
-      // add your content here
+      
     } else if (userInput.contains("deadpool")) {
-      // add your content here
+     
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getDeadpool().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -328,7 +333,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("deadpool2")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getDeadpool2().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -349,7 +354,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("free guy")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getFreeGuy().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -370,7 +375,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("r.i.p.d")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getRIPD().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -391,7 +396,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("green lantern")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getGreenLantern().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -412,7 +417,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("6 underground")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getSixUnderground().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -433,7 +438,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("red notice")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getRedNotice().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -455,7 +460,7 @@ public class Main {
       }
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      // add your content here
+     
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getSelfLess().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -476,7 +481,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("hitman")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getTheHitmansBodyguard().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -497,7 +502,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("changeup")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getChangeUp().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -518,7 +523,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("proposal")) {
-      // add your content here
+      
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getTheProposal().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -635,13 +640,17 @@ public class Main {
   }
 
   // This is the how movie response method which determines responses for how
-  // questions about movies
+  // questions about the different movies
   public static void howMovieResponse(String userInput) {
     if (userInput.contains("movie") || userInput.contains("movies")) {
-      // add your content here
+      
 
     } else if (userInput.contains("deadpool")) {
-      // add your content here
+      // These statements check the user input for various questions about this particular movie and then provide the proper 
+      // output depending on which question was asked
+      //NOTE: This is the same process for each movie, so for simplicity, These comments will not be repeated for the other movies
+
+      //this checks for: How many awards has + movie + received?
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getDeadpool().getAwards().size(); i++){
@@ -649,23 +658,30 @@ public class Main {
         }
         System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
       
+        //this checks for: How much box office profit has + movie + made?
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
       
+
+        //this checks for: How long was + movie ?
       } else if(userInput.contains("long") || userInput.contains("duration")){
         System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
       
+        //this checks for: How long did it take to film + movie?
       } else if(userInput.contains("long") && userInput.contains("film")){
         System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
       
+        //this checks for: How much was the budget for + movie?
       } else if (userInput.contains("budget")){
         System.out.println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
+     // if all else fails, just return nothing
       }else{
         return;
       }
 
+      // this section if for deadpool 2
     } else if (userInput.contains("deadpool 2")) {
-      // add your content here
+     
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getDeadpool2().getAwards().size(); i++){
@@ -688,8 +704,9 @@ public class Main {
         return;
       }
 
+      //this section is for free guy
     } else if (userInput.contains("free guy")) {
-      // add your content here
+      
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getFreeGuy().getAwards().size(); i++){
@@ -712,8 +729,9 @@ public class Main {
         return;
       }
 
+      //this section is for RIPD
     } else if (userInput.contains("r.i.p.d")) {
-      // add your content here
+      
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getRIPD().getAwards().size(); i++){
@@ -735,8 +753,9 @@ public class Main {
         return;
       }
 
+      //this section is for green lantern
     } else if (userInput.contains("green lantern")) {
-      // add your content here
+     
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getGreenLantern().getAwards().size(); i++){
@@ -758,8 +777,9 @@ public class Main {
         return;
       }
 
+      //this section is for 6 underground
     } else if (userInput.contains("6 underground")) {
-      // add your content here
+      
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getSixUnderground().getAwards().size(); i++){
@@ -781,8 +801,9 @@ public class Main {
         return;
       }
 
+      // this section is for rednotice
     } else if (userInput.contains("red notice")) {
-      // add your content here
+     
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getRedNotice().getAwards().size(); i++){
@@ -804,8 +825,9 @@ public class Main {
         return;
       }
 
+      //this section is for selfless
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      // add your content here
+      
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getSelfLess().getAwards().size(); i++){
@@ -827,8 +849,10 @@ public class Main {
         return;
       }
       
+
+      //this section is for the hitmans bodyguard
     } else if (userInput.contains("hitman")) {
-      // add your content here
+     
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getTheHitmansBodyguard().getAwards().size(); i++){
@@ -850,8 +874,9 @@ public class Main {
         return;
       }
      
+      //this section is for changeup
     } else if (userInput.contains("changeup")) {
-      // add your content here
+     
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getChangeUp().getAwards().size(); i++){
@@ -873,8 +898,9 @@ public class Main {
         return;
       }
       
+      //this section is for the proposal
     } else if (userInput.contains("proposal")) {
-      // add your content here
+      
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
         for(int i=0; i<r.getTheProposal().getAwards().size(); i++){
@@ -896,6 +922,7 @@ public class Main {
         return;
       }
    
+      //if all else fails, just return
     } else {
       return;
     }
@@ -929,22 +956,22 @@ public class Main {
   public static void whatPersonalResponse(String userInput) {
 
     if (userInput.contains("eye")) {
-      // add your content here
+     
       System.out.print("My eye colour is " + r.geteyecolour() + "\n");
     } else if (userInput.contains("height")) {
-      // add your content here
+      
       System.out.print("My height is " + r.getheight() + "\n");
     } else if (userInput.contains("net")) {
-      // add your content here
+     
       System.out.print("My net worth is " + r.getnetWorth() + "\n");
     } else if (userInput.contains("wife")) {
-      // add your content here
+      
       System.out.print("My wives' name is " + r.getwifeName() + "\n");
     } else if (userInput.contains("kids")) {
-      // add your content here
+      
       System.out.print("My kids is names are:" + r.getkidNames() + "\n");
     } else if (userInput.contains("birthdate")) {
-      // add your content here
+      
       System.out.print("My birthdate is " + r.getbirthDate() + "\n");
     } else {
       return;
