@@ -169,7 +169,7 @@ public class Movie {
     //toString method for the movies
     public String toString(){
 
-        return "Movie: " + this.title +"\n"+"IMDb Rating: " +this.imdbStars + "\n"+"Genre: " + this.genre + "\n" + "Rating: " + this.rating + "\n"+  "Director: " + this.director + "\n"+ "Box Office: $" + this.boxOffice 
+        return "Movie: " + this.title +"\n"+"IMDb Rating: " +this.imdbStars + "\n"+"Genre: " + this.genre + "\n" + "Rating: " + this.rating + "\n"+  "Director: " + this.director + "\n"+ "Box Office: $" + this.boxOffice
         +"\n"+"\n" + "Cast: "+ this.cast+ "\n"+ "\n" + "Awards: " + this.awards + "Filming Location:" + this.location;
     }
 

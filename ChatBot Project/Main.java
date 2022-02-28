@@ -10,19 +10,19 @@ public class Main{
   static RyanReynolds r = new RyanReynolds();
     public static void main(String[] args){
 
-       
+
         // a cool feature saying the chatbot is booting up for a delay of 2 seconds
         System.out.println("Ryan Reynolds Chat bot booting up...");
         try{
         TimeUnit.SECONDS.sleep(2); //delaying the program for 2 seconds
         }catch (Exception e){
-          System.out.println("Error Occurred"); //catching an error 
+          System.out.println("Error Occurred"); //catching an error
         }
          //prompt for user and creating scanner
         System.out.println("Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
 
         Scanner sc = new Scanner(System.in);
-        
+
 
         //initializing user input string
         String userInput;
@@ -33,7 +33,7 @@ public class Main{
         while (!engaged) {
           //grab user input
           userInput = sc.nextLine().toLowerCase();
-          
+
           //if the user input equals end, then engaged is set to true, the scanner closes, and we break from the loop to end conversation
           //otherwise we continually ask for user input
           if (userInput.equals("End")) {
@@ -66,33 +66,33 @@ public class Main{
     // this method takes in the users input and directs how the robot is going to respond by creating sub problems to solve
     // with other methods
     public static void analyzeInput(String userInput){
-     
+
       if(userInput.contains("hi")|| userInput.contains("hey") || userInput.contains("hello")){
           greetingResponse(userInput);
 
       }else if(userInput.contains("who")){
         whoResponse(userInput);
-        
+
         } else if(userInput.contains("what")){
         whatResponse(userInput);
-        
+
         } else if(userInput.contains("where")){
         whereResponse(userInput);
-        
+
          } else if(userInput.contains("when")){
         whenResponse(userInput);
-        
+
          }else if (userInput.contains("how")){
         howResponse(userInput);
-        
+
          }else{
         defaultResponse(userInput);
-        
+
          }
 
       }
-    
-    
+
+
 
 
     //------------------------------------------------------------------------------------------------------------------
@@ -210,7 +210,7 @@ public class Main{
 
     }
 
-    
+
   //------------------------------------------------------------------------------------------------------------------
     //below is the ask a question method which determines if the bot asks the question back to the user
 
@@ -413,11 +413,14 @@ public class Main{
     // This is the who personal response method which determines responses for who questions about the chat bots personal life
     public static void whoPersonalResponse(String userInput){
 
-      if(userInput.contains("Your text here")){
-        //add your content here
-      } else if(userInput.contains("Your text here")){
-        //add your content here
-      }else{
+      if(userInput.contains("wife")){
+        System.out.println("Im married too " + getwifeName());
+      } else if(userInput.contains("kids")||userInput.contains("children")){
+        System.out.println("My kids are " + getkidNames());
+      }else if(userInput.contains("previous marriage") || userInput.contains("ex-wife")){
+        System.out.println("I was previously married too " + getpreviousMarriage());
+      }else if(userInput.contains())
+      else{
         return;
       }
 
@@ -441,7 +444,7 @@ public class Main{
       //this calls the ask a question response for the chatbot to ask a question back to the user
       askAQuestionResponse(userInput);
 
-     
+
     }
 
     // This is the where personal response method which determines responses for where questions about the chat bots personal life
