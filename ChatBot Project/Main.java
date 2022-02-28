@@ -246,7 +246,7 @@ public class Main{
     // This is the who movie response method which determines responses for who questions about movies
     public static void whoMovieResponse(String userInput){
 
-      if(userInput.contains("movie") || userInput.contains("movies")){
+      if(userInput.contains("movie")){
         // add your content here
 
       }else if(userInput.contains("deadpool")){
@@ -279,30 +279,155 @@ public class Main{
     public static void whatMovieReponse(String userInput){
 
 
-      if(userInput.contains("movie") || userInput.contains("movies")){
+      if(userInput.contains("movie")){
         // add your content here
-
       }else if(userInput.contains("deadpool")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getDeadpool().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getDeadpool().getGenre());
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is " + r.getDeadpool().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getDeadpool().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getDeadpool().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getDeadpool().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getDeadpool().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The starts are " + r.getDeadpool().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else if(userInput.contains("deadpool 2")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getDeadpool2().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getDeadpool2().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is " + r.getDeadpool2().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getDeadpool2().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getDeadpool2().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getDeadpool2().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getDeadpool2().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getDeadpool2().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else if(userInput.contains("free guy")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getFreeGuy().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getFreeGuy().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is " + r.getFreeGuy().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getFreeGuy().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getFreeGuy().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getFreeGuy().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getFreeGuy().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getFreeGuy().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else if(userInput.contains("r.i.p.d")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getRIPD().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getRIPD().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is " + r.getRIPD().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getRIPD().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getRIPD().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getRIPD().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getRIPD().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getRIPD().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else if(userInput.contains("green lantern")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getGreenLantern().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getGreenLantern().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is " + r.getGreenLantern().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getGreenLantern().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getGreenLantern().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getGreenLantern().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getGreenLantern().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getGreenLantern().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else if(userInput.contains("6 underground")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getSixUnderground().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getSixUnderground().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is " + r.getSixUnderground().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getSixUnderground().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getSixUnderground().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getSixUnderground().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getSixUnderground().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getSixUnderground().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else if(userInput.contains("red notice")){
         // add your content here
-
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getRedNotice().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getRedNotice().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is w" + r.getRedNotice().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getRedNotice().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getRedNotice().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getRedNotice().getDirector()+"\n");
+        }else if(userInput.contains("boxoffice")) {
+          System.out.print("The gross box office $" + r.getRedNotice().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getRedNotice().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else{
         return;
       }
@@ -311,7 +436,7 @@ public class Main{
     // This is the where movie response method which determines responses for where questions about movies
     public static void whereMovieResponse(String userInput){
 
-      if(userInput.contains("movie") || userInput.contains("movies")){
+      if(userInput.contains("movie")){
         // add your content here
 
       }else if(userInput.contains("deadpool")){
@@ -343,7 +468,7 @@ public class Main{
 
     // This is the when movie response method which determines responses for when questions about movies
     public static void whenMovieResponse(String userInput){
-     if(userInput.contains("movie") || userInput.contains("movies")){
+     if(userInput.contains("movie")){
         // add your content here
 
       }else if(userInput.contains("deadpool")){
@@ -376,7 +501,7 @@ public class Main{
 
     // This is the how movie response method which determines responses for how questions about movies
     public static void howMovieResponse(String userInput){
-      if(userInput.contains("movie") || userInput.contains("movies")){
+      if(userInput.contains("movie")){
         // add your content here
 
       }else if(userInput.contains("deadpool")){
@@ -430,10 +555,24 @@ public class Main{
     // This is the what personal response method which determines responses for what questions about the chat bots personal life
     public static void whatPersonalResponse(String userInput){
 
-      if(userInput.contains("Your text here")){
+      if(userInput.contains("eye")){
         //add your content here
-      } else if(userInput.contains("Your text here")){
+        System.out.print("My eye colour is " + r.geteyecolour());
+      } else if(userInput.contains("height")){
         //add your content here
+        System.out.print("My height is " +r.getheight());
+      } else if(userInput.contains("net")){
+        //add your content here
+        System.out.print("My net worth is " + r.getnetWorth());
+      } else if(userInput.contains("wife")){
+        //add your content here
+        System.out.print("My wives' name is " + r.getwifeName());
+      } else if(userInput.contains("kids")){
+        //add your content here
+        System.out.print("My kids is names are:" + r.getkidNames());
+      } else if(userInput.contains("birthdate")){
+        //add your content here
+        System.out.print("My birthdate is " + r.getbirthDate());
       }else{
         return;
       }
