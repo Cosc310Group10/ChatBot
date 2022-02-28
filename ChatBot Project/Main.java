@@ -558,6 +558,18 @@ public class Main {
     } else if (userInput.contains("red notice")) {
       System.out.println("We filmed Red Notice in " + r.getRedNotice().getLocation());
 
+    } else if (userInput.contains("selfless")) {
+      // add your content here
+      
+    } else if (userInput.contains("hitman")) {
+      // add your content here
+     
+    } else if (userInput.contains("changeup")) {
+      // add your content here
+      
+    } else if (userInput.contains("proposal")) {
+      // add your content here
+   
     } else {
       return;
     }
@@ -591,6 +603,18 @@ public class Main {
     } else if (userInput.contains("red notice")) {
       // add your content here
 
+    } else if (userInput.contains("selfless")) {
+      // add your content here
+      
+    } else if (userInput.contains("hitman")) {
+      // add your content here
+     
+    } else if (userInput.contains("changeup")) {
+      // add your content here
+      
+    } else if (userInput.contains("proposal")) {
+      // add your content here
+   
     } else {
       return;
     }
@@ -673,6 +697,46 @@ public class Main {
         System.out.println(r.getRedNotice().getTitle() + " has " + count + " awards!");
       }
 
+    } else if (userInput.contains("selfless")) {
+      // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getSelfLess().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getSelfLess().getTitle() + " has " + count + " awards!");
+      }
+      
+    } else if (userInput.contains("hitman")) {
+      // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getTheHitmansBodyguard().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getTheHitmansBodyguard().getTitle() + " has " + count + " awards!");
+      }
+     
+    } else if (userInput.contains("changeup")) {
+      // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getChangeUp().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getChangeUp().getTitle() + " has " + count + " awards!");
+      }
+      
+    } else if (userInput.contains("proposal")) {
+      // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getTheProposal().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getTheProposal().getTitle() + " has " + count + " awards!");
+      }
+   
     } else {
       return;
     }
