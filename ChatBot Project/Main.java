@@ -677,10 +677,8 @@ public class Main{
     // This is the where personal response method which determines responses for where questions about the chat bots personal life
     public static void wherePersonalResponse(String userInput){
 
-      if(userInput.contains("Your text here")){
-        //add your content here
-      } else if(userInput.contains("Your text here")){
-        //add your content here
+      if(userInput.contains("birth place")||userInput.contains("grow up")){
+        System.out.println("I was born and raised in " + r.getbirthPlace());
       }else{
         return;
       }
