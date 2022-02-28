@@ -605,24 +605,73 @@ public class Main {
 
     } else if (userInput.contains("deadpool")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getDeadpool().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
+      }
 
     } else if (userInput.contains("deadpool 2")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getDeadpool2().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getDeadpool2().getTitle() + " has " + count + " awards!");
+      }
 
     } else if (userInput.contains("free guy")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getFreeGuy().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getFreeGuy().getTitle() + " has " + count + " awards!");
+      }
 
     } else if (userInput.contains("r.i.p.d")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getRIPD().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getRIPD().getTitle() + " has " + count + " awards!");
+      }
 
     } else if (userInput.contains("green lantern")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getGreenLantern().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getGreenLantern().getTitle() + " has " + count + " awards!");
+      }
 
     } else if (userInput.contains("6 underground")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getSixUnderground().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getSixUnderground().getTitle() + " has " + count + " awards!");
+      }
 
     } else if (userInput.contains("red notice")) {
       // add your content here
+      if(userInput.contains("awards") || userInput.contains("many")){
+        int count =0;
+        for(int i=0; i<r.getRedNotice().getAwards().size(); i++){
+          count++;
+        }
+        System.out.println(r.getRedNotice().getTitle() + " has " + count + " awards!");
+      }
 
     } else {
       return;
@@ -754,22 +803,19 @@ public class Main {
       System.out.println("I have " + count + " kids");
 
     } else if (userInput.contains("instagram") || userInput.contains("instagram followers")) {
-      // Chat bots response to user asking how many instagram followers Ryan Reynolds
-      // has
+      // Chat bots response to user asking how many instagram followers Ryan Reynolds has
       System.out.println("I have " + r.getinstagramFollowers() + " followers on instgram!");
 
     } else if (userInput.contains("twitter") || userInput.contains("twitter followers")) {
-      // Chat bots response to user asking how many twitter followers Ryan Reynolds
-      // has
+      // Chat bots response to user asking how many twitter followers Ryan Reynolds has
       System.out.println("I have " + r.gettwitterFollowers() + " followers on instgram!");
 
     } else if (userInput.contains("tiktok") || userInput.contains("tiktok followers")) {
       // Chat bots response to user asking how many TikTok followers Ryan Reynolds has
       System.out.println("I have " + r.gettiktokFollowers() + " followers on instgram!");
 
-    } else if (userInput.contains("personal") || userInput.contains("awards")) {
-      // Chat bots response to user asking how many personal / other awards Ryan
-      // Reynolds has
+    } else if ((userInput.contains("personal") || userInput.contains("other")) && userInput.contains("awards")) {
+      // Chat bots response to user asking how many personal / other awards Ryan Reynolds has
       int count = 0;
       for (int i = 0; i < r.getotherAwards().size(); i++) {
         count++;
