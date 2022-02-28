@@ -648,8 +648,20 @@ public class Main {
           count++;
         }
         System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
+      
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
+      
+      } else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("deadpool 2")) {
@@ -663,6 +675,17 @@ public class Main {
      
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getDeadpool2().getTitle() + " made a box office profit of $" + r.getDeadpool2().getBoxOffice());
+     
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getDeadpool2().getTitle() + " is " + r.getDeadpool2().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getDeadpool2().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("free guy")) {
@@ -676,6 +699,17 @@ public class Main {
       
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getFreeGuy().getTitle() + " made a box office profit of $" + r.getFreeGuy().getBoxOffice());
+     
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getFreeGuy().getTitle() + " is " + r.getFreeGuy().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getFreeGuy().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getFreeGuy().getTitle() + " was $" + r.getFreeGuy().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("r.i.p.d")) {
@@ -688,6 +722,17 @@ public class Main {
         System.out.println(r.getRIPD().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getRIPD().getTitle() + " made a box office profit of $" + r.getRIPD().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getRIPD().getTitle() + " is " + r.getRIPD().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getRIPD().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getRIPD().getTitle() + " was $" + r.getRIPD().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("green lantern")) {
@@ -700,6 +745,17 @@ public class Main {
         System.out.println(r.getGreenLantern().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getGreenLantern().getTitle() + " made a box office profit of $" + r.getGreenLantern().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getGreenLantern().getTitle() + " is " + r.getGreenLantern().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getGreenLantern().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getGreenLantern().getTitle() + " was $" + r.getGreenLantern().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("6 underground")) {
@@ -712,6 +768,17 @@ public class Main {
         System.out.println(r.getSixUnderground().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getSixUnderground().getTitle() + " made a box office profit of $" + r.getSixUnderground().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getSixUnderground().getTitle() + " is " + r.getSixUnderground().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getSixUnderground().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getSixUnderground().getTitle() + " was $" + r.getSixUnderground().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("red notice")) {
@@ -724,6 +791,17 @@ public class Main {
         System.out.println(r.getRedNotice().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getRedNotice().getTitle() + " made a box office profit of $" + r.getRedNotice().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getRedNotice().getTitle() + " is " + r.getRedNotice().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getRedNotice().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getRedNotice().getTitle() + " was $" + r.getRedNotice().getBudgetOfMovie());
+      }else{
+        return;
       }
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
@@ -736,6 +814,17 @@ public class Main {
         System.out.println(r.getSelfLess().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getSelfLess().getTitle() + " made a box office profit of $" + r.getSelfLess().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getSelfLess().getTitle() + " is " + r.getSelfLess().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getSelfLess().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getSelfLess().getTitle() + " was $" + r.getSelfLess().getBudgetOfMovie());
+      }else{
+        return;
       }
       
     } else if (userInput.contains("hitman")) {
@@ -748,6 +837,17 @@ public class Main {
         System.out.println(r.getTheHitmansBodyguard().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getTheHitmansBodyguard().getTitle() + " made a box office profit of $" + r.getTheHitmansBodyguard().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getTheHitmansBodyguard().getTitle() + " is " + r.getTheHitmansBodyguard().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getTheHitmansBodyguard().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getTheHitmansBodyguard().getTitle() + " was $" + r.getTheHitmansBodyguard().getBudgetOfMovie());
+      }else{
+        return;
       }
      
     } else if (userInput.contains("changeup")) {
@@ -760,6 +860,17 @@ public class Main {
         System.out.println(r.getChangeUp().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getChangeUp().getTitle() + " made a box office profit of $" + r.getChangeUp().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getChangeUp().getTitle() + " is " + r.getChangeUp().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getChangeUp().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getChangeUp().getTitle() + " was $" + r.getChangeUp().getBudgetOfMovie());
+      }else{
+        return;
       }
       
     } else if (userInput.contains("proposal")) {
@@ -772,6 +883,17 @@ public class Main {
         System.out.println(r.getTheProposal().getTitle() + " has " + count + " awards!");
       }else if(userInput.contains("box office") || userInput.contains("profit")){
         System.out.println(r.getTheProposal().getTitle() + " made a box office profit of $" + r.getTheProposal().getBoxOffice());
+      
+      }else if(userInput.contains("long") || userInput.contains("duration")){
+        System.out.println(r.getTheProposal().getTitle() + " is " + r.getTheProposal().getDuration());
+      
+      } else if(userInput.contains("long") && userInput.contains("film")){
+        System.out.println("It took " + r.getTheProposal().getTimeToFilm() + " to film");
+      
+      } else if (userInput.contains("budget")){
+        System.out.println("The budget for " + r.getTheProposal().getTitle() + " was $" + r.getTheProposal().getBudgetOfMovie());
+      }else{
+        return;
       }
    
     } else {

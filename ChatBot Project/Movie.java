@@ -174,6 +174,30 @@ public class Movie {
 		this.location = location;
 	}
 
+    public String getDuration(){
+        return duration;
+    }
+
+    public void setDuration(){
+        this.duration = duration;
+    }
+
+    public String getTimeToFilm(){
+        return timeToFilm;
+    }
+
+    public void setTimeToFilm(){
+        this.timeToFilm = timeToFilm;
+    }
+
+    public String getBudgetOfMovie(){
+        return budgetOfMovie;
+    }
+
+    public void setBudgetOfMovie(){
+        this.budgetOfMovie = budgetOfMovie;
+    }
+
 
     //toString method for the movies
     public String toString(){
