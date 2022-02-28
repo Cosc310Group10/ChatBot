@@ -1,5 +1,10 @@
 // GROUP 10 COSC 310 Main Class
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.Year;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -707,10 +712,30 @@ public class Main{
     // This is the how personal response method which determines responses for how questions about the chat bots personal life
     public static void howPersonalResponse(String userInput){
 
-       if(userInput.contains("Your text here")){
-        //add your content here
-      } else if(userInput.contains("Your text here")){
-        //add your content here
+       if(userInput.contains("old")){
+        //Chat bots repsonse to asking how old Ryan Reynolds is
+
+        // initializing birthDate, current date and period between the two dates
+      LocalDate birthDate = LocalDate.of(1976, 6, 23);
+      LocalDate currentDate = LocalDate.now();
+      Period difference = Period.between(birthDate, currentDate);
+      // taking current age as the years of the period determined above
+        int currentAge = difference.getYears();
+        //printing how old Ryan Reynolds currently is as of today
+        System.out.println("I am currently " + currentAge + " years old!");
+
+        // converting Ryan Reynolds age to days, hours, minutes, and seconds
+        int currentDays = currentAge * 365;
+        int currentHours = currentAge * 8760;
+        int currentMinutes = currentAge * 525600;
+        //initialize as long since this value exceeds integer storage
+        long currentSeconds = (currentAge)*31540000000L;
+        // print statement with all of the data above
+        System.out.println("Haha, or just because I am a robot, more specifically I am " + currentDays+ " days, " + currentHours+ " hours, " + currentMinutes+ " minutes, and " +currentSeconds + " seconds " + "old!");
+
+
+      } else if(userInput.contains("kid")){
+        //Chat bots response asking how many kids Ryan Reynolds has
       }else{
         return;
       }
