@@ -645,13 +645,28 @@ public class Main{
     // This is the what personal response method which determines responses for what questions about the chat bots personal life
     public static void whatPersonalResponse(String userInput){
 
-      if(userInput.contains("Your text here")){
-        //add your content here
-      } else if(userInput.contains("Your text here")){
-        //add your content here
-      }else{
-        return;
-      }
+      
+        if(userInput.contains("eye")){
+          //add your content here
+          System.out.print("My eye colour is " + r.geteyecolour());
+        } else if(userInput.contains("height")){
+          //add your content here
+          System.out.print("My height is " +r.getheight());
+        } else if(userInput.contains("net")){
+          //add your content here
+          System.out.print("My net worth is " + r.getnetWorth());
+        } else if(userInput.contains("wife")){
+          //add your content here
+          System.out.print("My wives' name is " + r.getwifeName());
+        } else if(userInput.contains("kids")){
+          //add your content here
+          System.out.print("My kids is names are:" + r.getkidNames());
+        } else if(userInput.contains("birthdate")){
+          //add your content here
+          System.out.print("My birthdate is " + r.getbirthDate());
+        }else{
+          return;
+        }
 
       //this calls the ask a question response for the chatbot to ask a question back to the user
       askAQuestionResponse(userInput);
