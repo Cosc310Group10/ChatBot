@@ -7,8 +7,9 @@ public class Main{
 
 
   //creating a static ryan reynolds object so its accessible by all methods
-  static RyanReynolds r = new RyanReynolds();
+  static RyanReynolds r = new RyanReynolds("6ft 2",190,"hazel","light brown","male","Vancouver","October 23 1976","Blake Lively","@vancityreynolds",18900000,41600000,18700000,"$150 M","Scarlett Johansson");
     public static void main(String[] args){
+
 
        
         // a cool feature saying the chatbot is booting up for a delay of 2 seconds
@@ -20,6 +21,7 @@ public class Main{
         }
          //prompt for user and creating scanner
         System.out.println("Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
+
 
         Scanner sc = new Scanner(System.in);
         
@@ -47,6 +49,7 @@ public class Main{
           }else{
             chatBot(userInput);
           }
+
         }
 
 
@@ -142,6 +145,7 @@ public class Main{
           break;
           default:
           return;
+
         }
 
 
@@ -269,18 +273,7 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
-      
-      }else if(userInput.contains("selfless")){
-        // add your content here
 
-      }else if(userInput.contains("hitman")){
-        // add your content here
-
-      }else if(userInput.contains("changeup")){
-        // add your content here
-
-      }else if(userInput.contains("proposal")){
-        // add your content here
       }else{
         return;
       }
@@ -313,18 +306,7 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
-   
-      }else if(userInput.contains("selfless")){
-        // add your content here
 
-      }else if(userInput.contains("hitman")){
-        // add your content here
-
-      }else if(userInput.contains("changeup")){
-        // add your content here
-
-      }else if(userInput.contains("proposal")){
-        // add your content here
       }else{
         return;
       }
@@ -356,18 +338,7 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
-   
-      }else if(userInput.contains("selfless")){
-        // add your content here
 
-      }else if(userInput.contains("hitman")){
-        // add your content here
-
-      }else if(userInput.contains("changeup")){
-        // add your content here
-
-      }else if(userInput.contains("proposal")){
-        // add your content here
       }else{
         return;
       }
@@ -399,18 +370,7 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
-   
-      }else if(userInput.contains("selfless")){
-        // add your content here
 
-      }else if(userInput.contains("hitman")){
-        // add your content here
-
-      }else if(userInput.contains("changeup")){
-        // add your content here
-
-      }else if(userInput.contains("proposal")){
-        // add your content here
       }else{
         return;
       }
@@ -443,18 +403,7 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
-   
-      }else if(userInput.contains("selfless")){
-        // add your content here
 
-      }else if(userInput.contains("hitman")){
-        // add your content here
-
-      }else if(userInput.contains("changeup")){
-        // add your content here
-
-      }else if(userInput.contains("proposal")){
-        // add your content here
       }else{
         return;
       }
