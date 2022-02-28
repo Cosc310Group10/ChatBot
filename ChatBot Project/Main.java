@@ -1068,11 +1068,11 @@ public class Main {
 
     } else if (userInput.contains("twitter") || userInput.contains("twitter followers")) {
       // Chat bots response to user asking how many twitter followers Ryan Reynolds has
-      System.out.println("I have " + r.gettwitterFollowers() + " followers on instgram!");
+      System.out.println("I have " + r.gettwitterFollowers() + " followers on Twitter!");
 
     } else if (userInput.contains("tiktok") || userInput.contains("tiktok followers")) {
       // Chat bots response to user asking how many TikTok followers Ryan Reynolds has
-      System.out.println("I have " + r.gettiktokFollowers() + " followers on instgram!");
+      System.out.println("I have " + r.gettiktokFollowers() + " followers on TikTok!");
 
     } else if ((userInput.contains("personal") || userInput.contains("other")) && userInput.contains("awards")) {
       // Chat bots response to user asking how many personal / other awards Ryan Reynolds has
