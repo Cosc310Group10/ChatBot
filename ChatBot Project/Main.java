@@ -302,7 +302,7 @@ public class Main{
         }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getDeadpool().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
-          System.out.print("The starts are " + r.getDeadpool().getImdbStars()+"\n");
+          System.out.print("The stars are " + r.getDeadpool().getImdbStars()+"\n");
         }else{
           return;
         }
