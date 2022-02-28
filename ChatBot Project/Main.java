@@ -269,7 +269,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+      
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -302,7 +313,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -334,7 +356,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -366,7 +399,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -399,7 +443,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
