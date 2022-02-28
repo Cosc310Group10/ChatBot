@@ -527,28 +527,28 @@ public class Main{
     public static void whereMovieResponse(String userInput){
 
       if(userInput.contains("movie") || userInput.contains("movies")){
-        // add your content here
+        System.out.println("My favourite place to shoot a movie is Vancouver!");
 
       }else if(userInput.contains("deadpool")){
-        // add your content here
+        System.out.println("We filmed Deadpool in "+r.getDeadpool().getLocation());
 
       }else if(userInput.contains("deadpool 2")){
-        // add your content here
+        System.out.println("We filmed Deadpool 2 in "+r.getDeadpool2().getLocation());
 
       }else if(userInput.contains("free guy")){
-        // add your content here
+        System.out.println("We filmed Free Guy in "+r.getFreeGuy().getLocation());
 
       }else if(userInput.contains("r.i.p.d")){
-        // add your content here
+         System.out.println("We filmed R.I.P.D. in "+r.getRIPD().getLocation());
 
       }else if(userInput.contains("green lantern")){
-        // add your content here
+        System.out.println("We filmed Green Lantern in "+r.getGreenLantern().getLocation());
 
       }else if(userInput.contains("6 underground")){
-        // add your content here
+        System.out.println("We filmed 6 Underground in "+r.getSixUnderground().getLocation());
 
       }else if(userInput.contains("red notice")){
-        // add your content here
+        System.out.println("We filmed Red Notice in "+r.getRedNotice().getLocation());
 
       }else{
         return;
