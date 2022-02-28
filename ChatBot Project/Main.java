@@ -808,22 +808,22 @@ public class Main {
 
     if (userInput.contains("eye")) {
       // add your content here
-      System.out.print("My eye colour is " + r.geteyecolour());
+      System.out.print("My eye colour is " + r.geteyecolour() + "\n");
     } else if (userInput.contains("height")) {
       // add your content here
-      System.out.print("My height is " + r.getheight());
+      System.out.print("My height is " + r.getheight() + "\n");
     } else if (userInput.contains("net")) {
       // add your content here
-      System.out.print("My net worth is " + r.getnetWorth());
+      System.out.print("My net worth is " + r.getnetWorth() + "\n");
     } else if (userInput.contains("wife")) {
       // add your content here
-      System.out.print("My wives' name is " + r.getwifeName());
+      System.out.print("My wives' name is " + r.getwifeName() + "\n");
     } else if (userInput.contains("kids")) {
       // add your content here
-      System.out.print("My kids is names are:" + r.getkidNames());
+      System.out.print("My kids is names are:" + r.getkidNames() + "\n");
     } else if (userInput.contains("birthdate")) {
       // add your content here
-      System.out.print("My birthdate is " + r.getbirthDate());
+      System.out.print("My birthdate is " + r.getbirthDate() + "\n");
     } else {
       return;
     }
