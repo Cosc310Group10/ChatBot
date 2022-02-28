@@ -1,8 +1,6 @@
 // GROUP 10 COSC 310 Main Class
 
-
-// current main class -- 1130AM Feb 28th
-
+//updating lance and merging to main - 1145AM feb 28
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.Year;
@@ -650,6 +648,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
       }
 
     } else if (userInput.contains("deadpool 2")) {
@@ -660,6 +660,9 @@ public class Main {
           count++;
         }
         System.out.println(r.getDeadpool2().getTitle() + " has " + count + " awards!");
+     
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getDeadpool2().getTitle() + " made a box office profit of $" + r.getDeadpool2().getBoxOffice());
       }
 
     } else if (userInput.contains("free guy")) {
@@ -670,6 +673,9 @@ public class Main {
           count++;
         }
         System.out.println(r.getFreeGuy().getTitle() + " has " + count + " awards!");
+      
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getFreeGuy().getTitle() + " made a box office profit of $" + r.getFreeGuy().getBoxOffice());
       }
 
     } else if (userInput.contains("r.i.p.d")) {
@@ -680,6 +686,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getRIPD().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getRIPD().getTitle() + " made a box office profit of $" + r.getRIPD().getBoxOffice());
       }
 
     } else if (userInput.contains("green lantern")) {
@@ -690,6 +698,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getGreenLantern().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getGreenLantern().getTitle() + " made a box office profit of $" + r.getGreenLantern().getBoxOffice());
       }
 
     } else if (userInput.contains("6 underground")) {
@@ -700,6 +710,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getSixUnderground().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getSixUnderground().getTitle() + " made a box office profit of $" + r.getSixUnderground().getBoxOffice());
       }
 
     } else if (userInput.contains("red notice")) {
@@ -710,6 +722,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getRedNotice().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getRedNotice().getTitle() + " made a box office profit of $" + r.getRedNotice().getBoxOffice());
       }
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
@@ -720,6 +734,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getSelfLess().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getSelfLess().getTitle() + " made a box office profit of $" + r.getSelfLess().getBoxOffice());
       }
       
     } else if (userInput.contains("hitman")) {
@@ -730,6 +746,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getTheHitmansBodyguard().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getTheHitmansBodyguard().getTitle() + " made a box office profit of $" + r.getTheHitmansBodyguard().getBoxOffice());
       }
      
     } else if (userInput.contains("changeup")) {
@@ -740,6 +758,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getChangeUp().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getChangeUp().getTitle() + " made a box office profit of $" + r.getChangeUp().getBoxOffice());
       }
       
     } else if (userInput.contains("proposal")) {
@@ -750,6 +770,8 @@ public class Main {
           count++;
         }
         System.out.println(r.getTheProposal().getTitle() + " has " + count + " awards!");
+      }else if(userInput.contains("box office") || userInput.contains("profit")){
+        System.out.println(r.getTheProposal().getTitle() + " made a box office profit of $" + r.getTheProposal().getBoxOffice());
       }
    
     } else {
