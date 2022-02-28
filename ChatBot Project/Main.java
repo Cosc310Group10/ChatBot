@@ -453,8 +453,6 @@ public class Main{
 
       if(userInput.contains("birth place")||userInput.contains("grow up")){
         System.out.println("I was born and raised in " + r.getbirthPlace());
-      } else if(userInput.contains("meet")&&userInput.contains("wife")){
-        System.out.println("I met my wonderful wife " + r.getwifeName() + " on the set of " + r.getGreenLantern().getTitle());
       }else{
         return;
       }
