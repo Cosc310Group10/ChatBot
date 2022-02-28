@@ -1,5 +1,6 @@
 // GROUP 10 COSC 310 Main Class
 
+// current main class -- 1130AM Feb 28th
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
