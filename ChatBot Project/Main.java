@@ -286,7 +286,7 @@ public class Main{
         if(userInput.contains("rating")){
           System.out.print("The rating is " + r.getDeadpool().getRating()+"\n");
         }else if(userInput.contains("genre")) {
-          System.out.print("The genre is " + r.getDeadpool().getGenre());
+          System.out.print("The genre is " + r.getDeadpool().getGenre()+"\n");
         }else if(userInput.contains("location")) {
           System.out.print("The location the movie was filmed in is " + r.getDeadpool().getLocation()+"\n");
         }else if(userInput.contains("awards")) {
@@ -295,14 +295,14 @@ public class Main{
           System.out.print("The cast members are " + r.getDeadpool().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getDeadpool().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getDeadpool().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The starts are " + r.getDeadpool().getImdbStars()+"\n");
         }else{
           return;
         }
-      }else if(userInput.contains("deadpool 2")){
+      }else if(userInput.contains("deadpool2")){
         // add your content here
         if(userInput.contains("rating")){
           System.out.print("The rating is " + r.getDeadpool2().getRating()+"\n");
@@ -316,7 +316,7 @@ public class Main{
           System.out.print("The cast members are " + r.getDeadpool2().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getDeadpool2().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getDeadpool2().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The stars are " + r.getDeadpool2().getImdbStars()+"\n");
@@ -337,7 +337,7 @@ public class Main{
           System.out.print("The cast members are " + r.getFreeGuy().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getFreeGuy().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getFreeGuy().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The stars are " + r.getFreeGuy().getImdbStars()+"\n");
@@ -358,7 +358,7 @@ public class Main{
           System.out.print("The cast members are " + r.getRIPD().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getRIPD().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getRIPD().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The stars are " + r.getRIPD().getImdbStars()+"\n");
@@ -379,7 +379,7 @@ public class Main{
           System.out.print("The cast members are " + r.getGreenLantern().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getGreenLantern().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getGreenLantern().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The stars are " + r.getGreenLantern().getImdbStars()+"\n");
@@ -400,7 +400,7 @@ public class Main{
           System.out.print("The cast members are " + r.getSixUnderground().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getSixUnderground().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getSixUnderground().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The stars are " + r.getSixUnderground().getImdbStars()+"\n");
@@ -421,7 +421,7 @@ public class Main{
           System.out.print("The cast members are " + r.getRedNotice().getCast()+"\n");
         }else if(userInput.contains("director")) {
           System.out.print("The director for this movie is " + r.getRedNotice().getDirector()+"\n");
-        }else if(userInput.contains("boxoffice")) {
+        }else if(userInput.contains("box office")) {
           System.out.print("The gross box office $" + r.getRedNotice().getBoxOffice()+"\n");
         }else if(userInput.contains("stars")) {
           System.out.print("The stars are " + r.getRedNotice().getImdbStars()+"\n");
@@ -557,22 +557,22 @@ public class Main{
 
       if(userInput.contains("eye")){
         //add your content here
-        System.out.print("My eye colour is " + r.geteyecolour());
+        System.out.print("My eye colour is " + r.geteyecolour()+"\n");
       } else if(userInput.contains("height")){
         //add your content here
-        System.out.print("My height is " +r.getheight());
+        System.out.print("My height is " +r.getheight()+"\n");
       } else if(userInput.contains("net")){
         //add your content here
-        System.out.print("My net worth is " + r.getnetWorth());
+        System.out.print("My net worth is " + r.getnetWorth()+"\n");
       } else if(userInput.contains("wife")){
         //add your content here
-        System.out.print("My wives' name is " + r.getwifeName());
+        System.out.print("My wives' name is " + r.getwifeName()+"\n");
       } else if(userInput.contains("kids")){
         //add your content here
-        System.out.print("My kids is names are:" + r.getkidNames());
+        System.out.print("My kids is names are:" + r.getkidNames()+"\n");
       } else if(userInput.contains("birthdate")){
         //add your content here
-        System.out.print("My birthdate is " + r.getbirthDate());
+        System.out.print("My birthdate is " + r.getbirthDate()+"\n");
       }else{
         return;
       }
