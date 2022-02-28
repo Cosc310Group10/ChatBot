@@ -269,7 +269,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -428,6 +439,91 @@ public class Main{
         }else{
           return;
         }
+           
+      }else if(userInput.contains("selfless")){
+        // add your content here
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getSelfLess().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getSelfLess().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is w" + r.getSelfLess().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getSelfLess().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getSelfLess().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getSelfLess().getDirector()+"\n");
+        }else if(userInput.contains("box office")) {
+          System.out.print("The gross box office $" + r.getSelfLess().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getSelfLess().getImdbStars()+"\n");
+        }else{
+          return;
+        }
+      }else if(userInput.contains("hitman")){
+        // add your content here
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getTheHitmansBodyguard().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getTheHitmansBodyguard().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is w" + r.getTheHitmansBodyguard().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getTheHitmansBodyguard().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getTheHitmansBodyguard().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getTheHitmansBodyguard().getDirector()+"\n");
+        }else if(userInput.contains("box office")) {
+          System.out.print("The gross box office $" + r.getTheHitmansBodyguard().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getTheHitmansBodyguard().getImdbStars()+"\n");
+        }else{
+          return;
+        }
+      }else if(userInput.contains("changeup")){
+        // add your content here
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getChangeUp().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getChangeUp().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is w" + r.getChangeUp().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getChangeUp().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getChangeUp().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getChangeUp().getDirector()+"\n");
+        }else if(userInput.contains("box office")) {
+          System.out.print("The gross box office $" + r.getChangeUp().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getChangeUp().getImdbStars()+"\n");
+        }else{
+          return;
+        }
+      }else if(userInput.contains("proposal")){
+        // add your content here
+        if(userInput.contains("rating")){
+          System.out.print("The rating is " + r.getTheProposal().getRating()+"\n");
+        }else if(userInput.contains("genre")) {
+          System.out.print("The genre is " + r.getTheProposal().getGenre()+"\n");
+        }else if(userInput.contains("location")) {
+          System.out.print("The location the movie was filmed in is w" + r.getTheProposal().getLocation()+"\n");
+        }else if(userInput.contains("awards")) {
+          System.out.print("The awards for this movie are " + r.getTheProposal().getAwards()+"\n");
+        }else if(userInput.contains("cast")) {
+          System.out.print("The cast members are " + r.getTheProposal().getCast()+"\n");
+        }else if(userInput.contains("director")) {
+          System.out.print("The director for this movie is " + r.getTheProposal().getDirector()+"\n");
+        }else if(userInput.contains("box office")) {
+          System.out.print("The gross box office $" + r.getTheProposal().getBoxOffice()+"\n");
+        }else if(userInput.contains("stars")) {
+          System.out.print("The stars are " + r.getTheProposal().getImdbStars()+"\n");
+        }else{
+          return;
+        }
       }else{
         return;
       }
@@ -459,7 +555,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -491,7 +598,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
@@ -524,7 +642,18 @@ public class Main{
 
       }else if(userInput.contains("red notice")){
         // add your content here
+   
+      }else if(userInput.contains("selfless")){
+        // add your content here
 
+      }else if(userInput.contains("hitman")){
+        // add your content here
+
+      }else if(userInput.contains("changeup")){
+        // add your content here
+
+      }else if(userInput.contains("proposal")){
+        // add your content here
       }else{
         return;
       }
