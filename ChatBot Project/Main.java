@@ -1,6 +1,6 @@
 // GROUP 10 COSC 310 Main Class
+// Updated at 309PM Feb 28
 
-//updating lance and merging to main - 1145AM feb 28
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.Year;
