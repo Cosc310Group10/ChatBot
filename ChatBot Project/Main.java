@@ -282,6 +282,18 @@ public class Main {
     } else if (userInput.contains("red notice")) {
       // add your content here
 
+    } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
+      // add your content here
+      
+    } else if (userInput.contains("hitman")) {
+      // add your content here
+      
+    } else if (userInput.contains("changeup")) {
+      // add your content here
+      
+    } else if (userInput.contains("proposal")) {
+      // add your content here
+     
     } else {
       return;
     }
@@ -441,7 +453,7 @@ public class Main {
         return;
       }
 
-    } else if (userInput.contains("selfless")) {
+    } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getSelfLess().getRating() + "\n");
@@ -558,7 +570,7 @@ public class Main {
     } else if (userInput.contains("red notice")) {
       System.out.println("We filmed Red Notice in " + r.getRedNotice().getLocation());
 
-    } else if (userInput.contains("selfless")) {
+    } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
       
     } else if (userInput.contains("hitman")) {
@@ -603,7 +615,7 @@ public class Main {
     } else if (userInput.contains("red notice")) {
       // add your content here
 
-    } else if (userInput.contains("selfless")) {
+    } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
       
     } else if (userInput.contains("hitman")) {
@@ -697,7 +709,7 @@ public class Main {
         System.out.println(r.getRedNotice().getTitle() + " has " + count + " awards!");
       }
 
-    } else if (userInput.contains("selfless")) {
+    } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
       if(userInput.contains("awards") || userInput.contains("many")){
         int count =0;
