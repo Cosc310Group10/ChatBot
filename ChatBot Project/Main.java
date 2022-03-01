@@ -1,7 +1,7 @@
 // GROUP 10 COSC 310 Main Class
 /*
 By:
-LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054 
+LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
 GRIFFIN WILCHUK, STUDENT #75303370 CARLA MATHER, STUDENT #22779193
 */
 // Updated at 325PM Feb 28
@@ -338,36 +338,36 @@ public class Main {
       }
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
-        System.out.println(r.getSelfLess().getDirector() + "directed Red Notice \n");
+        System.out.println(r.getSelfLess().getDirector() + "directed Self Less \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
-        System.out.println("The cast of Red Notice was " + r.getSelfLess().getCast() + "\n");
+        System.out.println("The cast of Self Less was " + r.getSelfLess().getCast() + "\n");
       } else {
         return;
       }
 
     } else if (userInput.contains("hitman")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
-        System.out.println(r.getTheHitmansBodyguard().getDirector() + "directed Red Notice \n");
+        System.out.println(r.getTheHitmansBodyguard().getDirector() + "directed The Hitmans Bodyguard \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
-        System.out.println("The cast of Red Notice was " + r.getTheHitmansBodyguard().getCast() + "\n");
+        System.out.println("The cast of Hitmans Bodyguard was " + r.getTheHitmansBodyguard().getCast() + "\n");
       } else {
         return;
       }
 
     } else if (userInput.contains("changeup")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
-        System.out.println(r.getChangeUp().getDirector() + "directed Red Notice \n");
+        System.out.println(r.getChangeUp().getDirector() + "directed Change Up \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
-        System.out.println("The cast of Red Notice was " + r.getChangeUp().getCast() + "\n");
+        System.out.println("The cast of Change Up was " + r.getChangeUp().getCast() + "\n");
       } else {
         return;
       }
 
     } else if (userInput.contains("proposal")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
-        System.out.println(r.getTheProposal().getDirector() + "directed Red Notice \n");
+        System.out.println(r.getTheProposal().getDirector() + "directed Proposal \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
-        System.out.println("The cast of Red Notice was " + r.getTheProposal().getCast() + "\n");
+        System.out.println("The cast of Proposal was " + r.getTheProposal().getCast() + "\n");
       } else {
         return;
       }
@@ -682,7 +682,7 @@ public class Main {
         System.out.println(r.getDeadpool().getTitle() + " was filmed in the year " + r.getDeadpool().getYear());
       }
 
-    } 
+    }
 
     } else if (userInput.contains("free guy")) {
       // When was Free Guy filmed?
@@ -719,26 +719,26 @@ public class Main {
       if(userInput.contains("when was")&& userInput.contains("filmed")){
         System.out.println(r.getSelfLess().getTitle() + " was filmed in the year " + r.getSelfLess().getYear());
       }
-      
+
     } else if (userInput.contains("hitman")) {
       // When was the The hitmans bodyguard filmed?
       if(userInput.contains("when was")&& userInput.contains("filmed")){
         System.out.println(r.getTheHitmansBodyguard().getTitle() + " was filmed in the year " + r.getTheHitmansBodyguard().getYear());
       }
-     
+
     } else if (userInput.contains("changeup")) {
       // When was the Changeup filmed?
       if(userInput.contains("when was")&& userInput.contains("filmed")){
         System.out.println(r.getChangeUp().getTitle() + " was filmed in the year " + r.getChangeUp().getYear());
       }
-      
+
     } else if (userInput.contains("proposal")) {
       // When was the Proposal Filmed?
 
       if(userInput.contains("when was")&& userInput.contains("filmed")){
         System.out.println(r.getTheProposal().getTitle() + " was filmed in the year "  + r.getTheProposal().getYear());
       }
-   
+
     } else {
       return;
     }
@@ -751,7 +751,7 @@ public class Main {
     //this checks for: How many movies in total have you been in?
     if (userInput.contains("movie") || userInput.contains("movies")) {
       System.out.println("I have been in about 65 movies");
-    
+
     } else if (userInput.contains("deadpool 2")) {
  // These statements check the user input for various questions about this
       // particular movie and then provide the proper
@@ -783,7 +783,7 @@ public class Main {
         // this checks for: How long did it take to film + movie?
       } else if (userInput.contains("budget")) {
         System.out.println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
-      
+
         // if all else fails, just return nothing
       } else {
         return;
@@ -791,7 +791,7 @@ public class Main {
 
       // the same process is followed for deadpool
     } else if (userInput.contains("deadpool")) {
-     
+
       if (userInput.contains("awards") || userInput.contains("many")) {
         int count = 0;
         for (int i = 0; i < r.getDeadpool().getAwards().size(); i++) {
@@ -799,24 +799,24 @@ public class Main {
         }
         System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
 
-        
+
       } else if (userInput.contains("box office") || userInput.contains("profit")) {
         System.out
             .println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
 
-       
+
       } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
 
-       
+
       } else if (userInput.contains("long") || userInput.contains("duration")) {
         System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
 
-        
+
       } else if (userInput.contains("budget")) {
         System.out
             .println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
-        
+
       } else {
         return;
       }
