@@ -1094,7 +1094,7 @@ public class Main {
     // checks for keywords about presonal"who" attributes, retruns appropriate
     // response
     if (userInput.contains("wife")) {
-      System.out.println("Im married too " + r.getwifeName());
+      System.out.println("Im married to " + r.getwifeName());
     } else if (userInput.contains("kids") || userInput.contains("children")) {
       System.out.println("My kids are " + r.getkidNames());
     } else if (userInput.contains("previous marriage") || userInput.contains("ex-wife")) {
