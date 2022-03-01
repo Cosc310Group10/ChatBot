@@ -274,7 +274,7 @@ public class Main {
       // for each movie, checks for either director (returns director) or check for
       // cast (returns cast)
 
-    }  else if (userInput.contains("deadpool 2")) {
+    }  else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getDeadpool2().getDirector() + "directed deadpool 2 \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
@@ -382,7 +382,7 @@ public class Main {
 
     if (userInput.contains("movie")) {
 
-    } else if (userInput.contains("deadpool2")) {
+    } else if (userInput.contains("deadpool2") || userInput.contains("deadpool 2")) {
 
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getDeadpool2().getRating() + "\n");
@@ -648,7 +648,7 @@ public class Main {
     if (userInput.contains("movie") || userInput.contains("movies")) {
       System.out.println("My favourite place to shoot a movie is Vancouver!");
 
-    }else if (userInput.contains("deadpool 2")) {
+    }else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
       System.out.println("We filmed Deadpool 2 in " + r.getDeadpool2().getLocation());
 
     } else if (userInput.contains("deadpool")) {
@@ -693,7 +693,7 @@ public class Main {
     if ((userInput.contains("movie") || userInput.contains("movies")) && userInput.contains("first")) {
       // When did you film your first movie?
       System.out.println("I filmed my first movie in the year 1993!");
-    } else if (userInput.contains("deadpool 2")) {
+    } else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
       // When was Deadpool 2 filmed?
       if(userInput.contains("when was")&& userInput.contains("filmed")){
         System.out.println(r.getDeadpool2().getTitle() + " was filmed in the year " + r.getDeadpool2().getYear());
@@ -773,7 +773,7 @@ public class Main {
     if (userInput.contains("movie") || userInput.contains("movies")) {
       System.out.println("I have been in about 65 movies");
 
-    } else if (userInput.contains("deadpool 2")) {
+    } else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
  // These statements check the user input for various questions about this
       // particular movie and then provide the proper
       // output depending on which question was asked
