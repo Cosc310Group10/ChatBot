@@ -274,30 +274,71 @@ public class Main {
   // questions about movies
   public static void whoMovieResponse(String userInput) {
 
-    if (userInput.contains("movie") || userInput.contains("movies")) {
-      // add your content here
+    if(userInput.contains("movie") || userInput.contains("movies")){
+      //for each movie, checks for either director (returns director) or check for cast (returns cast)
 
-    } else if (userInput.contains("deadpool")) {
-      // add your content here
+    }else if(userInput.contains("deadpool")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getDeadpool().getDirector() + "directed deadpool \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of deadpool was " + r.getDeadpool().getCast() + "\n");
+      }else{
+        return;
+      }
 
-    } else if (userInput.contains("deadpool 2")) {
-      // add your content here
+    }else if(userInput.contains("deadpool 2")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getDeadpool2().getDirector() + "directed deadpool 2 \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of deadpool 2 was " + r.getDeadpool2().getCast() + "\n");
+      }else{
+        return;
+      }
 
-    } else if (userInput.contains("free guy")) {
-      // add your content here
+    }else if(userInput.contains("free guy")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getFreeGuy().getDirector() + "directed Free Guy \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Free Guy was " + r.getFreeGuy().getCast() + "\n");
+      }else{
+        return;
+      }
 
-    } else if (userInput.contains("r.i.p.d")) {
-      // add your content here
+    }else if(userInput.contains("r.i.p.d")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getRIPD().getDirector() + "directed R.I.P.D \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of R.I.P.D was " + r.getRIPD().getCast() + "\n");
+      }else{
+        return;
+      }
 
-    } else if (userInput.contains("green lantern")) {
-      // add your content here
+    }else if(userInput.contains("green lantern")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getGreenLantern().getDirector() + "directed Green Lantern \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Green Lantern was " + r.getGreenLantern().getCast() + "\n");
+      }else{
+        return;
+      }
 
-    } else if (userInput.contains("6 underground")) {
-      // add your content here
+    }else if(userInput.contains("6 underground")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getSixUnderground().getDirector() + "directed 6 Underground \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of 6 Underground was " + r.getSixUnderground().getCast() + "\n");
+      }else{
+        return;
+      }
 
-    } else if (userInput.contains("red notice")) {
-      // add your content here
-
+    }else if(userInput.contains("red notice")){
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getRedNotice().getDirector() + "directed Red Notice \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Red Notice was " + r.getRedNotice().getCast() + "\n");
+      }else{
+        return;
+      }
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
       
@@ -947,10 +988,13 @@ public class Main {
   // questions about the chat bots personal life
   public static void whoPersonalResponse(String userInput) {
 
-    if (userInput.contains("Your text here")) {
-      // add your content here
-    } else if (userInput.contains("Your text here")) {
-      // add your content here
+    // checks for keywords about presonal"who" attributes, retruns appropriate response
+    if(userInput.contains("wife")){
+      System.out.println("Im married too " + r.getwifeName());
+    } else if(userInput.contains("kids")||userInput.contains("children")){
+      System.out.println("My kids are " + r.getkidNames());
+    }else if(userInput.contains("previous marriage") || userInput.contains("ex-wife")){
+      System.out.println("I was previously married too " + r.getpreviousMarriage());
     } else {
       return;
     }
