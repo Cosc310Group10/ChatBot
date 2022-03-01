@@ -47,6 +47,8 @@ public class Main {
       }
       // then reset question to false
       askAQuestion = false;
+      // print new line
+      System.out.println();
       // grab user input
       userInput = sc.nextLine().toLowerCase();
 
@@ -274,7 +276,7 @@ public class Main {
       // for each movie, checks for either director (returns director) or check for
       // cast (returns cast)
 
-    }  else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
+    } else if (userInput.contains("deadpool2") || userInput.contains("deadpool 2")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getDeadpool2().getDirector() + "directed deadpool 2 \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
@@ -282,7 +284,7 @@ public class Main {
       } else {
         return;
       }
-    }else if (userInput.contains("deadpool")) {
+    } else if (userInput.contains("deadpool")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getDeadpool().getDirector() + "directed deadpool \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
@@ -374,7 +376,7 @@ public class Main {
     } else {
       return;
     }
-}
+  }
 
   // This is the what movie response method which determines responses for what
   // questions about the different movies
@@ -405,7 +407,7 @@ public class Main {
       } else {
         return;
       }
-    }else if (userInput.contains("deadpool")) {
+    } else if (userInput.contains("deadpool")) {
 
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getDeadpool().getRating() + "\n");
@@ -648,13 +650,13 @@ public class Main {
     if (userInput.contains("movie") || userInput.contains("movies")) {
       System.out.println("My favourite place to shoot a movie is Vancouver!");
 
-    }else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
+    } else if (userInput.contains("deadpool2") || userInput.contains("deadpool 2")) {
       System.out.println("We filmed Deadpool 2 in " + r.getDeadpool2().getLocation());
 
     } else if (userInput.contains("deadpool")) {
       System.out.println("We filmed Deadpool in " + r.getDeadpool().getLocation());
 
-    }  else if (userInput.contains("free guy")) {
+    } else if (userInput.contains("free guy")) {
       System.out.println("We filmed Free Guy in " + r.getFreeGuy().getLocation());
 
     } else if (userInput.contains("r.i.p.d")) {
@@ -693,71 +695,73 @@ public class Main {
     if ((userInput.contains("movie") || userInput.contains("movies")) && userInput.contains("first")) {
       // When did you film your first movie?
       System.out.println("I filmed my first movie in the year 1993!");
-    } else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
+    } else if (userInput.contains("deadpool2") || userInput.contains("deadpool 2")) {
       // When was Deadpool 2 filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getDeadpool2().getTitle() + " was filmed in the year " + r.getDeadpool2().getYear());
-      }else if (userInput.contains("deadpool")) {
+      }
+
+    } else if (userInput.contains("deadpool")) {
       // When was deadpool filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getDeadpool().getTitle() + " was filmed in the year " + r.getDeadpool().getYear());
       }
 
-    }
-
     } else if (userInput.contains("free guy")) {
       // When was Free Guy filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getFreeGuy().getTitle() + " was filmed in the year " + r.getFreeGuy().getYear());
       }
 
     } else if (userInput.contains("r.i.p.d")) {
       // When was R.I.P.D filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getRIPD().getTitle() + " was filmed in the year " + r.getRIPD().getYear());
       }
 
     } else if (userInput.contains("green lantern")) {
       // When was Green Lantern filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getGreenLantern().getTitle() + " was filmed in the year " + r.getGreenLantern().getYear());
       }
 
     } else if (userInput.contains("6 underground")) {
       // When was 6 Underground filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
-        System.out.println(r.getSixUnderground().getTitle() + " was filmed in the year " + r.getSixUnderground().getYear());
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
+        System.out
+            .println(r.getSixUnderground().getTitle() + " was filmed in the year " + r.getSixUnderground().getYear());
       }
 
     } else if (userInput.contains("red notice")) {
       // When was the Red Notice filmed?
-      if(userInput.contains("when was") && userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getRedNotice().getTitle() + " was filmed in the year " + r.getRedNotice().getYear());
       }
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // When was selfless filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getSelfLess().getTitle() + " was filmed in the year " + r.getSelfLess().getYear());
       }
 
     } else if (userInput.contains("hitman")) {
       // When was the The hitmans bodyguard filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
-        System.out.println(r.getTheHitmansBodyguard().getTitle() + " was filmed in the year " + r.getTheHitmansBodyguard().getYear());
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
+        System.out.println(
+            r.getTheHitmansBodyguard().getTitle() + " was filmed in the year " + r.getTheHitmansBodyguard().getYear());
       }
 
     } else if (userInput.contains("changeup")) {
       // When was the Changeup filmed?
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
         System.out.println(r.getChangeUp().getTitle() + " was filmed in the year " + r.getChangeUp().getYear());
       }
 
     } else if (userInput.contains("proposal")) {
       // When was the Proposal Filmed?
 
-      if(userInput.contains("when was")&& userInput.contains("filmed")){
-        System.out.println(r.getTheProposal().getTitle() + " was filmed in the year "  + r.getTheProposal().getYear());
+      if (userInput.contains("when was") && userInput.contains("filmed")) {
+        System.out.println(r.getTheProposal().getTitle() + " was filmed in the year " + r.getTheProposal().getYear());
       }
 
     } else {
@@ -769,12 +773,12 @@ public class Main {
   // This is the how movie response method which determines responses for how
   // questions about the different movies
   public static void howMovieResponse(String userInput) {
-    //this checks for: How many movies in total have you been in?
+    // this checks for: How many movies in total have you been in?
     if (userInput.contains("movie") || userInput.contains("movies")) {
       System.out.println("I have been in about 65 movies");
 
-    } else if (userInput.contains("deadpool2")|| userInput.contains("deadpool 2")) {
- // These statements check the user input for various questions about this
+    } else if (userInput.contains("deadpool2") || userInput.contains("deadpool 2")) {
+      // These statements check the user input for various questions about this
       // particular movie and then provide the proper
       // output depending on which question was asked
       // NOTE: This is the same process for each movie, so for simplicity, These
@@ -793,17 +797,18 @@ public class Main {
         System.out
             .println(r.getDeadpool2().getTitle() + " made a box office profit of $" + r.getDeadpool2().getBoxOffice());
 
-             // this checks for: How long was + movie ?
+        // this checks for: How long was + movie ?
       } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getDeadpool2().getTimeToFilm() + " to film");
 
-         // this checks for: How much was the budget for + movie?
+        // this checks for: How much was the budget for + movie?
       } else if (userInput.contains("long") || userInput.contains("duration")) {
         System.out.println(r.getDeadpool2().getTitle() + " is " + r.getDeadpool2().getDuration());
 
         // this checks for: How long did it take to film + movie?
       } else if (userInput.contains("budget")) {
-        System.out.println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
+        System.out
+            .println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
 
         // if all else fails, just return nothing
       } else {
@@ -820,19 +825,15 @@ public class Main {
         }
         System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
 
-
       } else if (userInput.contains("box office") || userInput.contains("profit")) {
         System.out
             .println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
 
-
       } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
 
-
       } else if (userInput.contains("long") || userInput.contains("duration")) {
         System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
-
 
       } else if (userInput.contains("budget")) {
         System.out
@@ -842,8 +843,8 @@ public class Main {
         return;
       }
 
-      //this is the section for free guy
-    }else if (userInput.contains("free guy")) {
+      // this is the section for free guy
+    } else if (userInput.contains("free guy")) {
 
       if (userInput.contains("awards") || userInput.contains("many")) {
         int count = 0;
@@ -1165,9 +1166,9 @@ public class Main {
       System.out.println("I was born in 1976");
     } else if (userInput.contains("marry") || userInput.contains("married")) {
       // add your content here
-      if(userInput.contains("blake") || userInput.contains("wife")){
+      if (userInput.contains("blake") || userInput.contains("wife")) {
         System.out.println("I married my beautiful wife in September 2012");
-      }else if(userInput.contains("scarlett")){
+      } else if (userInput.contains("scarlett")) {
         System.out.println("We really should not talk about this, but we got married in September of 2008.");
       }
     } else {
