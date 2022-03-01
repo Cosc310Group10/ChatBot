@@ -203,7 +203,7 @@ public class Main {
     // Otherwise, we check if the where question is about his personal attributes
     // and if so we respond with the
     // where responses for personal questions
-    whatPersonalResponse(userInput);
+    wherePersonalResponse(userInput);
 
   }
 
