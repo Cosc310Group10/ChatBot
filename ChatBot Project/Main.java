@@ -401,7 +401,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getDeadpool2().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getDeadpool2().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year Deadpool 2 was made in was " + r.getDeadpool2().getYear() + "\n");
       } else {
         return;
@@ -424,7 +424,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getDeadpool().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getDeadpool().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year Deadpool was made in was " + r.getDeadpool().getYear() + "\n");
       } else {
         return;
@@ -447,7 +447,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getFreeGuy().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getFreeGuy().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year Free guy was made in was " + r.getFreeGuy().getYear() + "\n");
       } else {
         return;
@@ -470,7 +470,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getRIPD().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getRIPD().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year R.I.P.D was made in was " + r.getRIPD().getYear() + "\n");
       } else {
         return;
@@ -493,7 +493,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getGreenLantern().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getGreenLantern().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year Green Lantern was made in was " + r.getGreenLantern().getYear() + "\n");
       } else {
         return;
@@ -516,7 +516,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getSixUnderground().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getSixUnderground().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year 6 underground was made in was " + r.getSixUnderground().getYear() + "\n");
       } else {
         return;
@@ -539,7 +539,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getRedNotice().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getRedNotice().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year Red Notice was made in was " + r.getRedNotice().getYear() + "\n");
       } else {
         return;
@@ -563,7 +563,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getSelfLess().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getSelfLess().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year selfless was made in was " + r.getSelfLess().getYear() + "\n");
       } else {
         return;
@@ -586,7 +586,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getTheHitmansBodyguard().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getTheHitmansBodyguard().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year hitman bodygaurd was made in was " + r.getTheHitmansBodyguard().getYear() + "\n");
       } else {
         return;
@@ -609,7 +609,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getChangeUp().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getChangeUp().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year Changeup was made in was " + r.getChangeUp().getYear() + "\n");
       } else {
         return;
@@ -632,7 +632,7 @@ public class Main {
         System.out.print("The gross box office $" + r.getTheProposal().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getTheProposal().getImdbStars() + "\n");
-      } else if (userInput.contains("stars")) {
+      } else if (userInput.contains("year")) {
         System.out.print("The year The proposal was made in was " + r.getTheProposal().getYear() + "\n");
       } else {
         return;
