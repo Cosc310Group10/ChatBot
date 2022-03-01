@@ -43,7 +43,7 @@ public class Main {
       // if the bot asked a question, reply with cool and take the input
       if (askAQuestion == true) {
         userInput = sc.nextLine();
-        System.out.println("Cool!");
+        System.out.println("Really!");
       }
       // then reset question to false
       askAQuestion = false;
