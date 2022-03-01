@@ -275,20 +275,19 @@ public class Main {
       // for each movie, checks for either director (returns director) or check for
       // cast (returns cast)
 
-    } else if (userInput.contains("deadpool")) {
-      if (userInput.contains("directed") || userInput.contains("director")) {
-        System.out.println(r.getDeadpool().getDirector() + "directed deadpool \n");
-      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
-        System.out.println("The cast of deadpool was " + r.getDeadpool().getCast() + "\n");
-      } else {
-        return;
-      }
-
-    } else if (userInput.contains("deadpool 2")) {
+    }  else if (userInput.contains("deadpool 2")) {
       if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getDeadpool2().getDirector() + "directed deadpool 2 \n");
       } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of deadpool 2 was " + r.getDeadpool2().getCast() + "\n");
+      } else {
+        return;
+      }
+    }else if (userInput.contains("deadpool")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
+        System.out.println(r.getDeadpool().getDirector() + "directed deadpool \n");
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
+        System.out.println("The cast of deadpool was " + r.getDeadpool().getCast() + "\n");
       } else {
         return;
       }
@@ -376,7 +375,7 @@ public class Main {
     } else {
       return;
     }
-  }
+}
 
   // This is the what movie response method which determines responses for what
   // questions about the different movies
@@ -384,27 +383,6 @@ public class Main {
 
     if (userInput.contains("movie")) {
 
-    } else if (userInput.contains("deadpool")) {
-
-      if (userInput.contains("rating")) {
-        System.out.print("The rating is " + r.getDeadpool().getRating() + "\n");
-      } else if (userInput.contains("genre")) {
-        System.out.print("The genre is " + r.getDeadpool().getGenre() + "\n");
-      } else if (userInput.contains("location")) {
-        System.out.print("The location the movie was filmed in is " + r.getDeadpool().getLocation() + "\n");
-      } else if (userInput.contains("awards")) {
-        System.out.print("The awards for this movie are " + r.getDeadpool().getAwards() + "\n");
-      } else if (userInput.contains("cast")) {
-        System.out.print("The cast members are " + r.getDeadpool().getCast() + "\n");
-      } else if (userInput.contains("director")) {
-        System.out.print("The director for this movie is " + r.getDeadpool().getDirector() + "\n");
-      } else if (userInput.contains("box office")) {
-        System.out.print("The gross box office $" + r.getDeadpool().getBoxOffice() + "\n");
-      } else if (userInput.contains("stars")) {
-        System.out.print("The stars are " + r.getDeadpool().getImdbStars() + "\n");
-      } else {
-        return;
-      }
     } else if (userInput.contains("deadpool2")) {
 
       if (userInput.contains("rating")) {
@@ -423,6 +401,27 @@ public class Main {
         System.out.print("The gross box office $" + r.getDeadpool2().getBoxOffice() + "\n");
       } else if (userInput.contains("stars")) {
         System.out.print("The stars are " + r.getDeadpool2().getImdbStars() + "\n");
+      } else {
+        return;
+      }
+    }else if (userInput.contains("deadpool")) {
+
+      if (userInput.contains("rating")) {
+        System.out.print("The rating is " + r.getDeadpool().getRating() + "\n");
+      } else if (userInput.contains("genre")) {
+        System.out.print("The genre is " + r.getDeadpool().getGenre() + "\n");
+      } else if (userInput.contains("location")) {
+        System.out.print("The location the movie was filmed in is " + r.getDeadpool().getLocation() + "\n");
+      } else if (userInput.contains("awards")) {
+        System.out.print("The awards for this movie are " + r.getDeadpool().getAwards() + "\n");
+      } else if (userInput.contains("cast")) {
+        System.out.print("The cast members are " + r.getDeadpool().getCast() + "\n");
+      } else if (userInput.contains("director")) {
+        System.out.print("The director for this movie is " + r.getDeadpool().getDirector() + "\n");
+      } else if (userInput.contains("box office")) {
+        System.out.print("The gross box office $" + r.getDeadpool().getBoxOffice() + "\n");
+      } else if (userInput.contains("stars")) {
+        System.out.print("The stars are " + r.getDeadpool().getImdbStars() + "\n");
       } else {
         return;
       }
@@ -628,13 +627,13 @@ public class Main {
     if (userInput.contains("movie") || userInput.contains("movies")) {
       System.out.println("My favourite place to shoot a movie is Vancouver!");
 
+    }else if (userInput.contains("deadpool 2")) {
+      System.out.println("We filmed Deadpool 2 in " + r.getDeadpool2().getLocation());
+
     } else if (userInput.contains("deadpool")) {
       System.out.println("We filmed Deadpool in " + r.getDeadpool().getLocation());
 
-    } else if (userInput.contains("deadpool 2")) {
-      System.out.println("We filmed Deadpool 2 in " + r.getDeadpool2().getLocation());
-
-    } else if (userInput.contains("free guy")) {
+    }  else if (userInput.contains("free guy")) {
       System.out.println("We filmed Free Guy in " + r.getFreeGuy().getLocation());
 
     } else if (userInput.contains("r.i.p.d")) {
@@ -673,13 +672,13 @@ public class Main {
     if (userInput.contains("movie") || userInput.contains("movies")) {
       // add your content here
 
-    } else if (userInput.contains("deadpool")) {
-      // add your content here
-
     } else if (userInput.contains("deadpool 2")) {
       // add your content here
 
-    } else if (userInput.contains("free guy")) {
+    }else if (userInput.contains("deadpool")) {
+      // add your content here
+
+    }  else if (userInput.contains("free guy")) {
       // add your content here
 
     } else if (userInput.contains("r.i.p.d")) {
@@ -715,10 +714,12 @@ public class Main {
   // This is the how movie response method which determines responses for how
   // questions about the different movies
   public static void howMovieResponse(String userInput) {
+    //this checks for: How many movies in total have you been in?
     if (userInput.contains("movie") || userInput.contains("movies")) {
-
-    } else if (userInput.contains("deadpool")) {
-      // These statements check the user input for various questions about this
+      System.out.println("I have been in about 65 movies");
+    
+    } else if (userInput.contains("deadpool 2")) {
+ // These statements check the user input for various questions about this
       // particular movie and then provide the proper
       // output depending on which question was asked
       // NOTE: This is the same process for each movie, so for simplicity, These
@@ -727,62 +728,67 @@ public class Main {
       // this checks for: How many awards has + movie + received?
       if (userInput.contains("awards") || userInput.contains("many")) {
         int count = 0;
-        for (int i = 0; i < r.getDeadpool().getAwards().size(); i++) {
-          count++;
-        }
-        System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
-
-        // this checks for: How much box office profit has + movie + made?
-      } else if (userInput.contains("box office") || userInput.contains("profit")) {
-        System.out
-            .println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
-
-        // this checks for: How long was + movie ?
-      } else if (userInput.contains("long") && userInput.contains("film")) {
-        System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
-
-        // this checks for: How much was the budget for + movie?
-      } else if (userInput.contains("long") || userInput.contains("duration")) {
-        System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
-
-        // this checks for: How long did it take to film + movie?
-      } else if (userInput.contains("budget")) {
-        System.out
-            .println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
-        // if all else fails, just return nothing
-      } else {
-        return;
-      }
-
-      // this section if for deadpool 2
-    } else if (userInput.contains("deadpool 2")) {
-
-      if (userInput.contains("awards") || userInput.contains("many")) {
-        int count = 0;
         for (int i = 0; i < r.getDeadpool2().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getDeadpool2().getTitle() + " has " + count + " awards!");
 
+        // this checks for: How much box office profit has + movie + made?
       } else if (userInput.contains("box office") || userInput.contains("profit")) {
         System.out
             .println(r.getDeadpool2().getTitle() + " made a box office profit of $" + r.getDeadpool2().getBoxOffice());
 
+             // this checks for: How long was + movie ?
       } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getDeadpool2().getTimeToFilm() + " to film");
 
+         // this checks for: How much was the budget for + movie?
       } else if (userInput.contains("long") || userInput.contains("duration")) {
         System.out.println(r.getDeadpool2().getTitle() + " is " + r.getDeadpool2().getDuration());
 
+        // this checks for: How long did it take to film + movie?
       } else if (userInput.contains("budget")) {
-        System.out
-            .println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
+        System.out.println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
+      
+        // if all else fails, just return nothing
       } else {
         return;
       }
 
-      // this section is for free guy
-    } else if (userInput.contains("free guy")) {
+      // the same process is followed for deadpool
+    } else if (userInput.contains("deadpool")) {
+     
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getDeadpool().getAwards().size(); i++) {
+          count++;
+        }
+        System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
+
+        
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
+
+       
+      } else if (userInput.contains("long") && userInput.contains("film")) {
+        System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
+
+       
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
+
+        
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
+        
+      } else {
+        return;
+      }
+
+      //this is the section for free guy
+    }else if (userInput.contains("free guy")) {
 
       if (userInput.contains("awards") || userInput.contains("many")) {
         int count = 0;
