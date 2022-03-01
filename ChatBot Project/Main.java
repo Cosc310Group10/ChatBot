@@ -671,16 +671,16 @@ public class Main {
       System.out.println("We filmed Red Notice in " + r.getRedNotice().getLocation());
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      // add your content here
+      System.out.println("We filmed Self/Less in " + r.getSelfLess().getLocation());
 
     } else if (userInput.contains("hitman")) {
-      // add your content here
+      System.out.println("We filmed The Hitman's Bodyguard in " + r.getTheHitmansBodyguard().getLocation());
 
     } else if (userInput.contains("changeup")) {
-      // add your content here
+      System.out.println("We filmed Change up in " + r.getChangeUp().getLocation());
 
     } else if (userInput.contains("proposal")) {
-      // add your content here
+      System.out.println("We filmed The Proposal in " + r.getTheProposal().getLocation());
 
     } else {
       return;
