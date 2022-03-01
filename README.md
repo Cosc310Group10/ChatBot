@@ -6,14 +6,21 @@
 <img src="images/chat_bot.jpg" alt="hiking" width="350" height="400" />
   
  <p align = "center"><a href="https://www.imdb.com/name/nm0005351/">Learn more about Ryan Reynolds</a>
- <h3>About the Project:</h3>
+ <h2>About the Project:</h2>
  <p>Ben's text here</p>
  <br>
- <h3>Class Organization:</h3>
- <p>Lance's text here</p>
+ <h2>Class Organization:</h2>
+ <p>The Class organization of this Chat-Robot is fairly straightforward. We have segregated the classes into 3 main categories, The Ryan Reynolds Class, the Movie Class, and the Main Class.</p>
  <br>
- <h3>How to Compile and Run Code:</h3>
+ <h3>Ryan Reynolds Class:</h3>
+ <p>This Ryan Reynolds class is essentially a class which encapsulates and acquires all of the physical attributes, personal / personal informational attributes, and Movie Attributes. For example, this class is essentially creating an object approximation of the actor Ryan Reynolds with all of his most imporant information. In this class we have his: height, weight, hair color, eye color, gender, birthplace, wifes name, kids names, social media handle, twitter followers, instagram followers, tiktok followers, net worth, previous marriage, personal / other awards. In addition to this, we also have a sample of 12 movies Ryan Reynolds has been in which are also included in his attributes. The movies included are: Deadpool, Deadpool 2, Free Guy, R.I.P.D, Green Lantern, Buried, 6 Underground, Red Notice, Self/Less, The Hitman's Bodyguard, Change up, and the proposal. It is imporant to note that each movie object contains: IMDb star rating, title, year it was released, PG-13 or advisory rating, List of main cast members, Director, genre, list of all awards given to movie, box office profit, location movie was filmed, time taken to film the movie, duration/length of movie, and the budget of the movie. This class includes necessary and additional constructors, and all of the getters and setters provided.</p>
+ <h3>Movie Class:</h3>
+ <p>This movie class is essentially a class which creates a movie object which stores information about a movie, which is then initialized and used as various attributes in the Ryan Reynolds class. For example, each movie object contains: IMDb star rating, title, year it was released, PG-13 or advisory rating, List of main cast members, Director, genre, list of all awards given to movie, box office profit, location movie was filmed, time taken to film the movie, duration/length of movie, and the budget of the movie. This class also includes necessary and additional constructors, all of the getters and setters, and a customized toString() method which specifies movie information.</p>
+ <h3>Main Class:</h3>
+ <p>Here is a general overview of the main class: <br>This class includes the main method and main functionality of the Ryan Reynolds Chat-Bot. The main method is broken down into various parts. First we have our cool function which delays the bootup of the program to simulate as if we are turning on a system to talk to the chat bot. We have the delay set to 2 seconds, and then the program and first greeting is printed. Next we take the user input and check if ask a question is true (this value is set to true if the chatbot asks a question back to the user 1/3 of the time), and if so, a print statement is sent out and the user input is stored temporarily. After this, we set the ask a question to false, and prompt the user to input a question. Once we received the user input, we send it to the chatbot function which delegates the input into various subproblems to then determine how the chatbot will respond. This process continues infinitely until the user types goodbye, and then the engaged boolean is set to true and the while loop evlautes to !true = false, and the goodbye print is sent and the program ends. In the chatbot function the user input is sent to, we simply call the analyzeInput function. This analyzeInput function takes in the users input and directs how the robot is going to respond based on if the user input is a greeting, or a who, what, where, when, or how question, otherwise a default response is sent. This input is then further analyzed in a subproblem to determine if the input is a who, what, where, when, or how question about Ryan Reynolds movies or personal life. From here it calls the movie response and personal response to determine what this question is about. Inside each of these who, what, where, when, or how movie response and personal response methods, we have conditions for what questions are being asked and how the chatbot will respond to each of these questions. Lastly, in the personal response methods, we call the askAQuestionResponse which determines if the chatbot will ask the same question back to the user by generating a randomnumber from 1 to 3, hence it happens 1/3 of the time. </p>
+ <br>
+ <h2>How to Compile and Run Code:</h2>
  <p>Griffin's text here</p>
  
-  <h3>Additional Information:</h3>
- <p>additional text here</p>
+  <h2>Additional Information:</h2>
+ <p>This Chat-Robot is still underway for future improvements as this course term progresses! Stay tuned for updates, more efficient and less redundant code, and an overall more intelligent Ryan Reynolds chat robot!</p>
