@@ -669,42 +669,76 @@ public class Main {
   // This is the when movie response method which determines responses for when
   // questions about movies
   public static void whenMovieResponse(String userInput) {
-    if (userInput.contains("movie") || userInput.contains("movies")) {
-      // add your content here
-
+    if ((userInput.contains("movie") || userInput.contains("movies")) && userInput.contains("first")) {
+      // When did you film your first movie?
+      System.out.println("I filmed my first movie in the year 1993!");
     } else if (userInput.contains("deadpool 2")) {
-      // add your content here
+      // When was Deadpool 2 filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getDeadpool2().getTitle() + " was filmed in the year " + r.getDeadpool2().getYear());
+      }else if (userInput.contains("deadpool")) {
+      // When was deadpool filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getDeadpool().getTitle() + " was filmed in the year " + r.getDeadpool().getYear());
+      }
 
-    }else if (userInput.contains("deadpool")) {
-      // add your content here
+    } 
 
-    }  else if (userInput.contains("free guy")) {
-      // add your content here
+    } else if (userInput.contains("free guy")) {
+      // When was Free Guy filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getFreeGuy().getTitle() + " was filmed in the year " + r.getFreeGuy().getYear());
+      }
 
     } else if (userInput.contains("r.i.p.d")) {
-      // add your content here
+      // When was R.I.P.D filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getRIPD().getTitle() + " was filmed in the year " + r.getRIPD().getYear());
+      }
 
     } else if (userInput.contains("green lantern")) {
-      // add your content here
+      // When was Green Lantern filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getGreenLantern().getTitle() + " was filmed in the year " + r.getGreenLantern().getYear());
+      }
 
     } else if (userInput.contains("6 underground")) {
-      // add your content here
+      // When was 6 Underground filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getSixUnderground().getTitle() + " was filmed in the year " + r.getSixUnderground().getYear());
+      }
 
     } else if (userInput.contains("red notice")) {
-      // add your content here
+      // When was the Red Notice filmed?
+      if(userInput.contains("when was") && userInput.contains("filmed")){
+        System.out.println(r.getRedNotice().getTitle() + " was filmed in the year " + r.getRedNotice().getYear());
+      }
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      // add your content here
-
+      // When was selfless filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getSelfLess().getTitle() + " was filmed in the year " + r.getSelfLess().getYear());
+      }
+      
     } else if (userInput.contains("hitman")) {
-      // add your content here
-
+      // When was the The hitmans bodyguard filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getTheHitmansBodyguard().getTitle() + " was filmed in the year " + r.getTheHitmansBodyguard().getYear());
+      }
+     
     } else if (userInput.contains("changeup")) {
-      // add your content here
-
+      // When was the Changeup filmed?
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getChangeUp().getTitle() + " was filmed in the year " + r.getChangeUp().getYear());
+      }
+      
     } else if (userInput.contains("proposal")) {
-      // add your content here
+      // When was the Proposal Filmed?
 
+      if(userInput.contains("when was")&& userInput.contains("filmed")){
+        System.out.println(r.getTheProposal().getTitle() + " was filmed in the year "  + r.getTheProposal().getYear());
+      }
+   
     } else {
       return;
     }
@@ -1105,10 +1139,16 @@ public class Main {
   // questions about the chat bots personal life
   public static void whenPersonalResponse(String userInput) {
 
-    if (userInput.contains("Your text here")) {
+    if (userInput.contains("born") && userInput.contains("year")) {
       // add your content here
-    } else if (userInput.contains("Your text here")) {
+      System.out.println("I was born in 1976");
+    } else if (userInput.contains("marry") || userInput.contains("married")) {
       // add your content here
+      if(userInput.contains("blake") || userInput.contains("wife")){
+        System.out.println("I married my beautiful wife in September 2012");
+      }else if(userInput.contains("scarlett")){
+        System.out.println("We really should not talk about this, but we got married in September of 2008.");
+      }
     } else {
       return;
     }
