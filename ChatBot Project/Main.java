@@ -41,12 +41,12 @@ public class Main {
 
     // while engaged, continually ask for user input and store it
     while (!engaged) {
-      //if the bot asked a question, reply with cool and take the input
-      if(askAQuestion == true){
+      // if the bot asked a question, reply with cool and take the input
+      if (askAQuestion == true) {
         userInput = sc.nextLine();
         System.out.println("Cool!");
       }
-      //then reset question to false
+      // then reset question to false
       askAQuestion = false;
       // grab user input
       userInput = sc.nextLine().toLowerCase();
@@ -239,8 +239,8 @@ public class Main {
 
     if (random == 1) {
       System.out.println("\nHow about you?");
-     askAQuestion = true;
-      
+      askAQuestion = true;
+
     } else {
       return;
     }
@@ -271,107 +271,108 @@ public class Main {
   // questions about movies
   public static void whoMovieResponse(String userInput) {
 
-    if(userInput.contains("movie") || userInput.contains("movies")){
-      //for each movie, checks for either director (returns director) or check for cast (returns cast)
+    if (userInput.contains("movie") || userInput.contains("movies")) {
+      // for each movie, checks for either director (returns director) or check for
+      // cast (returns cast)
 
-    }else if(userInput.contains("deadpool")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("deadpool")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getDeadpool().getDirector() + "directed deadpool \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of deadpool was " + r.getDeadpool().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
 
-    }else if(userInput.contains("deadpool 2")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("deadpool 2")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getDeadpool2().getDirector() + "directed deadpool 2 \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of deadpool 2 was " + r.getDeadpool2().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
 
-    }else if(userInput.contains("free guy")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("free guy")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getFreeGuy().getDirector() + "directed Free Guy \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Free Guy was " + r.getFreeGuy().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
 
-    }else if(userInput.contains("r.i.p.d")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("r.i.p.d")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getRIPD().getDirector() + "directed R.I.P.D \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of R.I.P.D was " + r.getRIPD().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
 
-    }else if(userInput.contains("green lantern")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("green lantern")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getGreenLantern().getDirector() + "directed Green Lantern \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Green Lantern was " + r.getGreenLantern().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
 
-    }else if(userInput.contains("6 underground")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("6 underground")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getSixUnderground().getDirector() + "directed 6 Underground \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of 6 Underground was " + r.getSixUnderground().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
 
-    }else if(userInput.contains("red notice")){
-      if(userInput.contains("directed")||userInput.contains("director")){
+    } else if (userInput.contains("red notice")) {
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getRedNotice().getDirector() + "directed Red Notice \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Red Notice was " + r.getRedNotice().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      if(userInput.contains("directed")||userInput.contains("director")){
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getSelfLess().getDirector() + "directed Red Notice \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Red Notice was " + r.getSelfLess().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
-      
+
     } else if (userInput.contains("hitman")) {
-      if(userInput.contains("directed")||userInput.contains("director")){
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getTheHitmansBodyguard().getDirector() + "directed Red Notice \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Red Notice was " + r.getTheHitmansBodyguard().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
-      
+
     } else if (userInput.contains("changeup")) {
-      if(userInput.contains("directed")||userInput.contains("director")){
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getChangeUp().getDirector() + "directed Red Notice \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Red Notice was " + r.getChangeUp().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
-      
+
     } else if (userInput.contains("proposal")) {
-      if(userInput.contains("directed")||userInput.contains("director")){
+      if (userInput.contains("directed") || userInput.contains("director")) {
         System.out.println(r.getTheProposal().getDirector() + "directed Red Notice \n");
-      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+      } else if (userInput.contains("cast") || userInput.contains("worked with")) {
         System.out.println("The cast of Red Notice was " + r.getTheProposal().getCast() + "\n");
-      }else{
+      } else {
         return;
       }
-     
+
     } else {
       return;
     }
@@ -382,9 +383,9 @@ public class Main {
   public static void whatMovieReponse(String userInput) {
 
     if (userInput.contains("movie")) {
-      
+
     } else if (userInput.contains("deadpool")) {
-     
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getDeadpool().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -405,7 +406,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("deadpool2")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getDeadpool2().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -426,7 +427,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("free guy")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getFreeGuy().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -447,7 +448,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("r.i.p.d")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getRIPD().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -468,7 +469,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("green lantern")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getGreenLantern().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -489,7 +490,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("6 underground")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getSixUnderground().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -510,7 +511,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("red notice")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getRedNotice().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -532,7 +533,7 @@ public class Main {
       }
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-     
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getSelfLess().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -553,7 +554,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("hitman")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getTheHitmansBodyguard().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -574,7 +575,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("changeup")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getChangeUp().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -595,7 +596,7 @@ public class Main {
         return;
       }
     } else if (userInput.contains("proposal")) {
-      
+
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getTheProposal().getRating() + "\n");
       } else if (userInput.contains("genre")) {
@@ -650,16 +651,16 @@ public class Main {
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
-      
+
     } else if (userInput.contains("hitman")) {
       // add your content here
-     
+
     } else if (userInput.contains("changeup")) {
       // add your content here
-      
+
     } else if (userInput.contains("proposal")) {
       // add your content here
-   
+
     } else {
       return;
     }
@@ -695,16 +696,16 @@ public class Main {
 
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
       // add your content here
-      
+
     } else if (userInput.contains("hitman")) {
       // add your content here
-     
+
     } else if (userInput.contains("changeup")) {
       // add your content here
-      
+
     } else if (userInput.contains("proposal")) {
       // add your content here
-   
+
     } else {
       return;
     }
@@ -715,286 +716,305 @@ public class Main {
   // questions about the different movies
   public static void howMovieResponse(String userInput) {
     if (userInput.contains("movie") || userInput.contains("movies")) {
-      
 
     } else if (userInput.contains("deadpool")) {
-      // These statements check the user input for various questions about this particular movie and then provide the proper 
+      // These statements check the user input for various questions about this
+      // particular movie and then provide the proper
       // output depending on which question was asked
-      //NOTE: This is the same process for each movie, so for simplicity, These comments will not be repeated for the other movies
+      // NOTE: This is the same process for each movie, so for simplicity, These
+      // comments will not be repeated for the other movies
 
-      //this checks for: How many awards has + movie + received?
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getDeadpool().getAwards().size(); i++){
+      // this checks for: How many awards has + movie + received?
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getDeadpool().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getDeadpool().getTitle() + " has " + count + " awards!");
-      
-        //this checks for: How much box office profit has + movie + made?
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
-      
 
-        //this checks for: How long was + movie ?
-      } else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
-      
-        //this checks for: How long did it take to film + movie?
-      } else if(userInput.contains("long") && userInput.contains("film")){
+        // this checks for: How much box office profit has + movie + made?
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getDeadpool().getTitle() + " made a box office profit of $" + r.getDeadpool().getBoxOffice());
+
+        // this checks for: How long was + movie ?
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getDeadpool().getTimeToFilm() + " to film");
-      
-        //this checks for: How much was the budget for + movie?
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
-     // if all else fails, just return nothing
-      }else{
+
+        // this checks for: How much was the budget for + movie?
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getDeadpool().getTitle() + " is " + r.getDeadpool().getDuration());
+
+        // this checks for: How long did it take to film + movie?
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getDeadpool().getTitle() + " was $" + r.getDeadpool().getBudgetOfMovie());
+        // if all else fails, just return nothing
+      } else {
         return;
       }
 
       // this section if for deadpool 2
     } else if (userInput.contains("deadpool 2")) {
-     
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getDeadpool2().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getDeadpool2().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getDeadpool2().getTitle() + " has " + count + " awards!");
-     
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getDeadpool2().getTitle() + " made a box office profit of $" + r.getDeadpool2().getBoxOffice());
-     
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getDeadpool2().getTitle() + " is " + r.getDeadpool2().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getDeadpool2().getTitle() + " made a box office profit of $" + r.getDeadpool2().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getDeadpool2().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getDeadpool2().getTitle() + " is " + r.getDeadpool2().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getDeadpool2().getTitle() + " was $" + r.getDeadpool2().getBudgetOfMovie());
+      } else {
         return;
       }
 
-      //this section is for free guy
+      // this section is for free guy
     } else if (userInput.contains("free guy")) {
-      
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getFreeGuy().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getFreeGuy().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getFreeGuy().getTitle() + " has " + count + " awards!");
-      
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getFreeGuy().getTitle() + " made a box office profit of $" + r.getFreeGuy().getBoxOffice());
-     
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getFreeGuy().getTitle() + " is " + r.getFreeGuy().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getFreeGuy().getTitle() + " made a box office profit of $" + r.getFreeGuy().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getFreeGuy().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getFreeGuy().getTitle() + " was $" + r.getFreeGuy().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getFreeGuy().getTitle() + " is " + r.getFreeGuy().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getFreeGuy().getTitle() + " was $" + r.getFreeGuy().getBudgetOfMovie());
+      } else {
         return;
       }
 
-      //this section is for RIPD
+      // this section is for RIPD
     } else if (userInput.contains("r.i.p.d")) {
-      
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getRIPD().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getRIPD().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getRIPD().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
         System.out.println(r.getRIPD().getTitle() + " made a box office profit of $" + r.getRIPD().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getRIPD().getTitle() + " is " + r.getRIPD().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getRIPD().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getRIPD().getTitle() + " is " + r.getRIPD().getDuration());
+
+      } else if (userInput.contains("budget")) {
         System.out.println("The budget for " + r.getRIPD().getTitle() + " was $" + r.getRIPD().getBudgetOfMovie());
-      }else{
+      } else {
         return;
       }
 
-      //this section is for green lantern
+      // this section is for green lantern
     } else if (userInput.contains("green lantern")) {
-     
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getGreenLantern().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getGreenLantern().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getGreenLantern().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getGreenLantern().getTitle() + " made a box office profit of $" + r.getGreenLantern().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getGreenLantern().getTitle() + " is " + r.getGreenLantern().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out.println(
+            r.getGreenLantern().getTitle() + " made a box office profit of $" + r.getGreenLantern().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getGreenLantern().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getGreenLantern().getTitle() + " was $" + r.getGreenLantern().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getGreenLantern().getTitle() + " is " + r.getGreenLantern().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out.println(
+            "The budget for " + r.getGreenLantern().getTitle() + " was $" + r.getGreenLantern().getBudgetOfMovie());
+      } else {
         return;
       }
 
-      //this section is for 6 underground
+      // this section is for 6 underground
     } else if (userInput.contains("6 underground")) {
-      
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getSixUnderground().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getSixUnderground().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getSixUnderground().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getSixUnderground().getTitle() + " made a box office profit of $" + r.getSixUnderground().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getSixUnderground().getTitle() + " is " + r.getSixUnderground().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out.println(
+            r.getSixUnderground().getTitle() + " made a box office profit of $" + r.getSixUnderground().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getSixUnderground().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getSixUnderground().getTitle() + " was $" + r.getSixUnderground().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getSixUnderground().getTitle() + " is " + r.getSixUnderground().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out.println(
+            "The budget for " + r.getSixUnderground().getTitle() + " was $" + r.getSixUnderground().getBudgetOfMovie());
+      } else {
         return;
       }
 
       // this section is for rednotice
     } else if (userInput.contains("red notice")) {
-     
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getRedNotice().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getRedNotice().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getRedNotice().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getRedNotice().getTitle() + " made a box office profit of $" + r.getRedNotice().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getRedNotice().getTitle() + " is " + r.getRedNotice().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getRedNotice().getTitle() + " made a box office profit of $" + r.getRedNotice().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getRedNotice().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getRedNotice().getTitle() + " was $" + r.getRedNotice().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getRedNotice().getTitle() + " is " + r.getRedNotice().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getRedNotice().getTitle() + " was $" + r.getRedNotice().getBudgetOfMovie());
+      } else {
         return;
       }
 
-      //this section is for selfless
+      // this section is for selfless
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getSelfLess().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getSelfLess().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getSelfLess().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getSelfLess().getTitle() + " made a box office profit of $" + r.getSelfLess().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getSelfLess().getTitle() + " is " + r.getSelfLess().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getSelfLess().getTitle() + " made a box office profit of $" + r.getSelfLess().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getSelfLess().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getSelfLess().getTitle() + " was $" + r.getSelfLess().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getSelfLess().getTitle() + " is " + r.getSelfLess().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getSelfLess().getTitle() + " was $" + r.getSelfLess().getBudgetOfMovie());
+      } else {
         return;
       }
-      
 
-      //this section is for the hitmans bodyguard
+      // this section is for the hitmans bodyguard
     } else if (userInput.contains("hitman")) {
-     
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getTheHitmansBodyguard().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getTheHitmansBodyguard().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getTheHitmansBodyguard().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getTheHitmansBodyguard().getTitle() + " made a box office profit of $" + r.getTheHitmansBodyguard().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getTheHitmansBodyguard().getTitle() + " is " + r.getTheHitmansBodyguard().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out.println(r.getTheHitmansBodyguard().getTitle() + " made a box office profit of $"
+            + r.getTheHitmansBodyguard().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getTheHitmansBodyguard().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getTheHitmansBodyguard().getTitle() + " was $" + r.getTheHitmansBodyguard().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getTheHitmansBodyguard().getTitle() + " is " + r.getTheHitmansBodyguard().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out.println("The budget for " + r.getTheHitmansBodyguard().getTitle() + " was $"
+            + r.getTheHitmansBodyguard().getBudgetOfMovie());
+      } else {
         return;
       }
-     
-      //this section is for changeup
+
+      // this section is for changeup
     } else if (userInput.contains("changeup")) {
-     
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getChangeUp().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getChangeUp().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getChangeUp().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getChangeUp().getTitle() + " made a box office profit of $" + r.getChangeUp().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getChangeUp().getTitle() + " is " + r.getChangeUp().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out
+            .println(r.getChangeUp().getTitle() + " made a box office profit of $" + r.getChangeUp().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getChangeUp().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getChangeUp().getTitle() + " was $" + r.getChangeUp().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getChangeUp().getTitle() + " is " + r.getChangeUp().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out
+            .println("The budget for " + r.getChangeUp().getTitle() + " was $" + r.getChangeUp().getBudgetOfMovie());
+      } else {
         return;
       }
-      
-      //this section is for the proposal
+
+      // this section is for the proposal
     } else if (userInput.contains("proposal")) {
-      
-      if(userInput.contains("awards") || userInput.contains("many")){
-        int count =0;
-        for(int i=0; i<r.getTheProposal().getAwards().size(); i++){
+
+      if (userInput.contains("awards") || userInput.contains("many")) {
+        int count = 0;
+        for (int i = 0; i < r.getTheProposal().getAwards().size(); i++) {
           count++;
         }
         System.out.println(r.getTheProposal().getTitle() + " has " + count + " awards!");
-      }else if(userInput.contains("box office") || userInput.contains("profit")){
-        System.out.println(r.getTheProposal().getTitle() + " made a box office profit of $" + r.getTheProposal().getBoxOffice());
-      
-      }else if(userInput.contains("long") || userInput.contains("duration")){
-        System.out.println(r.getTheProposal().getTitle() + " is " + r.getTheProposal().getDuration());
-      
-      } else if(userInput.contains("long") && userInput.contains("film")){
+      } else if (userInput.contains("box office") || userInput.contains("profit")) {
+        System.out.println(
+            r.getTheProposal().getTitle() + " made a box office profit of $" + r.getTheProposal().getBoxOffice());
+
+      } else if (userInput.contains("long") && userInput.contains("film")) {
         System.out.println("It took " + r.getTheProposal().getTimeToFilm() + " to film");
-      
-      } else if (userInput.contains("budget")){
-        System.out.println("The budget for " + r.getTheProposal().getTitle() + " was $" + r.getTheProposal().getBudgetOfMovie());
-      }else{
+
+      } else if (userInput.contains("long") || userInput.contains("duration")) {
+        System.out.println(r.getTheProposal().getTitle() + " is " + r.getTheProposal().getDuration());
+
+      } else if (userInput.contains("budget")) {
+        System.out.println(
+            "The budget for " + r.getTheProposal().getTitle() + " was $" + r.getTheProposal().getBudgetOfMovie());
+      } else {
         return;
       }
-   
-      //if all else fails, just return
+
+      // if all else fails, just return
     } else {
       return;
     }
@@ -1009,12 +1029,13 @@ public class Main {
   // questions about the chat bots personal life
   public static void whoPersonalResponse(String userInput) {
 
-    // checks for keywords about presonal"who" attributes, retruns appropriate response
-    if(userInput.contains("wife")){
+    // checks for keywords about presonal"who" attributes, retruns appropriate
+    // response
+    if (userInput.contains("wife")) {
       System.out.println("Im married too " + r.getwifeName());
-    } else if(userInput.contains("kids")||userInput.contains("children")){
+    } else if (userInput.contains("kids") || userInput.contains("children")) {
       System.out.println("My kids are " + r.getkidNames());
-    }else if(userInput.contains("previous marriage") || userInput.contains("ex-wife")){
+    } else if (userInput.contains("previous marriage") || userInput.contains("ex-wife")) {
       System.out.println("I was previously married too " + r.getpreviousMarriage());
     } else {
       return;
@@ -1031,22 +1052,22 @@ public class Main {
   public static void whatPersonalResponse(String userInput) {
 
     if (userInput.contains("eye")) {
-     
+
       System.out.print("My eye colour is " + r.geteyecolour() + "\n");
     } else if (userInput.contains("height")) {
-      
+
       System.out.print("My height is " + r.getheight() + "\n");
     } else if (userInput.contains("net")) {
-     
+
       System.out.print("My net worth is " + r.getnetWorth() + "\n");
     } else if (userInput.contains("wife")) {
-      
+
       System.out.print("My wives' name is " + r.getwifeName() + "\n");
     } else if (userInput.contains("kids")) {
-      
+
       System.out.print("My kids is names are:" + r.getkidNames() + "\n");
     } else if (userInput.contains("birthdate")) {
-      
+
       System.out.print("My birthdate is " + r.getbirthDate() + "\n");
     } else {
       return;
@@ -1128,11 +1149,13 @@ public class Main {
       System.out.println("I have " + count + " kids");
 
     } else if (userInput.contains("instagram") || userInput.contains("instagram followers")) {
-      // Chat bots response to user asking how many instagram followers Ryan Reynolds has
+      // Chat bots response to user asking how many instagram followers Ryan Reynolds
+      // has
       System.out.println("I have " + r.getinstagramFollowers() + " followers on instgram!");
 
     } else if (userInput.contains("twitter") || userInput.contains("twitter followers")) {
-      // Chat bots response to user asking how many twitter followers Ryan Reynolds has
+      // Chat bots response to user asking how many twitter followers Ryan Reynolds
+      // has
       System.out.println("I have " + r.gettwitterFollowers() + " followers on Twitter!");
 
     } else if (userInput.contains("tiktok") || userInput.contains("tiktok followers")) {
@@ -1140,7 +1163,8 @@ public class Main {
       System.out.println("I have " + r.gettiktokFollowers() + " followers on TikTok!");
 
     } else if ((userInput.contains("personal") || userInput.contains("other")) && userInput.contains("awards")) {
-      // Chat bots response to user asking how many personal / other awards Ryan Reynolds has
+      // Chat bots response to user asking how many personal / other awards Ryan
+      // Reynolds has
       int count = 0;
       for (int i = 0; i < r.getotherAwards().size(); i++) {
         count++;
