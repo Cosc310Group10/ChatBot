@@ -8,9 +8,6 @@ GRIFFIN WILCHUK, STUDENT #75303370 CARLA MATHER, STUDENT #22779193
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.Year;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
