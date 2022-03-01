@@ -183,7 +183,7 @@ public class Movie {
         return duration;
     }
 
-    public void setDuration(){
+    public void setDuration(String duration){
         this.duration = duration;
     }
 
@@ -191,7 +191,7 @@ public class Movie {
         return timeToFilm;
     }
 
-    public void setTimeToFilm(){
+    public void setTimeToFilm(String timeToFilm){
         this.timeToFilm = timeToFilm;
     }
 
@@ -199,7 +199,7 @@ public class Movie {
         return budgetOfMovie;
     }
 
-    public void setBudgetOfMovie(){
+    public void setBudgetOfMovie(String budgetOfMovie){
         this.budgetOfMovie = budgetOfMovie;
     }
 
