@@ -7,7 +7,7 @@
   
  <p align = "center"><a href="https://www.imdb.com/name/nm0005351/">Learn more about Ryan Reynolds</a>
  <h2>About the Project:</h2>
- <p>Ben's text here</p>
+ <p>This project is a chatbot which takes user inputs and responds as though it is the famous actor Ryan Reynolds. It can handle a variety of questions about Ryan Reynolds’ personal life or about several of the movies he has acted in. The program will boot up and then be ready for the user to ask any question they like. If the chatbot version of Ryan Reynolds knows the answer then the user will see the response on screen, but if the chatbot version of Ryan Reynolds does not know the answer then the user will see a message explaining that the chatbot can’t answer their question. Occasionally, if the question is appropriate for a return question, the Ryan Reynolds chatbot will sometimes ask a question back to the user. This will be a response question. This back and forth between the user and the Ryan Reynolds chatbot will go on for an infinite amount of time before the user chooses to end the program with a simple trigger word.</p>
  <br>
  <h3>Class Organization:</h3>
  <p>The Class organization of this Chat-Robot is fairly straightforward. We have segregated the classes into 3 main categories, The Ryan Reynolds Class, the Movie Class, and the Main Class.</p>
