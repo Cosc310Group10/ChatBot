@@ -259,7 +259,7 @@ public class Main {
     // statement set as
     // the chat bot's default response to a question it does not know
 
-    System.out.println("Sorry, I am unsure of how to respond to this question");
+    System.out.println("Sorry, I am unsure of how to respond to this question.");
     System.out.println("Please ask me another question about my life or my movies, I would be happy to answer!");
 
   }
