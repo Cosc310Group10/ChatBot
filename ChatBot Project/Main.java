@@ -340,16 +340,40 @@ public class Main {
         return;
       }
     } else if (userInput.contains("selfless") || userInput.contains("self/less")) {
-      // add your content here
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getSelfLess().getDirector() + "directed Red Notice \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Red Notice was " + r.getSelfLess().getCast() + "\n");
+      }else{
+        return;
+      }
       
     } else if (userInput.contains("hitman")) {
-      // add your content here
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getTheHitmansBodyguard().getDirector() + "directed Red Notice \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Red Notice was " + r.getTheHitmansBodyguard().getCast() + "\n");
+      }else{
+        return;
+      }
       
     } else if (userInput.contains("changeup")) {
-      // add your content here
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getChangeUp().getDirector() + "directed Red Notice \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Red Notice was " + r.getChangeUp().getCast() + "\n");
+      }else{
+        return;
+      }
       
     } else if (userInput.contains("proposal")) {
-      // add your content here
+      if(userInput.contains("directed")||userInput.contains("director")){
+        System.out.println(r.getTheProposal().getDirector() + "directed Red Notice \n");
+      }else if(userInput.contains("cast") || userInput.contains("worked with")){
+        System.out.println("The cast of Red Notice was " + r.getTheProposal().getCast() + "\n");
+      }else{
+        return;
+      }
      
     } else {
       return;
