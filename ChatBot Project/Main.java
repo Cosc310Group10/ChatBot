@@ -499,7 +499,30 @@ public class Main {
       } else {
         return;
       }
-    } else if (userInput.contains("6 underground")) {
+    } else if (userInput.contains("buried")) {
+
+      if (userInput.contains("rating")) {
+        System.out.print("The rating is " + r.getBuried().getRating() + "\n");
+      } else if (userInput.contains("genre")) {
+        System.out.print("The genre is " + r.getBuried().getGenre() + "\n");
+      } else if (userInput.contains("location")) {
+        System.out.print("The location the movie was filmed in is " + r.getBuried().getLocation() + "\n");
+      } else if (userInput.contains("awards")) {
+        System.out.print("The awards for this movie are " + r.getBuried().getAwards() + "\n");
+      } else if (userInput.contains("cast")) {
+        System.out.print("The cast members are " + r.getBuried().getCast() + "\n");
+      } else if (userInput.contains("director")) {
+        System.out.print("The director for this movie is " + r.getBuried().getDirector() + "\n");
+      } else if (userInput.contains("box office")) {
+        System.out.print("The gross box office $" + r.getBuried().getBoxOffice() + "\n");
+      } else if (userInput.contains("stars")) {
+        System.out.print("The stars are " + r.getBuried().getImdbStars() + "\n");
+      } else if (userInput.contains("year")) {
+        System.out.print("The year Green Lantern was made in was " + r.getBuried().getYear() + "\n");
+      } else {
+        return;
+      }
+    }else if (userInput.contains("6 underground")) {
 
       if (userInput.contains("rating")) {
         System.out.print("The rating is " + r.getSixUnderground().getRating() + "\n");
