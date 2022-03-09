@@ -109,7 +109,7 @@ public class RyanReynolds {
 
     //6 Underground
     ArrayList<String> sixUndergroundCast = new ArrayList<>(Arrays.asList("Me", "Melanie Laurent", "Manuel Garcia-Rulfo","Ben Hardy", "Adira Arjona", "Dave Franco", "Corey Hawkins", "Lior Raz","Payman Maadi","Yuri Kolokolnikov", "Kim Kold", "Lidia Franco","James Murray", "Lukhanyo Bele", "George Kareman", "James Carroll Jordan", "Ron Funches", "Daniel Adegboyega"));
-
+    ArrayList<String> sixUndergroundAwards = new ArrayList<>(Arrays.asList("Taurus World Stunt Award"));
     private Movie sixUnderground = new Movie(6.1,"6 Underground",2019,"R",sixUndergroundCast,"Michael Bay","Action and Thriller",sixUndergroundAwards,"N/A","Abu Dhabi");
 
 
