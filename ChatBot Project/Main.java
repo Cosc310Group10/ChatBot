@@ -234,11 +234,38 @@ public class Main{
 
      //this is a method that is called as a default response if the chat bot is unable to determine how to respond
     public static void defaultResponse(String userInput){
-      //If all else fails and the chat bot does not not how to respond, we have this statement set as
-      // the chat bot's default response to a question it does not know
+      //If all else fails and the chat bot does not not how to respond, we have these 5 statements set as
+      // the chat bot's default responses to any questions it does not know
+      
 
-      System.out.println("Sorry, I am unsure of how to respond to this question");
-      System.out.println("Please ask me another question about my life or my movies, I would be happy to answer!");
+      //random value to select a response
+      int selector = (int) (Math.random()*5);
+     
+      switch(selector)
+      {
+      // case statements: each is a unique response when the question is not understood
+        case 0 :
+          System.out.println("I'm sorry I don't understand the question. Please ask me again!");
+          break;
+
+        case 1 :
+          System.out.println("Pardon? I didn't quite get that.");
+          break;
+
+        case 2 :
+          System.out.println("I'm sorry I don't understand the question. Maybe it's because of your accent hahaha!");
+          break;
+
+        case 3 :
+          System.out.println("Sorry, you will have to ask that again.");
+          break;
+
+        case 4 :
+          System.out.println("That was a confusing question! Can you ask me again?");
+          break;
+
+        default : 
+      }
 
     }
 
