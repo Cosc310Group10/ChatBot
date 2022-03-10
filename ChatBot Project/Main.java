@@ -7,6 +7,7 @@ GRIFFIN WILCHUK, STUDENT #75303370 CARLA MATHER, STUDENT #22779193
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +20,9 @@ public class Main {
   static boolean responseSaid = false;
 
   public static void main(String[] args) {
+
+    //creating a user map
+    HashMap<String, String> userMap = new HashMap<String, String>();
 
     // a cool feature saying the chatbot is booting up for a delay of 2 seconds
     System.out.println("Ryan Reynolds Chat bot booting up...");
@@ -53,6 +57,10 @@ public class Main {
       System.out.println();
       // grab user input
       userInput = sc.nextLine().toLowerCase();
+
+      
+      
+
 
       // if the user input equals end, then engaged is set to true, the scanner
       // closes, and we break from the loop to end conversation
@@ -91,6 +99,7 @@ public class Main {
 
     if (userInput.contains("hi") || userInput.contains("hey") || userInput.contains("hello")) {
       greetingResponse(userInput);
+      
 
     } else if (userInput.contains("who")) {
       whoResponse(userInput);
