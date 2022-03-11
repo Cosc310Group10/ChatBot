@@ -11,8 +11,64 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
-public class Main {
+
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+public class Main extends JFrame {
+
+
+  //creating a text area
+  private static JTextArea chatArea = new JTextArea();
+  //creating a text field / box
+  private static JTextField chatField = new JTextField();
+  //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
+  public Main(){
+    JFrame frame = new JFrame();
+    frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    frame.setVisible(true);
+    frame.setLayout(null);
+    frame.setSize(600,600);
+    // frame.setBackground(new Color(0,0,0));
+    frame.setTitle("Ryan Reynolds Chat Bot");
+    frame.add(chatArea);
+    frame.add(chatField);
+
+    //this is for the text area formatting
+    chatArea.setSize(500,400);
+    chatArea.setLocation(2,2);
+
+    //this is for the text field
+    chatField.setSize(540,30);
+    chatField.setLocation(2, 500);
+
+    chatField.addActionListener(new ActionListener(){
+
+    public void actionPerformed(ActionEvent e){
+      String uText = chatField.getText();
+      chatArea.append("You: " + uText+"\n");
+
+      if(uText.contains("Hi")){
+        Bot("deadpool");
+      }
+      
+
+  }
+  });
+
+  }
+
+  private void Bot(String s){
+    chatArea.append("Ryan Reynolds: "+s+"\n");
+  }
 
   // creating a static ryan reynolds object so its accessible by all methods
   static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
@@ -65,6 +121,9 @@ public class Main {
 
   // --------------------------------------------------------------------------------------------------
   public static void main(String[] args) {
+
+    //GUI STUFF
+    new Main();
 
     // initializing the greeting repsonse list
     greetingResponses.add("hi");
@@ -421,7 +480,7 @@ public class Main {
     for (int i = 0; i < movieQuestion.size(); i++) {
       if (userInput.contains(movieQuestion.get(0))) {
 
-        System.out.println(movieTitleAsked + " " + imdbMap.get(movieTitleAsked));
+       chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked));
         break;
 
       } else if (userInput.contains(movieQuestion.get(1))) {
