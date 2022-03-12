@@ -99,7 +99,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     frame.add(chatField);
 
     //this is for the text area formatting
-    chatArea.setSize(500,400);
+    chatArea.setSize(800,500);
     chatArea.setLocation(2,2);
 
     //this is for the text field
