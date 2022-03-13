@@ -13,6 +13,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -22,10 +23,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.FlowLayout;
 
+import java.awt.GraphicsDevice;
 import javax.swing.JButton;
+import java.awt.GraphicsEnvironment;
+    //----------------------------------------------------------------------------------------------------------------------------
 public class ChatBot extends JFrame {
 
 
+    //----------------------------------------------------------------------------------------------------------------------------
 
 // creating a static ryan reynolds object so its accessible by all methods
 static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
@@ -84,32 +89,61 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
   //creating a text field / box
   private static JTextField chatField = new JTextField();
 
-  
+  private static JButton button;
+ 
+    //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
   public ChatBot(){
 
-    JFrame frame = new JFrame();
+    //getting the laptop screen size, and setting the frame to be full screen
+    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    GraphicsDevice device = graphics.getDefaultScreenDevice();
+    JFrame frame = new JFrame("Fullscreen");
+    device.setFullScreenWindow(frame);
+
     frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    frame.setLayout(new FlowLayout());
     frame.setVisible(true);
     frame.setLayout(null);
-    frame.setSize(600,600);
-    frame.setBackground(new Color(0,0,0));
+    // frame.setPreferredSize(new Dimension());
+    frame.setResizable(false);
+    
+    frame.getContentPane().setBackground(Color.blue);
     frame.setTitle("Ryan Reynolds Chat Bot");
     frame.add(chatArea);
     frame.add(chatField);
-
+    this.pack();
+   
     //this is for the text area formatting
-    chatArea.setSize(800,500);
-    chatArea.setLocation(2,2);
+    chatArea.setSize(1259,595);
+    chatArea.setLocation(4,4);
+    chatArea.setBackground(Color.black);
+    chatArea.setForeground(Color.yellow);
+    
 
     //this is for the text field
-    chatField.setSize(540,30);
-    chatField.setLocation(2, 500);
+    chatField.setSize(1259,40);
+    chatField.setLocation(3, 600);
+    chatField.setBackground(Color.black);
+    chatField.setForeground(Color.yellow);
+    chatField.setCaretColor(Color.yellow);
 
+   
+    //creating a button
+    button = new JButton("Ask:");
+    
+
+
+    //----------------------------------------------------------------------------------------------------------------------------
+    // HERE WE ARE CREATING AN ACTION LISTENER AND MAKING AN ACTION PERFORMED METHOD WHICH INCLUDES ALL OF OUR MAIN CODE
+    //EXCEPT FOR THE METHODS USED IN THE CODE WHICH ARE OUTSIDE THIS ACTION PERFORMED METHOD
     chatField.addActionListener(new ActionListener(){
 
     public void actionPerformed(ActionEvent e){
 
+      if(e.getSource()==button){
+        System.out.println("Hi " + chatField.getText());
+    }
 
  // initializing the greeting repsonse list
  greetingResponses.add("hi");
@@ -263,6 +297,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
 
   }
+
   });
 
   }
@@ -276,6 +311,8 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
     //GUI STUFF
     new ChatBot();
+
+   
 
    
 

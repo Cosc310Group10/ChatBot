@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 public class MyFrame extends JFrame implements ActionListener{
     JButton button;
     JTextField textField;
+    
     MyFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout());
@@ -33,4 +34,8 @@ public class MyFrame extends JFrame implements ActionListener{
         }
 
     }
+    public static void main(String[]args){
+        MyFrame f = new MyFrame();
+    }
 }
+
