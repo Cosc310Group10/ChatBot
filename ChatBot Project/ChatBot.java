@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 
 import java.awt.Dimension;
@@ -26,6 +27,7 @@ import java.awt.FlowLayout;
 import java.awt.GraphicsDevice;
 import javax.swing.JButton;
 import java.awt.GraphicsEnvironment;
+import javax.swing.ImageIcon;
     //----------------------------------------------------------------------------------------------------------------------------
 public class ChatBot extends JFrame {
 
@@ -90,6 +92,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
   private static JTextField chatField = new JTextField();
 
   private static JButton button;
+  ImageIcon image;
  
     //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
@@ -101,12 +104,23 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     JFrame frame = new JFrame("Fullscreen");
     device.setFullScreenWindow(frame);
 
+
+    
     frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     frame.setLayout(new FlowLayout());
     frame.setVisible(true);
     frame.setLayout(null);
     // frame.setPreferredSize(new Dimension());
     frame.setResizable(false);
+
+
+    //setting GUI image as ryan reynolds
+    
+    //can only get logo to change with absolute path
+    image = new ImageIcon("/Users/lance_oxb4bxn/OneDrive/UBCO/2021-2022 Year 4/Term 2/COSC 310/TeamGitHub/ChatBot/ChatBot Project/ryan_reynolds.jpg");
+    // image = new ImageIcon("./ryan_reynolds.jpg");
+    
+    frame.setIconImage(image.getImage()); //changes icon of frame
     
     frame.getContentPane().setBackground(Color.blue);
     frame.setTitle("Ryan Reynolds Chat Bot");
@@ -131,6 +145,10 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
    
     //creating a button
     button = new JButton("Ask:");
+
+   
+       
+        
     
 
 
