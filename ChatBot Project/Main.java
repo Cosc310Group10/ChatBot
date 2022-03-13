@@ -934,6 +934,7 @@ public class Main{
     
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public static void textresponse(String string){
         System.out.println("Ryan: " + string);
 =======
@@ -1026,4 +1027,7 @@ public class Main{
       return;
 >>>>>>> Stashed changes
     }
+=======
+    
+>>>>>>> Stashed changes
 }
