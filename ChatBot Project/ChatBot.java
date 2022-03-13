@@ -288,6 +288,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
       // grab user input
       userInputUnformatted = chatField.getText();
       userInput = chatField.getText().toLowerCase();
+      chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
       
       // if the user input equals end, then engaged is set to true, the scanner
