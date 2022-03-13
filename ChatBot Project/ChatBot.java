@@ -133,6 +133,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     chatArea.setLocation(4,4);
     chatArea.setBackground(Color.black);
     chatArea.setForeground(Color.yellow);
+    chatArea.setLineWrap(true);
     
 
     //this is for the text field
@@ -141,6 +142,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     chatField.setBackground(Color.black);
     chatField.setForeground(Color.yellow);
     chatField.setCaretColor(Color.yellow);
+    
 
    
     //creating a button
@@ -257,14 +259,14 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
    
     if (startUp == true){
     // a cool feature saying the chatbot is booting up for a delay of 2 seconds
-    chatArea.append("Ryan Reynolds Chat bot booting up...\n");
+    chatArea.setText("Ryan Reynolds Chat bot booting up...\n");
     try {
       TimeUnit.SECONDS.sleep(2); // delaying the program for 2 seconds
     } catch (Exception g) {
-      chatArea.append("Error Occurred"); // catching an error
+      chatArea.setText("Error Occurred"); // catching an error
     }
     // prompt for user and creating scanner
-    chatArea.append("Ryan Reynolds: " + 
+    chatArea.setText("Ryan Reynolds: " + 
         "Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!\n");
         startUp = false;
   }
@@ -278,7 +280,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
       // if the bot asked a question, reply with cool and take the input
       if (askAQuestion == true) {
         
-        chatArea.append("Ryan Reynolds: Really!\n");
+        chatArea.setText("Ryan Reynolds: Really!\n");
       }
       // then reset question to false
       askAQuestion = false;
