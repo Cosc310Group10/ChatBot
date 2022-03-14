@@ -185,7 +185,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
       
      if(e.getSource()==button){
-       System.out.println("Hi");
+      
      
         
     
@@ -310,7 +310,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
        
       }
       //otherwise, re prompt for input and repeat
-
+askAQuestion = false;
       // print new line
       chatArea.append("\n");
       // grab user input
