@@ -13,11 +13,14 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.awt.Color;
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
+import javax.swing.*;
+import java.awt.BorderLayout;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JPanel;
 import javax.swing.JLabel;
-
+import java.awt.Container;
+import javax.swing.AbstractButton;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -29,7 +32,7 @@ import javax.swing.JButton;
 import java.awt.GraphicsEnvironment;
 import javax.swing.ImageIcon;
     //----------------------------------------------------------------------------------------------------------------------------
-public class ChatBot extends JFrame {
+public class ChatBot extends JFrame implements ActionListener {
 
 
     //----------------------------------------------------------------------------------------------------------------------------
@@ -104,15 +107,33 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     JFrame frame = new JFrame("Fullscreen");
     device.setFullScreenWindow(frame);
 
-
+    JPanel panel = new JPanel();
     
     frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     frame.setLayout(new FlowLayout());
-    frame.setVisible(true);
-    frame.setLayout(null);
-    // frame.setPreferredSize(new Dimension());
-    frame.setResizable(false);
+  
+    
+    
+    
+    //creating and adding a button
+        button = new JButton("Ask:");
+        button.setPreferredSize(new Dimension(700,30));
+        
 
+       
+        // Container contentPane = frame.getContentPane();
+    
+       
+        // contentPane.add(button, BorderLayout.SOUTH);
+
+        button.setBounds(500,600,200,900);
+        
+     
+        // add(button);
+        button.addActionListener(this);
+       
+       
+    
 
     //setting GUI image as ryan reynolds
     
@@ -121,12 +142,16 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     // image = new ImageIcon("./ryan_reynolds.jpg");
     
     frame.setIconImage(image.getImage()); //changes icon of frame
-    
     frame.getContentPane().setBackground(Color.blue);
     frame.setTitle("Ryan Reynolds Chat Bot");
+    frame.add(button);
     frame.add(chatArea);
     frame.add(chatField);
+    frame.setVisible(true);
+    frame.setLayout(null);
+    frame.setResizable(false);
     this.pack();
+    
    
     //this is for the text area formatting
     chatArea.setSize(1259,595);
@@ -134,6 +159,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     chatArea.setBackground(Color.black);
     chatArea.setForeground(Color.yellow);
     chatArea.setLineWrap(true);
+    // chatArea.add(button);
     
 
     //this is for the text field
@@ -142,29 +168,27 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     chatField.setBackground(Color.black);
     chatField.setForeground(Color.yellow);
     chatField.setCaretColor(Color.yellow);
-    
-
-   
-    //creating a button
-    button = new JButton("Ask:");
+    chatField.add(button);
 
    
        
-        
+  }
     
 
 
     //----------------------------------------------------------------------------------------------------------------------------
     // HERE WE ARE CREATING AN ACTION LISTENER AND MAKING AN ACTION PERFORMED METHOD WHICH INCLUDES ALL OF OUR MAIN CODE
     //EXCEPT FOR THE METHODS USED IN THE CODE WHICH ARE OUTSIDE THIS ACTION PERFORMED METHOD
-    chatField.addActionListener(new ActionListener(){
+    
 
     public void actionPerformed(ActionEvent e){
 
-      if(e.getSource()==button){
-        System.out.println("Hi " + chatField.getText());
-    }
-
+      
+     if(e.getSource()==button){
+       System.out.println("Hi");
+     
+        
+    
  // initializing the greeting repsonse list
  greetingResponses.add("hi");
  greetingResponses.add("hello");
@@ -279,11 +303,13 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     
       // if the bot asked a question, reply with cool and take the input
       if (askAQuestion == true) {
-        
+        userInputUnformatted = chatField.getText();
+        chatField.setText("");
+        chatArea.append("You: " + userInputUnformatted+"\n");
         chatArea.setText("Ryan Reynolds: Really!\n");
+       
       }
-      // then reset question to false
-      askAQuestion = false;
+      //otherwise, re prompt for input and repeat
 
       // print new line
       chatArea.append("\n");
@@ -292,6 +318,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
       userInput = chatField.getText().toLowerCase();
       chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
+      
       
       // if the user input equals end, then engaged is set to true, the scanner
       // closes, and we break from the loop to end conversation
@@ -318,10 +345,14 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
 
   }
+}
 
-  });
 
-  }
+  
+  
+
+
+
 
  
 
@@ -674,7 +705,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     int random = (int) (Math.random() * 6); // 1/6 of the time the chat bot asks a question back to the user
 
     if (random == 1) {
-      chatArea.append("Ryan Reynolds: " + "\nHow about you?"+"\n");
+      chatArea.append("Ryan Reynolds: " + "How about you?"+"\n");
       askAQuestion = true;
 
     } else {
