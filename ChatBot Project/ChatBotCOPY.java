@@ -32,7 +32,7 @@ import javax.swing.JButton;
 import java.awt.GraphicsEnvironment;
 import javax.swing.ImageIcon;
     //----------------------------------------------------------------------------------------------------------------------------
-public class ChatBot extends JFrame implements ActionListener {
+public class ChatBotCOPY extends JFrame implements ActionListener {
 
 
     //----------------------------------------------------------------------------------------------------------------------------
@@ -99,77 +99,29 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
  
     //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
-  public ChatBot(){
+  public ChatBotCOPY(){
 
-    //getting the laptop screen size, and setting the frame to be full screen
-    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    GraphicsDevice device = graphics.getDefaultScreenDevice();
-    JFrame frame = new JFrame("Fullscreen");
-    device.setFullScreenWindow(frame);
-
-    JPanel panel = new JPanel();
     
-    frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    frame.setLayout(new FlowLayout());
+    JFrame f = new JFrame("Bruh");
+   //set size and location of frame
+   f.setSize(390, 300);
+   f.setLocation(100, 150);
+   f.setLayout(new FlowLayout());
+   //make sure it quits when x is clicked
+   f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
-    
-    
-    
-    //creating and adding a button
-        button = new JButton("Ask:");
-        button.setPreferredSize(new Dimension(700,30));
-        
-
-       
-        // Container contentPane = frame.getContentPane();
-    
-       
-        // contentPane.add(button, BorderLayout.SOUTH);
-
-        button.setBounds(500,600,200,900);
-        
-     
-        // add(button);
-        button.addActionListener(this);
-       
-       
-    
-
-    //setting GUI image as ryan reynolds
-    
-    //can only get logo to change with absolute path
-    image = new ImageIcon("/Users/lance_oxb4bxn/OneDrive/UBCO/2021-2022 Year 4/Term 2/COSC 310/TeamGitHub/ChatBot/ChatBot Project/ryan_reynolds.jpg");
-    // image = new ImageIcon("./ryan_reynolds.jpg");
-    
-    frame.setIconImage(image.getImage()); //changes icon of frame
-    frame.getContentPane().setBackground(Color.blue);
-    frame.setTitle("Ryan Reynolds Chat Bot");
-    frame.add(button);
-    frame.add(chatArea);
-    frame.add(chatField);
-    frame.setVisible(true);
-    frame.setLayout(null);
-    frame.setResizable(false);
-    this.pack();
-    
-   
-    //this is for the text area formatting
-    chatArea.setSize(1259,595);
-    chatArea.setLocation(4,4);
-    chatArea.setBackground(Color.black);
-    chatArea.setForeground(Color.yellow);
-    chatArea.setLineWrap(true);
-    // chatArea.add(button);
-    
-
-    //this is for the text field
-    // chatField.setLayout(new FlowLayout());
-    chatField.setSize(1259,40);
-    chatField.setLocation(3, 600);
-    chatField.setBackground(Color.black);
-    chatField.setForeground(Color.yellow);
-    chatField.setCaretColor(Color.yellow);
-    chatField.add(button);
+   JButton button = new JButton("Submit");
+   button.addActionListener(this);
+ 
+   JTextField field = new JTextField();
+   //set size of the text box
+   field.setBounds(50, 100, 200, 30);
+   //add elements to the frame
+  
+   field.add(button);
+   f.add(field);
+   f.setLayout(null);
+   f.setVisible(true);
 
    
        
@@ -363,7 +315,7 @@ askAQuestion = false;
   public static void main(String[] args) {
 
     //GUI STUFF
-    new ChatBot();
+    new ChatBotCOPY();
 
    
 
