@@ -108,7 +108,12 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     device.setFullScreenWindow(frame);
 
     JPanel panel = new JPanel();
-    
+    JScrollPane scroll = new JScrollPane(
+        chatArea, 
+        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+        JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
+    );
+
     frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     frame.setLayout(new FlowLayout());
   
@@ -147,6 +152,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     frame.add(button);
     frame.add(chatArea);
     frame.add(chatField);
+    frame.add(scroll);
     frame.setVisible(true);
     frame.setLayout(null);
     frame.setResizable(false);
@@ -169,7 +175,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     chatField.setBackground(Color.black);
     chatField.setForeground(Color.yellow);
     chatField.setCaretColor(Color.yellow);
-    chatField.add(button);
+    // chatField.add(button);
 
    
        
@@ -308,10 +314,10 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
         chatField.setText("");
         chatArea.append("You: " + userInputUnformatted+"\n");
         chatArea.setText("Ryan Reynolds: Really!\n");
-       
+        
       }
       //otherwise, re prompt for input and repeat
-askAQuestion = false;
+      askAQuestion = false;
       // print new line
       chatArea.append("\n");
       // grab user input
@@ -703,7 +709,7 @@ askAQuestion = false;
   // question back to the user or not
 
   public static void askAQuestionResponse() {
-    int random = (int) (Math.random() * 6); // 1/6 of the time the chat bot asks a question back to the user
+    int random = (int) (Math.random() * 2); // 1/6 of the time the chat bot asks a question back to the user
 
     if (random == 1) {
       chatArea.append("Ryan Reynolds: " + "How about you?"+"\n");

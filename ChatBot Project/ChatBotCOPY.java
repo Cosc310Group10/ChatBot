@@ -90,9 +90,13 @@ static HashMap<String, String> durationMap = new HashMap<String, String>();
 static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
   //creating a text area
-  private static JTextArea chatArea = new JTextArea();
+  private static JTextArea chatArea;
   //creating a text field / box
-  private static JTextField chatField = new JTextField();
+  private static JTextField chatField;
+
+  private static JScrollPane scroll;
+
+  private static JPanel panel;
 
   private static JButton button;
   ImageIcon image;
@@ -101,31 +105,50 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
   public ChatBotCOPY(){
 
-    
-    JFrame f = new JFrame("Bruh");
-   //set size and location of frame
-   f.setSize(390, 300);
-   f.setLocation(100, 150);
-   f.setLayout(new FlowLayout());
-   //make sure it quits when x is clicked
-   f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-  
-   JButton button = new JButton("Submit");
-   button.addActionListener(this);
- 
-   JTextField field = new JTextField();
-   //set size of the text box
-   field.setBounds(50, 100, 200, 30);
-   //add elements to the frame
-  
-   field.add(button);
-   f.add(field);
-   f.setLayout(null);
-   f.setVisible(true);
+    //getting the laptop screen size, and setting the frame to be full screen
+    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    GraphicsDevice device = graphics.getDefaultScreenDevice();
+    JFrame frame = new JFrame("Fullscreen");
+    device.setFullScreenWindow(frame);
 
+    //creating the panel
+    panel = new JPanel();
+
+    //specifying the text area/field sizes
+    chatArea = new JTextArea(1259,595);
+    chatField = new JTextField(1259,40);
+
+    //specifying a button
+    button = new JButton(700,30);
+    
+    scroll = new JScrollPane(
+        chatArea, 
+        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+        JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
+    );
+    
+    setSize(600,400);
+    setResizable(false);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    chatArea.setEditable(false);
+    chatField.addKeyListener(this);
+    panel.add(scroll);
+    panel.add(button);
+    panel.add(chatField);
+    panel.add(chatArea);
+    panel.setBackground(new Color(0, 200, 255));
+    add(panel);
+
+    setVisible(true);
+
+    
    
        
   }
+
+ 
+
     
 
 
@@ -315,6 +338,8 @@ askAQuestion = false;
   public static void main(String[] args) {
 
     //GUI STUFF
+ 
+
     new ChatBotCOPY();
 
    
@@ -322,6 +347,7 @@ askAQuestion = false;
    
 
   }
+ 
 
   // ---------------------------------------------------------------------------------------------------------
   // this is a method which fills in each movie map with its respective key and
