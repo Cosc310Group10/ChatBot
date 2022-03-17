@@ -3,6 +3,7 @@ what's
 wife's
 name?
 deadpool
+deadpools
 deadpool2
 deadpool 2
 dead pool
@@ -41,7 +42,7 @@ boxoffice
 location
 time
 film
-lenght
+length
 duration
 budget
 hi
@@ -95,7 +96,6 @@ why
 .
 ,
 '
-
 name?
 deadpool?
 deadpool2?
@@ -136,7 +136,7 @@ boxoffice?
 location?
 time?
 film?
-lenght?
+length?
 duration?
 budget?
 hi?
@@ -179,6 +179,53 @@ awards?
 award?
 cast?
 old?
+names
+deadpools
+deadpool2's
+deadpool 2's
+dead pools
+dead pool2's
+free guys
+freeguys
+ripds
+ripd's
+r.i.p.d
+r.i.p.d's
+green lanterns
+greenlanterns
+sixundergrounds
+six undergrounds
+rednotices
+red notices
+selfless'
+the hitmans bodyguards
+thehitmansbodyguards
+the hitman's bodyguards
+changeups
+change ups
+the proposals
+theproposals
+imdbs
+imdb's
+years
+ratings
+director's
+directors
+genre's
+genres
+locations
+location's
+times
+time's
+films
+film's
+length
+length's
+lengths
+durations
+duration's
+budgets
+budget's
 mint mobile
 maximum effort
 aviation american gin

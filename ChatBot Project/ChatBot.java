@@ -686,7 +686,7 @@ static boolean oneWordWrong;
   // question back to the user or not
 
   public static void askAQuestionResponse() {
-    int random = (int) (Math.random() * 2); // 1/6 of the time the chat bot asks a question back to the user
+    int random = (int) (Math.random() * 6); // 1/6 of the time the chat bot asks a question back to the user
 
     if (random == 1) {
       chatArea.append("Ryan Reynolds: " + "How about you?"+"\n");
@@ -753,7 +753,7 @@ static boolean oneWordWrong;
   }
   
   public static void isMySpellingRight(String userInput, String filePath) {
-    oneWordWrong = true;
+    
     try{
      FileReader fr = new FileReader(filePath);
      BufferedReader in = new BufferedReader(fr);
