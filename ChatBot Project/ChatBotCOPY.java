@@ -99,52 +99,21 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
   private static JPanel panel;
 
   private static JButton button;
+
   ImageIcon image;
  
     //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
   public ChatBotCOPY(){
 
-    //getting the laptop screen size, and setting the frame to be full screen
-    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    GraphicsDevice device = graphics.getDefaultScreenDevice();
-    JFrame frame = new JFrame("Fullscreen");
-    device.setFullScreenWindow(frame);
-
-    //creating the panel
-    panel = new JPanel();
-
-    //specifying the text area/field sizes
-    chatArea = new JTextArea(1259,595);
-    chatField = new JTextField(1259,40);
-
-    //specifying a button
-    button = new JButton(700,30);
     
-    scroll = new JScrollPane(
-        chatArea, 
-        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
-        JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
-    );
-    
-    setSize(600,400);
-    setResizable(false);
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-    chatArea.setEditable(false);
-    chatField.addKeyListener(this);
-    panel.add(scroll);
-    panel.add(button);
-    panel.add(chatField);
-    panel.add(chatArea);
-    panel.setBackground(new Color(0, 200, 255));
-    add(panel);
-
-    setVisible(true);
-
     
    
        
+  }
+
+  public void setUpGUI(){
+    
   }
 
  

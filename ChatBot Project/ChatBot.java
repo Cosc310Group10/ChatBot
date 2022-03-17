@@ -89,13 +89,13 @@ static HashMap<String, String> durationMap = new HashMap<String, String>();
 // Initializing the budget map
 static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
-  //creating a text area
-  private static JTextArea chatArea = new JTextArea();
-  //creating a text field / box
-  private static JTextField chatField = new JTextField();
-
-  private static JButton button;
-  ImageIcon image;
+public static JFrame frame;
+public static JPanel panel;
+public static JTextArea chatArea;
+public static JTextField chatField;
+public static JScrollBar scrollBar;
+public static JButton button;
+public static ImageIcon image;
  
     //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
@@ -104,82 +104,54 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     //getting the laptop screen size, and setting the frame to be full screen
     GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
     GraphicsDevice device = graphics.getDefaultScreenDevice();
-    JFrame frame = new JFrame("Fullscreen");
+    frame = new JFrame("Fullscreen");
     device.setFullScreenWindow(frame);
-
-    JPanel panel = new JPanel();
-    JScrollPane scroll = new JScrollPane(
-        chatArea, 
-        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
-        JScrollPane.HORIZONTAL_SCROLLBAR_NEVER
-    );
-
-    frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    frame.setLayout(new FlowLayout());
-  
-    
-    
-    
-    //creating and adding a button
+        panel = new JPanel();
+        
+        image = new ImageIcon("/Users/lance_oxb4bxn/OneDrive/UBCO/2021-2022 Year 4/Term 2/COSC 310/TeamGitHub/ChatBot/ChatBot Project/ryan_reynolds.jpg");
+        // frame = new JFrame();
+        // panel = new JPanel(new GridLayout(4,1));
+        // panelFiller = new JPanel();
+        chatArea = new JTextArea(50,90);
+        chatField = new JTextField(40);
+        scrollBar = new JScrollBar();
+       
         button = new JButton("Ask:");
-        button.setPreferredSize(new Dimension(700,30));
+
         
+       
+  }
 
-       
-        // Container contentPane = frame.getContentPane();
-    
-       
-        // contentPane.add(button, BorderLayout.SOUTH);
+  public void setUpMyGUI(){
 
-        button.setBounds(500,600,200,900);
-        
-     
-        // add(button);
-        button.addActionListener(this);
-       
-       
-    
+    panel.setBackground(Color.red);
 
-    //setting GUI image as ryan reynolds
-    
-    //can only get logo to change with absolute path
-    image = new ImageIcon("/Users/lance_oxb4bxn/OneDrive/UBCO/2021-2022 Year 4/Term 2/COSC 310/TeamGitHub/ChatBot/ChatBot Project/ryan_reynolds.jpg");
-    // image = new ImageIcon("./ryan_reynolds.jpg");
-    
-    frame.setIconImage(image.getImage()); //changes icon of frame
-    frame.getContentPane().setBackground(Color.blue);
-    frame.setTitle("Ryan Reynolds Chat Bot");
-    frame.add(button);
-    frame.add(chatArea);
-    frame.add(chatField);
-    frame.add(scroll);
-    frame.setVisible(true);
-    frame.setLayout(null);
-    frame.setResizable(false);
-    this.pack();
+    frame.add(panel);
     
    
-    //this is for the text area formatting
-    chatArea.setSize(1259,595);
-    chatArea.setLocation(4,4);
+    button.addActionListener(this);
     chatArea.setBackground(Color.black);
     chatArea.setForeground(Color.yellow);
     chatArea.setLineWrap(true);
-    // chatArea.add(button);
-    
 
-    //this is for the text field
-    // chatField.setLayout(new FlowLayout());
-    chatField.setSize(1259,40);
-    chatField.setLocation(3, 600);
+
     chatField.setBackground(Color.black);
     chatField.setForeground(Color.yellow);
-    chatField.setCaretColor(Color.yellow);
-    // chatField.add(button);
 
+    panel.add(chatArea);
+    panel.add(button);
+    panel.add(chatField);
+    
+
+    frame.setIconImage(image.getImage()); //changes icon of frame
+    frame.setTitle("Ryan Reynold's ChatBot");
    
-       
-  }
+    frame.setVisible(true);
+    frame.setResizable(false);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+}
     
 
 
@@ -310,12 +282,13 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     
       // if the bot asked a question, reply with cool and take the input
       if (askAQuestion == true) {
-        userInputUnformatted = chatField.getText();
-        chatField.setText("");
+        // userInputUnformatted = chatField.getText();
+        // chatField.setText("");
+        
         chatArea.append("You: " + userInputUnformatted+"\n");
         chatArea.setText("Ryan Reynolds: Really!\n");
-        
-      }
+        askAQuestion = false;
+      }else{
       //otherwise, re prompt for input and repeat
       askAQuestion = false;
       // print new line
@@ -325,6 +298,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
       userInput = chatField.getText().toLowerCase();
       chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
+      }
       
       
       // if the user input equals end, then engaged is set to true, the scanner
@@ -355,21 +329,12 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 }
 
 
-  
-  
-
-
-
-
- 
-
-  
-
   // --------------------------------------------------------------------------------------------------
   public static void main(String[] args) {
 
     //GUI STUFF
-    new ChatBot();
+    ChatBot gui = new ChatBot();
+        gui.setUpMyGUI();
 
    
 

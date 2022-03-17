@@ -26,10 +26,10 @@ public class spellCheckTest {
 		
 		 FileReader fr = new FileReader(filePath);
 		 BufferedReader in = new BufferedReader(fr);
-		 String s;
+		 
 		 String word;
-		 while((s = in.readLine())!= null) {
-			 word = in.readLine();
+		 while((word = in.readLine())!= null) {
+			 
 			 if(userInput.equals(word)) {
 				 speltCorrectly = true;
 				 break;
