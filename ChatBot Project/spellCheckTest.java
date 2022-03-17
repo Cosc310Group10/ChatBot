@@ -17,7 +17,7 @@ public class spellCheckTest {
 		
 		for(int i=0; i<splitInput.length;i++) {
 			
-			isMySpellingRight(splitInput[i],"C:\\Users\\lance_oxb4bxn\\OneDrive\\UBCO\\Coding\\test.txt");
+			isMySpellingRight(splitInput[i],"chatBotDictonary.txt");
 		}
 		
 	}
@@ -43,6 +43,11 @@ public class spellCheckTest {
 	
 	
 	public static void main(String[] args) throws IOException {
+
+        //USE THIS TO ENSURE JAVA chatBotDictonary.txt FILE WORKS, make sure txt file is in here!
+    //String dir = System.getProperty("user.dir");
+  // directory from where the program was launched
+  //System.out.println(dir);
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter a phrase: ");
 		String userInput = in.nextLine();

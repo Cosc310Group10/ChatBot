@@ -1,4 +1,4 @@
-// GROUP 10 COSC 310 Main Class ***UPDATED MARCH 3RD****
+// GROUP 10 COSC 310 Main Class
 /*
 By:
 LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
@@ -318,13 +318,13 @@ public static ImageIcon image;
   public static void main(String[] args) {
 
     //USE THIS TO ENSURE JAVA IMAGE ICON WORKS, make sure image is in here!
-    String dir = System.getProperty("user.dir");
+    //String dir = System.getProperty("user.dir");
   // directory from where the program was launched
-  System.out.println(dir);
+  //System.out.println(dir);
 
     //GUI STUFF
     ChatBot gui = new ChatBot();
-        gui.setUpMyGUI();
+    gui.setUpMyGUI();
 
    
 
