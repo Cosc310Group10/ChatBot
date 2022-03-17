@@ -11,26 +11,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.awt.Color;
-import javax.swing.JFrame;
+import java.awt.*;
 import javax.swing.*;
-import java.awt.BorderLayout;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import java.awt.Container;
-import javax.swing.AbstractButton;
-
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.FlowLayout;
 
-import java.awt.GraphicsDevice;
-import javax.swing.JButton;
-import java.awt.GraphicsEnvironment;
-import javax.swing.ImageIcon;
     //----------------------------------------------------------------------------------------------------------------------------
 public class ChatBot extends JFrame implements ActionListener {
 
