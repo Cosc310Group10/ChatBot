@@ -94,9 +94,7 @@ public static ImageIcon image;
         panel = new JPanel();
         
         image = new ImageIcon("ryan_reynolds.jpg");
-        // frame = new JFrame();
-        // panel = new JPanel(new GridLayout(4,1));
-        // panelFiller = new JPanel();
+        
         chatArea = new JTextArea(50,90);
         chatField = new JTextField(40);
         scrollBar = new JScrollBar();
@@ -266,14 +264,7 @@ public static ImageIcon image;
     // Continually ask for user input and store it
     
       // if the bot asked a question, reply with cool and take the input
-      if (askAQuestion == true) {
-        // userInputUnformatted = chatField.getText();
-        // chatField.setText("");
-        
-        chatArea.append("You: " + userInputUnformatted+"\n");
-        chatArea.setText("Ryan Reynolds: Really!\n");
-        askAQuestion = false;
-      }else{
+      
       //otherwise, re prompt for input and repeat
       askAQuestion = false;
       // print new line
@@ -283,7 +274,7 @@ public static ImageIcon image;
       userInput = chatField.getText().toLowerCase();
       chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
-      }
+      
       
       
       // if the user input equals end, then engaged is set to true, the scanner
@@ -668,7 +659,11 @@ public static ImageIcon image;
 
     if (random == 1) {
       chatArea.append("Ryan Reynolds: " + "How about you?"+"\n");
-      askAQuestion = true;
+        userInputUnformatted = chatField.getText();
+        chatField.setText("");
+        chatArea.append("You: " + userInputUnformatted+"\n");
+        chatArea.append("Ryan Reynolds: Really!\n");
+      
 
     } else {
       return;
