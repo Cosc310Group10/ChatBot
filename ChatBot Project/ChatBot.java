@@ -93,7 +93,7 @@ public static ImageIcon image;
     device.setFullScreenWindow(frame);
         panel = new JPanel();
         
-        image = new ImageIcon("/Users/lance_oxb4bxn/OneDrive/UBCO/2021-2022 Year 4/Term 2/COSC 310/TeamGitHub/ChatBot/ChatBot Project/ryan_reynolds.jpg");
+        image = new ImageIcon("ryan_reynolds.jpg");
         // frame = new JFrame();
         // panel = new JPanel(new GridLayout(4,1));
         // panelFiller = new JPanel();
@@ -316,6 +316,11 @@ public static ImageIcon image;
 
   // --------------------------------------------------------------------------------------------------
   public static void main(String[] args) {
+
+    //USE THIS TO ENSURE JAVA IMAGE ICON WORKS, make sure image is in here!
+    String dir = System.getProperty("user.dir");
+  // directory from where the program was launched
+  System.out.println(dir);
 
     //GUI STUFF
     ChatBot gui = new ChatBot();
