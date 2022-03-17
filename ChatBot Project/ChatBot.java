@@ -271,9 +271,9 @@ static boolean oneWordWrong;
     // here we are setting up the possible business questions, and the possible business
     // to be asked about
    // Initializing business Questions ArrayList
-    businessQuestion.add("business name");
-    businessQuestion.add("year started");
-    businessQuestion.add("business location");
+    // businessQuestion.add("business name");
+    businessQuestion.add("year");
+    businessQuestion.add("location");
     businessQuestion.add("position");
 
 
@@ -287,11 +287,11 @@ static boolean oneWordWrong;
    
 
     // Initializing the businessName map
-    fillInBusinessMap(businessNameMap, "business name");
+    // fillInBusinessMap(businessNameMap, "business name");
     // Initializing the yearStarted map
-    fillInBusinessMap(yearStartedMap, "year started");
+    fillInBusinessMap(yearStartedMap, "year");
     // Initializing the businessLocation map
-    fillInBusinessMap(businessLocationMap, "business location");
+    fillInBusinessMap(businessLocationMap, "location");
     // Initializing the businessPosition map
     fillInBusinessMap(businessPositionMap, "position");
 
@@ -545,16 +545,17 @@ static boolean oneWordWrong;
     // this movie key
     for (int i = 0; i < listOfBusiness.size(); i++) {
 
-      if (value == "business name") {
-        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
+      // if (value == "business name") {
+      //   map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
 
-      } else if (value == "year started") {
+      // } else 
+      if (value == "year") {
         map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "The year that Ryan Reynolds started " + listOfBusiness.get(i).getbusinessName().toLowerCase() + " is " + listOfBusiness.get(i).getyearStarted());
 
-      } else if (value == "business location") {
+      } else if (value == "location") {
         map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The location is " + listOfBusiness.get(i).getbusinessLocation().toLowerCase());
       
-      } else if (value == "business position") {
+      } else if (value == "position") {
         map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The position is " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName());
       } else {
 
@@ -659,39 +660,39 @@ static boolean oneWordWrong;
        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(1))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(2))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(3))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(4))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(5))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(6))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(7))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(8))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(9))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(10))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(11))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
         break;
       } else {
@@ -776,21 +777,22 @@ static boolean oneWordWrong;
   public static void businessChatFunction(String userInput, String businessNameAsked) {
 
     for (int i = 0; i < businessQuestion.size(); i++) {
-      if (userInput.contains(businessQuestion.get(0))) {
+      // if (userInput.contains(businessQuestion.get(0))) {
 
-        System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
+      //   System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
+      //   break;
+
+      // } else 
+      if (userInput.contains(businessQuestion.get(i))) {
+       chatArea.append("Ryan Reynolds: " + yearStartedMap.get(businessNameAsked) +"\n");
         break;
 
-      } else if (userInput.contains(businessQuestion.get(1))) {
-        System.out.println(businessNameAsked + " " + yearStartedMap.get(businessNameAsked));
+      } else if (userInput.contains(businessQuestion.get(i))) {
+        chatArea.append("Ryan Reynolds: " +businessLocationMap.get(businessNameAsked)+"\n");
         break;
 
-      } else if (userInput.contains(businessQuestion.get(2))) {
-        System.out.println(businessNameAsked + " " + businessLocationMap.get(businessNameAsked));
-        break;
-
-      } else if (userInput.contains(businessQuestion.get(3))) {
-        System.out.println(businessNameAsked + " " + businessPositionMap.get(businessNameAsked));
+      } else if (userInput.contains(businessQuestion.get(i))) {
+        chatArea.append("Ryan Reynolds: " +businessPositionMap.get(businessNameAsked)+"\n");
         break;
       } else {
 

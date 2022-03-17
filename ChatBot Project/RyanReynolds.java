@@ -233,7 +233,7 @@ public class RyanReynolds {
     //adding the buisnees class info in
     //ryan reynolds businesses 
     //Mint Mobile 
-    private Business mintMobileInfo = new Business("Mint Moblie",2019,"Costa Mesa, California", "Owner");
+    private Business mintMobileInfo = new Business("Mint Mobile",2019,"Costa Mesa, California", "Owner");
 
     //getter for Mint Mobile
     public Business getMintMoblie(){
