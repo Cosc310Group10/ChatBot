@@ -31,7 +31,7 @@ public class ChatBot extends JFrame implements ActionListener {
 
 // creating a static ryan reynolds object so its accessible by all methods
 static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
-"Blake Lively", "@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
+"Blake Lively","@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
 
 // boolean to keep track if the bot asked a question
 static boolean askAQuestion = false;
@@ -332,12 +332,12 @@ static boolean oneWordWrong;
     // TODO: Specify your translation requirements here:
     String fromLang = "es";
     String toLang = "en";
-    try{
-    userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
-    System.out.println(userInput);
-    }catch(Exception g){
-      return;
-    }
+    // try{
+    // userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+    // System.out.println(userInput);
+    // }catch(Exception g){
+    //   return;
+    // }
 
       chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
@@ -384,11 +384,6 @@ static boolean oneWordWrong;
     ChatBot gui = new ChatBot();
     gui.setUpMyGUI();
 
-
-
-   
-
-   
 
   }
 
@@ -551,16 +546,16 @@ static boolean oneWordWrong;
     for (int i = 0; i < listOfBusiness.size(); i++) {
 
       if (value == "business name") {
-        map.put(businessQuestion.get(i).getbusinessName().toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
 
       } else if (value == "year started") {
-        map.put(businessQuestion.get(i).getbusinessName().toLowerCase(), "The year that Ryan Reynolds started " + listOfBusiness.get(i).getbusinessName().toLowerCase() + " is " + listOfBusiness.get(i).getyearStarted());
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "The year that Ryan Reynolds started " + listOfBusiness.get(i).getbusinessName().toLowerCase() + " is " + listOfBusiness.get(i).getyearStarted());
 
       } else if (value == "business location") {
-        map.put(businessQuestion.get(i).getbusinessName().toLowerCase(), " The location is " + listOfBusiness.get(i).getbusinessLocation().toLowerCase());
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The location is " + listOfBusiness.get(i).getbusinessLocation().toLowerCase());
       
       } else if (value == "business position") {
-        map.put(businessQuestion.get(i).getbusinessName().toLowerCase(), " The position is " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName());
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The position is " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName());
       } else {
 
         return;
@@ -639,7 +634,7 @@ static boolean oneWordWrong;
         // then we send the user input and the movie title asked about to a chat
         // function which determines
         // the robots reponse
-        movieChatFunction(userInput, businesNameAsked);
+        businessChatFunction(userInput, businesNameAsked);
         return;
 
       }
