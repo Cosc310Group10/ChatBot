@@ -332,12 +332,12 @@ static boolean oneWordWrong;
     // TODO: Specify your translation requirements here:
     String fromLang = "es";
     String toLang = "en";
-    // try{
-    // userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+    try{
+    userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
     // System.out.println(userInput);
-    // }catch(Exception g){
-    //   return;
-    // }
+    }catch(Exception g){
+      return;
+    }
 
       chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
