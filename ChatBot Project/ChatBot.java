@@ -1,4 +1,4 @@
-// GROUP 10 COSC 310 Main Class ***UPDATED MARCH 3RD****
+// GROUP 10 COSC 310 Main Class
 /*
 By:
 LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
@@ -11,189 +11,295 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Main {
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
-  // creating a static ryan reynolds object so its accessible by all methods
-  static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
-      "Blake Lively", "@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
+    //----------------------------------------------------------------------------------------------------------------------------
+public class ChatBot extends JFrame implements ActionListener {
 
-  // boolean to keep track if the bot asked a question
-  static boolean askAQuestion = false;
 
-  // string to track user input
-  static String userInput;
-  // string to track which movie title was asked about
-  static String movieTitleAsked;
-  // string to track which personal question was asked about
-  static String personalQuestionAsked;
-  // arraylists for the list of movies, movie questions, personal questions, and
-  // greeting responses
-  static ArrayList<Movie> listOfMovies = new ArrayList<>();
-  static ArrayList<String> movieQuestion = new ArrayList<>();
-  static ArrayList<String> personalQuestion = new ArrayList<>();
-  static ArrayList<String> greetingResponses = new ArrayList<>();
+    //----------------------------------------------------------------------------------------------------------------------------
 
-  // creating the map for the personal attributes
-  static HashMap<String, String> personalQuestionMap = new HashMap<String, String>();
+// creating a static ryan reynolds object so its accessible by all methods
+static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
+"Blake Lively", "@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
 
-  // Here we are creating the maps for the different movie attributes
-  // Initializing the imdb map
-  static HashMap<String, String> imdbMap = new HashMap<String, String>();
-  // Initializing the year map
-  static HashMap<String, String> yearMap = new HashMap<String, String>();
-  // Initializing the rating map
-  static HashMap<String, String> ratingMap = new HashMap<String, String>();
-  // Initializing the cast map
-  static HashMap<String, String> castMap = new HashMap<String, String>();
-  // Initializing the director map
-  static HashMap<String, String> directorMap = new HashMap<String, String>();
-  // Initializing the genre map
-  static HashMap<String, String> genreMap = new HashMap<String, String>();
-  // Initializing the awards map
-  static HashMap<String, String> awardsMap = new HashMap<String, String>();
-  // Initializing the box office map
-  static HashMap<String, String> boxOfficeMap = new HashMap<String, String>();
-  // Initializing the location map
-  static HashMap<String, String> locationMap = new HashMap<String, String>();
-  // Initializing the timeToFilm map
-  static HashMap<String, String> timeToFilmMap = new HashMap<String, String>();
-  // Initializing the duration map
-  static HashMap<String, String> durationMap = new HashMap<String, String>();
-  // Initializing the budget map
-  static HashMap<String, String> budgetMap = new HashMap<String, String>();
+// boolean to keep track if the bot asked a question
+static boolean askAQuestion = false;
+//boolean for start up statements
+static boolean startUp = true;
 
-  // --------------------------------------------------------------------------------------------------
-  public static void main(String[] args) {
+// string to track user inputs
+static String userInput;
+static String userInputUnformatted;
+// string to track which movie title was asked about
+static String movieTitleAsked;
+// string to track which personal question was asked about
+static String personalQuestionAsked;
+// arraylists for the list of movies, movie questions, personal questions, and
+// greeting responses
+static ArrayList<Movie> listOfMovies = new ArrayList<>();
+static ArrayList<String> movieQuestion = new ArrayList<>();
+static ArrayList<String> personalQuestion = new ArrayList<>();
+static ArrayList<String> greetingResponses = new ArrayList<>();
 
-    // initializing the greeting repsonse list
-    greetingResponses.add("hi");
-    greetingResponses.add("hello");
-    greetingResponses.add("hey");
+// creating the map for the personal attributes
+static HashMap<String, String> personalQuestionMap = new HashMap<String, String>();
 
-    // here we are setting up the possible movie questions, and the possible movies
-    // to be asked about
-    // Initializing Movie Questions ArrayList
-    movieQuestion.add("imdb");
-    movieQuestion.add("year");
-    movieQuestion.add("rating");
-    movieQuestion.add("cast");
-    movieQuestion.add("director");
-    movieQuestion.add("genre");
-    movieQuestion.add("awards");
-    movieQuestion.add("box office");
-    movieQuestion.add("location");
-    movieQuestion.add("time");
-    movieQuestion.add("film");
-    movieQuestion.add("length");
-    movieQuestion.add("duration");
-    movieQuestion.add("budget");
+// Here we are creating the maps for the different movie attributes
+// Initializing the imdb map
+static HashMap<String, String> imdbMap = new HashMap<String, String>();
+// Initializing the year map
+static HashMap<String, String> yearMap = new HashMap<String, String>();
+// Initializing the rating map
+static HashMap<String, String> ratingMap = new HashMap<String, String>();
+// Initializing the cast map
+static HashMap<String, String> castMap = new HashMap<String, String>();
+// Initializing the director map
+static HashMap<String, String> directorMap = new HashMap<String, String>();
+// Initializing the genre map
+static HashMap<String, String> genreMap = new HashMap<String, String>();
+// Initializing the awards map
+static HashMap<String, String> awardsMap = new HashMap<String, String>();
+// Initializing the box office map
+static HashMap<String, String> boxOfficeMap = new HashMap<String, String>();
+// Initializing the location map
+static HashMap<String, String> locationMap = new HashMap<String, String>();
+// Initializing the timeToFilm map
+static HashMap<String, String> timeToFilmMap = new HashMap<String, String>();
+// Initializing the duration map
+static HashMap<String, String> durationMap = new HashMap<String, String>();
+// Initializing the budget map
+static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
-    // Initializing the list of movies
-    listOfMovies.add(r.getDeadpool());
-    listOfMovies.add(r.getDeadpool2());
-    listOfMovies.add(r.getFreeGuy());
-    listOfMovies.add(r.getRIPD());
-    listOfMovies.add(r.getGreenLantern());
-    listOfMovies.add(r.getBuried());
-    listOfMovies.add(r.getSixUnderground());
-    listOfMovies.add(r.getRedNotice());
-    listOfMovies.add(r.getSelfLess());
-    listOfMovies.add(r.getTheHitmansBodyguard());
-    listOfMovies.add(r.getChangeUp());
-    listOfMovies.add(r.getTheProposal());
+public static JFrame frame;
+public static JPanel panel;
+public static JTextArea chatArea;
+public static JTextField chatField;
+public static JScrollBar scrollBar;
+public static JButton button;
+public static ImageIcon image;
 
-    // Initializing the imdb map
-    fillInMovieMap(imdbMap, "imdb");
-    // Initializing the year map
-    fillInMovieMap(yearMap, "year");
-    // Initializing the rating map
-    fillInMovieMap(ratingMap, "rating");
-    // Initializing the cast map
-    fillInMovieMap(castMap, "cast");
-    // Initializing the director map
-    fillInMovieMap(directorMap, "director");
-    // Initializing the genre map
-    fillInMovieMap(genreMap, "genre");
-    // Initializing the awards map
-    fillInMovieMap(awardsMap, "awards");
-    // Initializing the box office map
-    fillInMovieMap(boxOfficeMap, "box office");
-    // Initializing the location map
-    fillInMovieMap(locationMap, "location");
-    // Initializing the timeToFilm map
-    fillInMovieMap(timeToFilmMap, "time");
-    // Initializing the duration map
-    fillInMovieMap(durationMap, "duration");
-    // Initializing the budget map
-    fillInMovieMap(budgetMap, "budget");
+static boolean speltCorrectly = false;
+static String[] splitInput;
+static boolean oneWordWrong;
+ 
+    //---------------------------------------------------------------------------------------------------------------------------- 
+  //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
+  public ChatBot(){
 
-    // ---------------------------------------------------------------------------------------------------------
+    //getting the laptop screen size, and setting the frame to be full screen
+    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    GraphicsDevice device = graphics.getDefaultScreenDevice();
+    frame = new JFrame("Fullscreen");
+    device.setFullScreenWindow(frame);
+        panel = new JPanel();
+        
+        image = new ImageIcon("ryan_reynolds.jpg");
+        
+        chatArea = new JTextArea(50,90);
+        chatField = new JTextField(40);
+        scrollBar = new JScrollBar();
+       
+        button = new JButton("Ask:");
 
-    // here we add all the key words into the personal question list
-    personalQuestion.add("height");
-    personalQuestion.add("weight");
-    personalQuestion.add("hair colour");
-    personalQuestion.add("eye colour");
-    personalQuestion.add("gender");
-    personalQuestion.add("birthplace");
-    personalQuestion.add("birthdate");
-    personalQuestion.add("wife");
-    personalQuestion.add("kids names");
-    personalQuestion.add("social media handle");
-    personalQuestion.add("twitter followers");
-    personalQuestion.add("instagram followers");
-    personalQuestion.add("tiktok followers");
-    personalQuestion.add("net worth");
-    personalQuestion.add("previous marriage");
-    personalQuestion.add("other awards");
-    personalQuestion.add("old");
+        
+       
+  }
+
+  public void setUpMyGUI(){
+
+    panel.setBackground(Color.red);
+
+    frame.add(panel);
+    
+   
+    button.addActionListener(this);
+    chatArea.setBackground(Color.black);
+    chatArea.setForeground(Color.yellow);
+    chatArea.setLineWrap(true);
+
+
+    chatField.setBackground(Color.black);
+    chatField.setForeground(Color.yellow);
+
+    panel.add(chatArea);
+    panel.add(button);
+    panel.add(chatField);
+    
+
+    frame.setIconImage(image.getImage()); //changes icon of frame
+    frame.setTitle("Ryan Reynold's ChatBot");
+   
+    frame.setVisible(true);
+    frame.setResizable(false);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+}
+    
+
+
+    //----------------------------------------------------------------------------------------------------------------------------
+    // HERE WE ARE CREATING AN ACTION LISTENER AND MAKING AN ACTION PERFORMED METHOD WHICH INCLUDES ALL OF OUR MAIN CODE
+    //EXCEPT FOR THE METHODS USED IN THE CODE WHICH ARE OUTSIDE THIS ACTION PERFORMED METHOD
+    
+
+    public void actionPerformed(ActionEvent e){
+
+      
+     if(e.getSource()==button){
+      
+     
+        
+    
+ // initializing the greeting repsonse list
+ greetingResponses.add("hi");
+ greetingResponses.add("hello");
+ greetingResponses.add("hey");
+
+ // here we are setting up the possible movie questions, and the possible movies
+ // to be asked about
+ // Initializing Movie Questions ArrayList
+ movieQuestion.add("imdb");
+ movieQuestion.add("year");
+ movieQuestion.add("rating");
+ movieQuestion.add("cast");
+ movieQuestion.add("director");
+ movieQuestion.add("genre");
+ movieQuestion.add("awards");
+ movieQuestion.add("box office");
+ movieQuestion.add("location");
+ movieQuestion.add("time");
+ movieQuestion.add("film");
+ movieQuestion.add("length");
+ movieQuestion.add("duration");
+ movieQuestion.add("budget");
+
+ // Initializing the list of movies
+ listOfMovies.add(r.getDeadpool());
+ listOfMovies.add(r.getDeadpool2());
+ listOfMovies.add(r.getFreeGuy());
+ listOfMovies.add(r.getRIPD());
+ listOfMovies.add(r.getGreenLantern());
+ listOfMovies.add(r.getBuried());
+ listOfMovies.add(r.getSixUnderground());
+ listOfMovies.add(r.getRedNotice());
+ listOfMovies.add(r.getSelfLess());
+ listOfMovies.add(r.getTheHitmansBodyguard());
+ listOfMovies.add(r.getChangeUp());
+ listOfMovies.add(r.getTheProposal());
+
+ // Initializing the imdb map
+ fillInMovieMap(imdbMap, "imdb");
+ // Initializing the year map
+ fillInMovieMap(yearMap, "year");
+ // Initializing the rating map
+ fillInMovieMap(ratingMap, "rating");
+ // Initializing the cast map
+ fillInMovieMap(castMap, "cast");
+ // Initializing the director map
+ fillInMovieMap(directorMap, "director");
+ // Initializing the genre map
+ fillInMovieMap(genreMap, "genre");
+ // Initializing the awards map
+ fillInMovieMap(awardsMap, "awards");
+ // Initializing the box office map
+ fillInMovieMap(boxOfficeMap, "box office");
+ // Initializing the location map
+ fillInMovieMap(locationMap, "location");
+ // Initializing the timeToFilm map
+ fillInMovieMap(timeToFilmMap, "time");
+ // Initializing the duration map
+ fillInMovieMap(durationMap, "duration");
+ // Initializing the budget map
+ fillInMovieMap(budgetMap, "budget");
+
+ // ---------------------------------------------------------------------------------------------------------
+
+ // here we add all the key words into the personal question list
+ personalQuestion.add("height");
+ personalQuestion.add("weight");
+ personalQuestion.add("hair colour");
+ personalQuestion.add("eye colour");
+ personalQuestion.add("gender");
+ personalQuestion.add("birthplace");
+ personalQuestion.add("birthdate");
+ personalQuestion.add("wife");
+ personalQuestion.add("kids names");
+ personalQuestion.add("social media handle");
+ personalQuestion.add("twitter followers");
+ personalQuestion.add("instagram followers");
+ personalQuestion.add("tiktok followers");
+ personalQuestion.add("net worth");
+ personalQuestion.add("previous marriage");
+ personalQuestion.add("other awards");
+ personalQuestion.add("old");
+
+
+
+
+
 
     // here we are initializing the personal question map
     fillInPersonalMap(personalQuestionMap);
 
+   
+    if (startUp == true){
     // a cool feature saying the chatbot is booting up for a delay of 2 seconds
-    System.out.println("Ryan Reynolds Chat bot booting up...");
+    chatArea.setText("Ryan Reynolds Chat bot booting up...\n");
     try {
       TimeUnit.SECONDS.sleep(2); // delaying the program for 2 seconds
-    } catch (Exception e) {
-      System.out.println("Error Occurred"); // catching an error
+    } catch (Exception g) {
+      chatArea.setText("Error Occurred"); // catching an error
     }
     // prompt for user and creating scanner
-    System.out.println(
-        "Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!");
+    chatArea.setText("Ryan Reynolds: " + 
+        "Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!\n");
+        startUp = false;
+  }
 
-    Scanner sc = new Scanner(System.in);
+   
 
     // initializing user input string
 
-    // initializing engaged boolean to continually get user input until user is not
-    // engaged and ends conversation
-    boolean engaged = false;
-
-    // while engaged, continually ask for user input and store it
-    while (!engaged) {
+    // Continually ask for user input and store it
+    
       // if the bot asked a question, reply with cool and take the input
-      if (askAQuestion == true) {
-        userInput = sc.nextLine();
-        System.out.println("Really!");
-      }
-      // then reset question to false
+      
+      //otherwise, re prompt for input and repeat
       askAQuestion = false;
-
       // print new line
-      System.out.println();
+      chatArea.append("\n");
       // grab user input
-      userInput = sc.nextLine().toLowerCase();
-
+      userInputUnformatted = chatField.getText();
+      userInput = chatField.getText().toLowerCase();
+      chatField.setText("");
+      chatArea.append("You: " + userInputUnformatted+"\n"); 
+      
+      
+      
       // if the user input equals end, then engaged is set to true, the scanner
       // closes, and we break from the loop to end conversation
       // otherwise we continually ask for user input
       if (userInput.equals("goodbye")) {
-        System.out.println("Goodbye! Nice meeting you!");
-        sc.close();
-        engaged = true;
-        break;
+        chatArea.append("Ryan Reynolds: "+"Goodbye! Nice meeting you! I am shutting down now."+"\n");
+        try {
+          TimeUnit.SECONDS.sleep(3); // delaying the program for 2 seconds
+        } catch (Exception g) {
+          chatArea.append("Error Occurred"); // catching an error
+        }
+        System.exit(0);
+        
 
         // otherwise, call the chatbot function which calls the analyze function
         // which analyzes the input and then the method figures out how the chat bot
@@ -202,7 +308,29 @@ public class Main {
         chatBot(userInput);
       }
 
-    }
+    
+    
+
+
+  }
+}
+
+
+  // --------------------------------------------------------------------------------------------------
+  public static void main(String[] args) {
+
+    //USE THIS TO ENSURE JAVA IMAGE ICON WORKS, make sure image is in here!
+    //String dir = System.getProperty("user.dir");
+  // directory from where the program was launched
+  //System.out.println(dir);
+
+    //GUI STUFF
+    ChatBot gui = new ChatBot();
+    gui.setUpMyGUI();
+
+   
+
+   
 
   }
 
@@ -358,7 +486,14 @@ public class Main {
   // this method is the chatbot method which calls the analyze function method to
   // determine the chatbot response
   public static void chatBot(String userInput) {
+
+    wordForWord(userInput);
+
+    if(speltCorrectly == true){
     analyzeInput(userInput);
+  }else{
+    chatArea.append("Your message is spelt wrong! Try again.\n");
+  }
   }
 
   // this method takes in the users input and directs how the robot is going to
@@ -421,43 +556,43 @@ public class Main {
     for (int i = 0; i < movieQuestion.size(); i++) {
       if (userInput.contains(movieQuestion.get(0))) {
 
-        System.out.println(movieTitleAsked + " " + imdbMap.get(movieTitleAsked));
+       chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
         break;
 
       } else if (userInput.contains(movieQuestion.get(1))) {
-        System.out.println(movieTitleAsked + " " + yearMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
         break;
 
       } else if (userInput.contains(movieQuestion.get(2))) {
-        System.out.println(movieTitleAsked + " " + ratingMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
         break;
 
       } else if (userInput.contains(movieQuestion.get(3))) {
-        System.out.println(movieTitleAsked + " " + castMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(4))) {
-        System.out.println(movieTitleAsked + " " + directorMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(5))) {
-        System.out.println(movieTitleAsked + " " + genreMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(6))) {
-        System.out.println(movieTitleAsked + " " + awardsMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(7))) {
-        System.out.println(movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(8))) {
-        System.out.println(movieTitleAsked + " " + locationMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(9))) {
-        System.out.println(movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(10))) {
-        System.out.println(movieTitleAsked + " " + durationMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
         break;
       } else if (userInput.contains(movieQuestion.get(11))) {
-        System.out.println(movieTitleAsked + " " + budgetMap.get(movieTitleAsked));
+        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
         break;
       } else {
 
@@ -475,7 +610,7 @@ public class Main {
   // value pair
   public static void personalChatFunction(String userInput, String personalQuestionAsked) {
 
-    System.out.println(personalQuestionMap.get(personalQuestionAsked));
+    chatArea.append("Ryan Reynolds: " + personalQuestionMap.get(personalQuestionAsked)+"\n");
     askAQuestionResponse(); // asks a question back to the user
   }
 
@@ -494,37 +629,37 @@ public class Main {
     // switch statement to determine responses
     switch (randomNumber) {
       case 0:
-        System.out.println("Hello!");
+      chatArea.append("Ryan Reynolds: " + "Hello!"+"\n");
         break;
       case 1:
-        System.out.println("Hey Hey!");
+      chatArea.append("Ryan Reynolds: " + "Hey Hey!"+"\n");
         break;
       case 2:
-        System.out.println("Hi there");
+      chatArea.append("Ryan Reynolds: " + "Hi there"+"\n");
         break;
       case 3:
-        System.out.println("Hi how are ya!");
+      chatArea.append("Ryan Reynolds: " + "Hi how are ya!"+"\n");
         break;
       case 4:
-        System.out.println("Hello there");
+      chatArea.append("Ryan Reynolds: " + "Hello there"+"\n");
         break;
       case 5:
-        System.out.println("Hey! I am Ryan Reynolds, nice to meet you!");
+      chatArea.append("Ryan Reynolds: " + "Hey! I am Ryan Reynolds, nice to meet you!"+"\n");
         break;
       case 6:
-        System.out.println("What a beautiful day to meet someone as great as me hey? Haha, Hi nice to meet you!");
+      chatArea.append("Ryan Reynolds: " + "What a beautiful day to meet someone as great as me hey? Haha, Hi nice to meet you!"+"\n");
         break;
       case 7:
-        System.out.println("Yo!");
+      chatArea.append("Ryan Reynolds: " + "Yo!"+"\n");
         break;
       case 8:
-        System.out.println("Hey there");
+      chatArea.append("Ryan Reynolds: " + "Hey there"+"\n");
         break;
       case 9:
-        System.out.println("Hi, nice to meet you!");
+      chatArea.append("Ryan Reynolds: " + "Hi, nice to meet you!"+"\n");
         break;
       case 10:
-        System.out.println("Hey!");
+      chatArea.append("Ryan Reynolds: " + "Hey!"+"\n");
         break;
       default:
         return;
@@ -538,11 +673,15 @@ public class Main {
   // question back to the user or not
 
   public static void askAQuestionResponse() {
-    int random = (int) (Math.random() * 6); // 1/6 of the time the chat bot asks a question back to the user
+    int random = (int) (Math.random() * 2); // 1/6 of the time the chat bot asks a question back to the user
 
     if (random == 1) {
-      System.out.println("\nHow about you?");
-      askAQuestion = true;
+      chatArea.append("Ryan Reynolds: " + "How about you?"+"\n");
+        userInputUnformatted = chatField.getText();
+        chatField.setText("");
+        chatArea.append("You: " + userInputUnformatted+"\n");
+        chatArea.append("Ryan Reynolds: Really!\n");
+      
 
     } else {
       return;
@@ -563,22 +702,97 @@ public class Main {
       switch(selector){
       // case statements: each is a unique response when the question is not understood
         case 0 :
-          System.out.println("I'm sorry I don't understand the question. Please ask me again!");
+        chatArea.append("Ryan Reynolds: " + "I'm sorry I don't understand the question. Please ask me again!"+"\n");
           break;
         case 1 :
-          System.out.println("Pardon? I didn't quite get that.");
+        chatArea.append("Ryan Reynolds: " + "Pardon? I didn't quite get that."+"\n");
           break;
         case 2 :
-          System.out.println("I'm sorry I don't understand the question. Maybe it's because of your accent hahaha!");
+        chatArea.append("Ryan Reynolds: " + "I'm sorry I don't understand the question. Maybe it's because of your accent hahaha!"+"\n");
           break;
         case 3 :
-          System.out.println("Sorry, you will have to ask that again.");
+        chatArea.append("Ryan Reynolds: " + "Sorry, you will have to ask that again."+"\n");
           break;
         case 4 :
-          System.out.println("That was a confusing question! Can you ask me again?");
+        chatArea.append("Ryan Reynolds: " + "That was a confusing question! Can you ask me again?"+"\n");
           break;
         default : 
       }
   }
 
+
+
+
+
+
+
+  public static void wordForWord(String userInput) {
+    splitInput = userInput.split(" ");
+    oneWordWrong = false;
+    for(int i=0; i<splitInput.length;i++) {
+      if(oneWordWrong == false){
+      isMySpellingRight(splitInput[i],"dictonary.txt");
+      }else{
+        break;
+      }
+    }
+    
+  }
+  
+  public static void isMySpellingRight(String userInput, String filePath) {
+    oneWordWrong = true;
+    try{
+     FileReader fr = new FileReader(filePath);
+     BufferedReader in = new BufferedReader(fr);
+     
+     String word;
+     while((word = in.readLine())!= null) {
+       
+       if(userInput.equals(word)) {
+         speltCorrectly = true;
+         oneWordWrong = false;
+         break;
+       }else {
+         speltCorrectly = false;
+         oneWordWrong = true;
+       }
+     }
+     in.close();}catch(Exception e){
+       return;
+     }
+  }
+  
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
