@@ -227,6 +227,55 @@ public class RyanReynolds {
         return theProposal;
     }
 
+
+
+    // ---------------------------------------------------------------------------------------------------------
+    //adding the buisnees class info in
+    //ryan reynolds businesses 
+    //Mint Mobile 
+    private Business mintMobileInfo = new Business("Mint Mobile",2019,"Costa Mesa, California", "Owner");
+
+    //getter for Mint Mobile
+    public Business getMintMoblie(){
+        return mintMobileInfo;
+    }
+
+    //Maximum Effort  
+    private Business maximumEffortInfo  = new Business("Maximum Effort ",2018,"New York, New York", "Co-Founder");
+
+    //getter for Maximum Effort
+    public Business getMaximumEffort(){
+        return maximumEffortInfo;
+    }
+    //Aviation American Gin
+    private Business aviationAmericanGinInfo = new Business("Aviation American Gin",2018 ,"New York, New York", "Owner");
+
+    //getter for Aviation American Gin
+    public Business getAviationAmericanGin(){
+        return aviationAmericanGinInfo;
+    }
+    //Wrexham AFC
+    private Business wrexhamAFCInfo = new Business("Wrexham AFC",2021 ,"Wrexham, North Wales", "Co-Chairman");
+
+    //getter for Wrexham AFC
+    public Business getwrexhamAFC(){
+        return wrexhamAFCInfo;
+    }
+     //Group Effort Initiative
+     private Business groupEffortInitiativeInfo = new Business("Group Effort Initiative",2020 ,"New York, New York", "Co-Founder");
+
+     //getter for Group Effort Initiative
+     public Business getgroupEffortInitiative(){
+         return groupEffortInitiativeInfo;
+     }
+      //MNTN
+    private Business mNTNInfo = new Business("MNTN",2021 ,"New York, New York", "Chief Creative Officer");
+
+    //getter for MNTN
+    public Business getMNTN(){
+        return mNTNInfo;
+    }
+
     // Constructors below
     // RyanReynolds Constructor for all physical attributes
 
@@ -267,7 +316,7 @@ public class RyanReynolds {
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
-        this.haircolour = socialMediaHandle;
+        this.socialMediaHandle= socialMediaHandle;
         this.twitterFollowers = twitterFollowers;
         this.instagramFollowers = instagramFollowers;
         this.tiktokFollowers = tiktokFollowers;

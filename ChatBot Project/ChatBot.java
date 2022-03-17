@@ -31,7 +31,7 @@ public class ChatBot extends JFrame implements ActionListener {
 
 // creating a static ryan reynolds object so its accessible by all methods
 static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
-"Blake Lively", "@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
+"Blake Lively","@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
 
 // boolean to keep track if the bot asked a question
 static boolean askAQuestion = false;
@@ -45,6 +45,9 @@ static String userInputUnformatted;
 static String movieTitleAsked;
 // string to track which personal question was asked about
 static String personalQuestionAsked;
+// string to track which business name was asked about
+static String businesNameAsked;
+
 // arraylists for the list of movies, movie questions, personal questions, and
 // greeting responses
 static ArrayList<Movie> listOfMovies = new ArrayList<>();
@@ -54,6 +57,16 @@ static ArrayList<String> greetingResponses = new ArrayList<>();
 
 // creating the map for the personal attributes
 static HashMap<String, String> personalQuestionMap = new HashMap<String, String>();
+
+// creating the arrays for the business attributes
+static ArrayList<Business> listOfBusiness = new ArrayList<>();  /*adding list of businesses*/
+static ArrayList<String> businessQuestion = new ArrayList<>();   /*adding business questions*/
+
+// creating the maps for the differentbusiness attributes
+static HashMap<String, String> businessNameMap = new HashMap<String, String>(); /*adding business hashmap*/
+static HashMap<String, String> yearStartedMap = new HashMap<String, String>(); /*adding business hashmap*/
+static HashMap<String, String> businessLocationMap = new HashMap<String, String>(); /*adding business hashmap*/
+static HashMap<String, String> businessPositionMap = new HashMap<String, String>(); /*adding business hashmap*/
 
 // Here we are creating the maps for the different movie attributes
 // Initializing the imdb map
@@ -253,6 +266,38 @@ static boolean oneWordWrong;
     // here we are initializing the personal question map
     fillInPersonalMap(personalQuestionMap);
 
+
+
+    // here we are setting up the possible business questions, and the possible business
+    // to be asked about
+   // Initializing business Questions ArrayList
+    // businessQuestion.add("business name");
+    businessQuestion.add("year");
+    businessQuestion.add("location");
+    businessQuestion.add("position");
+
+
+    // Initializing the list of business
+    listOfBusiness.add(r.getMintMoblie());
+    listOfBusiness.add(r.getMaximumEffort());
+    listOfBusiness.add(r.getAviationAmericanGin());
+    listOfBusiness.add(r.getwrexhamAFC());
+    listOfBusiness.add(r.getgroupEffortInitiative());
+    listOfBusiness.add(r.getMNTN());
+   
+
+    // Initializing the businessName map
+    // fillInBusinessMap(businessNameMap, "business name");
+    // Initializing the yearStarted map
+    fillInBusinessMap(yearStartedMap, "year");
+    // Initializing the businessLocation map
+    fillInBusinessMap(businessLocationMap, "location");
+    // Initializing the businessPosition map
+    fillInBusinessMap(businessPositionMap, "position");
+
+
+    // ---------------------------------------------------------------------------------------------------------
+
    
     if (startUp == true){
     // a cool feature saying the chatbot is booting up for a delay of 2 seconds
@@ -289,7 +334,7 @@ static boolean oneWordWrong;
     String toLang = "en";
     try{
     userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
-    System.out.println(userInput);
+    // System.out.println(userInput);
     }catch(Exception g){
       return;
     }
@@ -339,11 +384,6 @@ static boolean oneWordWrong;
     ChatBot gui = new ChatBot();
     gui.setUpMyGUI();
 
-
-
-   
-
-   
 
   }
 
@@ -492,6 +532,39 @@ static boolean oneWordWrong;
     }
   }
 
+
+
+  // ---------------------------------------------------------------------------------------------------------
+   // this is a method which fills in the business map with its respective key and
+  // value depending on which map it is
+  // via a process of elimination by if and else which determines what the key
+  // will be
+  public static void fillInBusinessMap(HashMap<String, String> map, String value) {
+
+    // this loops through each movie object, and initializes the respective map with
+    // this movie key
+    for (int i = 0; i < listOfBusiness.size(); i++) {
+
+      // if (value == "business name") {
+      //   map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
+
+      // } else 
+      if (value == "year") {
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "The year that Ryan Reynolds started " + listOfBusiness.get(i).getbusinessName().toLowerCase() + " is " + listOfBusiness.get(i).getyearStarted());
+
+      } else if (value == "location") {
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The location is " + listOfBusiness.get(i).getbusinessLocation().toLowerCase());
+      
+      } else if (value == "position") {
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The position is " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName());
+      } else {
+
+        return;
+      }
+      
+    }
+  }
+
   // ------------------------------------------------------------------------------------------------------------------
   // below is the chatbot and analyze function methods to determine chatbots
   // reponse
@@ -539,7 +612,7 @@ static boolean oneWordWrong;
       }
     }
 
-    // if the userInput does not contain a movie title,
+    // if the userInput does not contain a movie title but contains a personal question,
     // we segregate the users query to being about the bots personal life
     for (int k = 0; k < personalQuestion.size(); k++) {
 
@@ -550,6 +623,21 @@ static boolean oneWordWrong;
         // the robots reponse
         personalChatFunction(userInput, personalQuestionAsked);
         return;
+      }
+    }
+
+    // if the userInput contains a business name , we segregate ithe users query to
+    // being about business
+    for (int j = 0; j < listOfBusiness.size(); j++) {
+      if (userInput.contains(listOfBusiness.get(j).getbusinessName().toLowerCase())) {
+        businesNameAsked = listOfBusiness.get(j).getbusinessName().toLowerCase();
+
+        // then we send the user input and the movie title asked about to a chat
+        // function which determines
+        // the robots reponse
+        businessChatFunction(userInput, businesNameAsked);
+        return;
+
       }
     }
 
@@ -572,39 +660,39 @@ static boolean oneWordWrong;
        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(1))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(2))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(3))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(4))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(5))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(6))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(7))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(8))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(9))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(10))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(11))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
         break;
       } else {
@@ -681,6 +769,41 @@ static boolean oneWordWrong;
 
   }
 
+   // ---------------------------------------------------------------------------------------------------------
+  // This is the business chat function for the chatbot, which loops through the
+  // business questions and determines
+  // depending on which question is asked how the bot will respond using the
+  // corresponding map and key value pair
+  public static void businessChatFunction(String userInput, String businessNameAsked) {
+
+    for (int i = 0; i < businessQuestion.size(); i++) {
+      // if (userInput.contains(businessQuestion.get(0))) {
+
+      //   System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
+      //   break;
+
+      // } else 
+      if (userInput.contains(businessQuestion.get(i))) {
+       chatArea.append("Ryan Reynolds: " + yearStartedMap.get(businessNameAsked) +"\n");
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(i))) {
+        chatArea.append("Ryan Reynolds: " +businessLocationMap.get(businessNameAsked)+"\n");
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(i))) {
+        chatArea.append("Ryan Reynolds: " +businessPositionMap.get(businessNameAsked)+"\n");
+        break;
+      } else {
+
+        return;
+      }
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------------------------------------
+
   // ------------------------------------------------------------------------------------------------------------------
   // below is the ask a question method which determines if the bot asks the
   // question back to the user or not
@@ -733,11 +856,7 @@ static boolean oneWordWrong;
       }
   }
 
-
-
-
-
-
+//--------------------------------------------------------------------------------------------------------
 
   public static void wordForWord(String userInput) {
     splitInput = userInput.split(" ");
