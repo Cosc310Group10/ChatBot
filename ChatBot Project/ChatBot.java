@@ -16,6 +16,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
     //----------------------------------------------------------------------------------------------------------------------------
 public class ChatBot extends JFrame implements ActionListener {
 
@@ -81,6 +88,10 @@ public static JTextField chatField;
 public static JScrollBar scrollBar;
 public static JButton button;
 public static ImageIcon image;
+
+static boolean speltCorrectly = false;
+static String[] splitInput;
+static boolean oneWordWrong;
  
     //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
@@ -475,7 +486,14 @@ public static ImageIcon image;
   // this method is the chatbot method which calls the analyze function method to
   // determine the chatbot response
   public static void chatBot(String userInput) {
+
+    wordForWord(userInput);
+
+    if(speltCorrectly == true){
     analyzeInput(userInput);
+  }else{
+    chatArea.append("Your message is spelt wrong! Try again.\n");
+  }
   }
 
   // this method takes in the users input and directs how the robot is going to
@@ -702,4 +720,79 @@ public static ImageIcon image;
       }
   }
 
+
+
+
+
+
+
+  public static void wordForWord(String userInput) {
+    splitInput = userInput.split(" ");
+    oneWordWrong = false;
+    for(int i=0; i<splitInput.length;i++) {
+      if(oneWordWrong == false){
+      isMySpellingRight(splitInput[i],"dictonary.txt");
+      }else{
+        break;
+      }
+    }
+    
+  }
+  
+  public static void isMySpellingRight(String userInput, String filePath) {
+    oneWordWrong = true;
+    try{
+     FileReader fr = new FileReader(filePath);
+     BufferedReader in = new BufferedReader(fr);
+     
+     String word;
+     while((word = in.readLine())!= null) {
+       
+       if(userInput.equals(word)) {
+         speltCorrectly = true;
+         oneWordWrong = false;
+         break;
+       }else {
+         speltCorrectly = false;
+         oneWordWrong = true;
+       }
+     }
+     in.close();}catch(Exception e){
+       return;
+     }
+  }
+  
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
