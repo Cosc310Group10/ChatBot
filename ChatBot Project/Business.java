@@ -6,14 +6,17 @@ public class Business {
     //year started
     private int yearStarted;
     //location of business
-    private String location;
+    private String businessLocation;
+    //position of business
+    private String businessPosition;
 
     // Constructors below
     //Business Constructor for all business attributes
-    Business(String businessName, int yearStarted, String location){
+    Business(String businessName, int yearStarted, String businessLocation, String businessPosition){
         this.businessName = businessName;
         this.yearStarted = yearStarted;
-        this.location = location;
+        this.businessLocation = businessLocation;
+        this.businessPosition = businessPosition;
     }
 
     Business(){
@@ -34,40 +37,16 @@ public class Business {
     public void setyearStarted(int yearStarted){
         this.yearStarted = yearStarted;
     }
-    public String getlocation(){
-        return location;
+    public String getbusinessLocation(){
+        return businessLocation;
     }
-    public void setlocation(String location){
-        this.location = location;
+    public void setbusinessLocation(String businessLocation){
+        this.businessLocation = businessLocation;
     }
- //Mint Mobile 
- private Business mintMobileInfo = new Business("Mint Moblie",2019,"Costa Mesa, California");
-
- //getter for Mint Mobile
- public Business getMintMoblie(){
-     return mintMobileInfo;
- }
-
- //Maximum Effort  
- private Business maximumEffortInfo  = new Business("Maximum Effort ",2018,"New York, New York");
-
- //getter for Maximum Effort
- public Business getMaximumEffort(){
-     return maximumEffortInfo;
- }
- //Aviation American Gin
- private Business aviationAmericanGinInfo = new Business("Aviation American Gin",2018 ,"Portland, Oregon");
-
- //getter for Aviation American Gin
- public Business getAviationAmericanGin(){
-     return aviationAmericanGinInfo;
- }
- //Wrexham AFC
- private Business wrexhamAFCInfo = new Business("Wrexham AFC",2021 ,"Wrexham, North Wales");
-
- //getter for Wrexham AFC
- public Business getwrexhamAFC(){
-     return wrexhamAFCInfo;
- }
-
+    public String getbusinessPosition(){
+        return businessPosition;
+    }
+    public void setbusinessPosition(String businessPosition){
+        this.businessPosition = businessPosition;
+    }
 }

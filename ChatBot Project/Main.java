@@ -27,15 +27,28 @@ public class Main {
   static String movieTitleAsked;
   // string to track which personal question was asked about
   static String personalQuestionAsked;
+  // string to track which business name was asked about
+  static String businesNameAsked;
+
   // arraylists for the list of movies, movie questions, personal questions, and
   // greeting responses
   static ArrayList<Movie> listOfMovies = new ArrayList<>();
   static ArrayList<String> movieQuestion = new ArrayList<>();
   static ArrayList<String> personalQuestion = new ArrayList<>();
   static ArrayList<String> greetingResponses = new ArrayList<>();
+  
+  // creating the arrays for the business attributes
+  static ArrayList<Business> listOfBusiness = new ArrayList<>();  /*adding list of businesses*/
+  static ArrayList<String> businessQuestion = new ArrayList<>();   /*adding business questions*/
 
   // creating the map for the personal attributes
   static HashMap<String, String> personalQuestionMap = new HashMap<String, String>();
+
+  // creating the maps for the differentbusiness attributes
+  static HashMap<String, String> businessNameMap = new HashMap<String, String>(); /*adding business hashmap*/
+  static HashMap<String, String> yearStartedMap = new HashMap<String, String>(); /*adding business hashmap*/
+  static HashMap<String, String> businessLocationMap = new HashMap<String, String>(); /*adding business hashmap*/
+  static HashMap<String, String> businessPositionMap = new HashMap<String, String>(); /*adding business hashmap*/
 
   // Here we are creating the maps for the different movie attributes
   // Initializing the imdb map
@@ -127,6 +140,37 @@ public class Main {
     fillInMovieMap(durationMap, "duration");
     // Initializing the budget map
     fillInMovieMap(budgetMap, "budget");
+
+
+    // --------------------------------------------------------------------------------------------------
+
+    // here we are setting up the possible business questions, and the possible business
+    // to be asked about
+   // Initializing business Questions ArrayList
+    businessQuestion.add("business name");
+    businessQuestion.add("year started");
+    businessQuestion.add("business location");
+    businessQuestion.add("position");
+
+
+    // Initializing the list of business
+    listOfBusiness.add(r.getMintMoblie());
+    listOfBusiness.add(r.getMaximumEffort());
+    listOfBusiness.add(r.getAviationAmericanGin());
+    listOfBusiness.add(r.getwrexhamAFC());
+    listOfBusiness.add(r.getgroupEffortInitiative());
+    listOfBusiness.add(r.getMNTN());
+   
+
+    // Initializing the businessName map
+    fillInBusinessMap(businessNameMap, "business name");
+    // Initializing the yearStarted map
+    fillInBusinessMap(yearStartedMap, "year started");
+    // Initializing the businessLocation map
+    fillInBusinessMap(businessLocationMap, "business location");
+    // Initializing the businessPosition map
+    fillInBusinessMap(businessPositionMap, "position");
+
 
     // ---------------------------------------------------------------------------------------------------------
 
@@ -267,6 +311,36 @@ public class Main {
     }
   }
 
+ // ---------------------------------------------------------------------------------------------------------
+   // this is a method which fills in the business map with its respective key and
+  // value depending on which map it is
+  // via a process of elimination by if and else which determines what the key
+  // will be
+  public static void fillInBusinessMap(HashMap<String, String> map, String value) {
+
+    // this loops through each movie object, and initializes the respective map with
+    // this movie key
+    for (int i = 0; i < listOfBusiness.size(); i++) {
+
+      if (value == "business name") {
+        map.put(businessQuestion.get(i).toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
+
+      } else if (value == "year started") {
+        map.put(businessQuestion.get(i).toLowerCase(), "The year that Ryan Reynolds started " + listOfBusiness.get(i).getbusinessName().toLowerCase() + " is " + listOfBusiness.get(i).getyearStarted());
+
+      } else if (value == "business location") {
+        map.put(businessQuestion.get(i).toLowerCase(), " The location is " + listOfBusiness.get(i).getbusinessLocation().toLowerCase());
+      
+      } else if (value == "business position") {
+        map.put(businessQuestion.get(i).toLowerCase(), " The position is " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName());
+      } else {
+
+        return;
+      }
+      
+    }
+  }
+
   // ---------------------------------------------------------------------------------------------------------
   // this is a method which fills in the personal map with its respective key and
   // value depending on which map it is
@@ -391,6 +465,21 @@ public class Main {
       }
     }
 
+    // if the userInput contains a business name , we segregate ithe users query to
+    // being about business
+    for (int j = 0; j < listOfBusiness.size(); j++) {
+      if (userInput.contains(listOfBusiness.get(j).getbusinessName().toLowerCase())) {
+        businesNameAsked = listOfBusiness.get(j).getbusinessName().toLowerCase();
+
+        // then we send the user input and the movie title asked about to a chat
+        // function which determines
+        // the robots reponse
+        movieChatFunction(userInput, businesNameAsked);
+        return;
+
+      }
+    }
+
     // if the userInput does not contain a movie title,
     // we segregate the users query to being about the bots personal life
     for (int k = 0; k < personalQuestion.size(); k++) {
@@ -458,6 +547,39 @@ public class Main {
         break;
       } else if (userInput.contains(movieQuestion.get(11))) {
         System.out.println(movieTitleAsked + " " + budgetMap.get(movieTitleAsked));
+        break;
+      } else {
+
+        return;
+      }
+    }
+
+  }
+
+
+  // ---------------------------------------------------------------------------------------------------------
+  // This is the business chat function for the chatbot, which loops through the
+  // business questions and determines
+  // depending on which question is asked how the bot will respond using the
+  // corresponding map and key value pair
+  public static void businessChatFunction(String userInput, String businessNameAsked) {
+
+    for (int i = 0; i < businessQuestion.size(); i++) {
+      if (userInput.contains(businessQuestion.get(0))) {
+
+        System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(1))) {
+        System.out.println(businessNameAsked + " " + yearStartedMap.get(businessNameAsked));
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(2))) {
+        System.out.println(businessNameAsked + " " + businessLocationMap.get(businessNameAsked));
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(3))) {
+        System.out.println(businessNameAsked + " " + businessPositionMap.get(businessNameAsked));
         break;
       } else {
 
