@@ -283,6 +283,17 @@ static boolean oneWordWrong;
       // grab user input
       userInputUnformatted = chatField.getText();
       userInput = chatField.getText().toLowerCase();
+
+    // TODO: Specify your translation requirements here:
+    String fromLang = "es";
+    String toLang = "en";
+    try{
+    userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+    System.out.println(userInput);
+    }catch(Exception g){
+      return;
+    }
+
       chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
       
@@ -327,6 +338,8 @@ static boolean oneWordWrong;
     //GUI STUFF
     ChatBot gui = new ChatBot();
     gui.setUpMyGUI();
+
+
 
    
 
