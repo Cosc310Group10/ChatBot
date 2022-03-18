@@ -1,3 +1,4 @@
+
 public class Business {
     // Attributes below(referring to business)
     //name of business
@@ -48,4 +49,5 @@ public class Business {
     public void setbusinessPosition(String businessPosition){
         this.businessPosition = businessPosition;
     }
+    
 }
