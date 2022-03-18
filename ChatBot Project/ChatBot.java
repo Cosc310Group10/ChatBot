@@ -110,11 +110,15 @@ static boolean oneWordWrong;
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
   public ChatBot(){
 
-    //getting the laptop screen size, and setting the frame to be full screen
-    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    GraphicsDevice device = graphics.getDefaultScreenDevice();
-    frame = new JFrame("Fullscreen");
-    device.setFullScreenWindow(frame);
+    // //getting the laptop screen size, and setting the frame to be full screen
+    // GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    // GraphicsDevice device = graphics.getDefaultScreenDevice();
+    // frame = new JFrame("Fullscreen");
+    frame = new JFrame();
+    // device.setFullScreenWindow(frame);
+
+    frame.setSize(500, 500);
+
         panel = new JPanel();
         
         image = new ImageIcon("ryan_reynolds.jpg");
@@ -154,7 +158,7 @@ static boolean oneWordWrong;
     frame.setTitle("Ryan Reynold's ChatBot");
    
     frame.setVisible(true);
-    frame.setResizable(false);
+    frame.setResizable(true);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
@@ -375,10 +379,10 @@ static boolean oneWordWrong;
   // --------------------------------------------------------------------------------------------------
   public static void main(String[] args) {
 
-    //USE THIS TO ENSURE JAVA IMAGE ICON WORKS, make sure image is in here!
-    //String dir = System.getProperty("user.dir");
-  //// directory from where the program was launched
-  //System.out.println(dir);
+    //USE THIS TO ENSURE JAVA IMAGE ICON AND DICTONARY WORKS, make sure image is in here!
+  //   String dir = System.getProperty("user.dir");
+  // // directory from where the program was launched
+  // System.out.println(dir);
 
     //GUI STUFF
     ChatBot gui = new ChatBot();
