@@ -658,52 +658,52 @@ static boolean oneWordWrong;
   // corresponding map and key value pair
   public static void movieChatFunction(String userInput, String movieTitleAsked) {
 
-    for (int i = 0; i < movieQuestion.size(); i++) {
+    
       if (userInput.contains(movieQuestion.get(0))) {
 
        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
-        break;
+       return;
 
-      } else if (userInput.contains(movieQuestion.get(i))) {
+      } else if (userInput.contains(movieQuestion.get(1))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
-        break;
+        return;
 
-      } else if (userInput.contains(movieQuestion.get(i))) {
+      } else if (userInput.contains(movieQuestion.get(2))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
-        break;
+        return;
 
-      } else if (userInput.contains(movieQuestion.get(i))) {
+      } else if (userInput.contains(movieQuestion.get(3))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(4))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(5))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(6))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(7))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(8))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(9))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(10))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(11))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
-        break;
+        return;
       } else {
 
         return;
       }
-    }
+    
 
   }
 
@@ -780,29 +780,23 @@ static boolean oneWordWrong;
   // corresponding map and key value pair
   public static void businessChatFunction(String userInput, String businessNameAsked) {
 
-    for (int i = 0; i < businessQuestion.size(); i++) {
-      // if (userInput.contains(businessQuestion.get(0))) {
-
-      //   System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
-      //   break;
-
-      // } else 
-      if (userInput.contains(businessQuestion.get(i))) {
+    
+      if (userInput.contains(businessQuestion.get(0))) {
        chatArea.append("Ryan Reynolds: " + yearStartedMap.get(businessNameAsked) +"\n");
-        break;
+       return;
 
-      } else if (userInput.contains(businessQuestion.get(i))) {
+      } else if (userInput.contains(businessQuestion.get(1))) {
         chatArea.append("Ryan Reynolds: " +businessLocationMap.get(businessNameAsked)+"\n");
-        break;
+        return;
 
-      } else if (userInput.contains(businessQuestion.get(i))) {
+      } else if (userInput.contains(businessQuestion.get(2))) {
         chatArea.append("Ryan Reynolds: " +businessPositionMap.get(businessNameAsked)+"\n");
-        break;
+        return;
       } else {
 
         return;
       }
-    }
+    
 
   }
 
