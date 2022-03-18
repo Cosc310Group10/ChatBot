@@ -8,8 +8,8 @@ public class Translate {
   // TODO: If you have your own Premium account credentials, put them down here:
 
   //THIS NEEDS A PAID FOR LOGIN ID AND PASSWORD
-  private static final String CLIENT_ID = "FREE_TRIAL_ACCOUNT";
-  private static final String CLIENT_SECRET = "PUBLIC_SECRET";
+  private static final String CLIENT_ID = "Griffinwilchuk@gmail.com";
+  private static final String CLIENT_SECRET = "aa8e06c5439e49be8609a815fdd5081a";
   private static final String ENDPOINT = "http://api.whatsmate.net/v1/translation/translate";
 
   /**
