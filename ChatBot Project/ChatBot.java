@@ -117,7 +117,7 @@ static boolean oneWordWrong;
     frame = new JFrame();
     // device.setFullScreenWindow(frame);
 
-    frame.setSize(500, 500);
+    frame.setSize(600, 500);
 
         panel = new JPanel();
         
@@ -125,7 +125,7 @@ static boolean oneWordWrong;
         
         chatArea = new JTextArea(50,90);
         chatField = new JTextField(40);
-        scrollBar = new JScrollBar();
+        //scrollBar = new JScrollBar();
        
         button = new JButton("Ask:");
 
@@ -333,7 +333,7 @@ static boolean oneWordWrong;
       userInputUnformatted = chatField.getText();
       userInput = chatField.getText().toLowerCase();
 
-    // TODO: Specify your translation requirements here:
+    //TODO: Specify your translation requirements here:
     String fromLang = "es";
     String toLang = "en";
     try{
