@@ -191,42 +191,6 @@ public class RyanReynolds {
     private Movie theHitmansBodyguard = new Movie(6.9, "The Hitman's Bodyguard", 2017, "R", theHitmansBodyguardCast,
             "Patrick Hughes", "Action, Comedy, and Crime", theHitmansBodyguardAwards, "176,600,000", "Amsterdam", "N/A",
             "1hr 58m", "69,000,000");
-<<<<<<< HEAD
-
-    // getter for the hitmans bodyguard movie
-    public Movie getTheHitmansBodyguard() {
-        return theHitmansBodyguard;
-    }
-
-    // Change up
-    ArrayList<String> changeUpCast = new ArrayList<>(Arrays.asList("Me", "Jason Bateman", "Olivia Wilde", "Leslie Mann",
-            "Alan Arkin", " Mircea Monroe", "Gregory Itzin", "Ned Schmidtke", "Ming Lo", "Sydney Rouviere",
-            "Craig Bierko", "Dax Griffin", "Andrea Moore", "Matthew Cornwell", "Taaffe O'Connell", "Fred Stoller",
-            "Faith Alhadeff", "Luke Bain"));
-    ArrayList<String> changeUpAwards = new ArrayList<>(Arrays.asList("N/A"));
-    private Movie changeUp = new Movie(6.3, "The Change-up", 2011, "R", changeUpCast, "David Dobkin",
-            "Comedy and Fantasy", changeUpAwards, "75,500,000", "Alpharetta, Georgia", "N/A", "1hr 52m", "52,000,000");
-
-    // getter for change up movie
-    public Movie getChangeUp() {
-        return changeUp;
-    }
-
-    // The Proposal
-    ArrayList<String> theProposalCast = new ArrayList<>(Arrays.asList("Me", "Sandra Bullock", "Mary Steenburgen",
-            "Craig T. Nelson", "Betty White", "Denis O'Hare", "Oscar Nuñez", "Aasif Mandvi", "Michael Nouri",
-            "Michael Mosley", "Dale Place", "Alicia Hunt", "Alexis Garcia", "Kortney Adams", "Chris Whitney",
-            "	Lee Wesley", "Gregg Edelman", "Phyllis Kay"));
-    ArrayList<String> theProposalAwards = new ArrayList<>(Arrays.asList("BMI Film Music Award", "People's Choice Award",
-            "Rembrandt Award", "Teen Choice Award", "WIN Award"));
-    private Movie theProposal = new Movie(6.7, "The Proposal", 2009, "PG-13", theProposalCast, "Anne Fletcher",
-            "Comedy, Drama, Romance", theProposalAwards, "317,400,000", "Sitka, Alaska", "2 months", "1hr 48m",
-            "40,000,000");
-
-    // getter for the proposal movie
-    public Movie getTheProposal() {
-        return theProposal;
-=======
 
     // getter for the hitmans bodyguard movie
     public Movie getTheHitmansBodyguard() {
@@ -310,7 +274,6 @@ public class RyanReynolds {
     //getter for MNTN
     public Business getMNTN(){
         return mNTNInfo;
->>>>>>> main
     }
 
     // Constructors below
@@ -353,11 +316,7 @@ public class RyanReynolds {
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.wifeName = wifeName;
-<<<<<<< HEAD
-        this.haircolour = socialMediaHandle;
-=======
         this.socialMediaHandle= socialMediaHandle;
->>>>>>> main
         this.twitterFollowers = twitterFollowers;
         this.instagramFollowers = instagramFollowers;
         this.tiktokFollowers = tiktokFollowers;
@@ -499,8 +458,4 @@ public class RyanReynolds {
         this.otherAwards = otherAwards;
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
