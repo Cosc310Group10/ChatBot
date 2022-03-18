@@ -1,4 +1,4 @@
-// GROUP 10 COSC 310 Main Class ***UPDATED MARCH 3RD****
+// GROUP 10 COSC 310 Main Class
 /*
 By:
 LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
@@ -11,25 +11,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.awt.Color;
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-
-import java.awt.Dimension;
+import java.awt.*;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.FlowLayout;
 
-import javax.swing.JButton;
-public class ChatBot extends JFrame {
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+    //----------------------------------------------------------------------------------------------------------------------------
+public class ChatBot extends JFrame implements ActionListener {
 
 
+    //----------------------------------------------------------------------------------------------------------------------------
 
 // creating a static ryan reynolds object so its accessible by all methods
 static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
-"Blake Lively", "@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
+"Blake Lively","@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
 
 // boolean to keep track if the bot asked a question
 static boolean askAQuestion = false;
@@ -43,6 +45,9 @@ static String userInputUnformatted;
 static String movieTitleAsked;
 // string to track which personal question was asked about
 static String personalQuestionAsked;
+// string to track which business name was asked about
+static String businesNameAsked;
+
 // arraylists for the list of movies, movie questions, personal questions, and
 // greeting responses
 static ArrayList<Movie> listOfMovies = new ArrayList<>();
@@ -52,6 +57,16 @@ static ArrayList<String> greetingResponses = new ArrayList<>();
 
 // creating the map for the personal attributes
 static HashMap<String, String> personalQuestionMap = new HashMap<String, String>();
+
+// creating the arrays for the business attributes
+static ArrayList<Business> listOfBusiness = new ArrayList<>();  /*adding list of businesses*/
+static ArrayList<String> businessQuestion = new ArrayList<>();   /*adding business questions*/
+
+// creating the maps for the differentbusiness attributes
+static HashMap<String, String> businessNameMap = new HashMap<String, String>(); /*adding business hashmap*/
+static HashMap<String, String> yearStartedMap = new HashMap<String, String>(); /*adding business hashmap*/
+static HashMap<String, String> businessLocationMap = new HashMap<String, String>(); /*adding business hashmap*/
+static HashMap<String, String> businessPositionMap = new HashMap<String, String>(); /*adding business hashmap*/
 
 // Here we are creating the maps for the different movie attributes
 // Initializing the imdb map
@@ -79,38 +94,87 @@ static HashMap<String, String> durationMap = new HashMap<String, String>();
 // Initializing the budget map
 static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
-  //creating a text area
-  private static JTextArea chatArea = new JTextArea();
-  //creating a text field / box
-  private static JTextField chatField = new JTextField();
+public static JFrame frame;
+public static JPanel panel;
+public static JTextArea chatArea;
+public static JTextField chatField;
+public static JScrollBar scrollBar;
+public static JButton button;
+public static ImageIcon image;
 
-  
+static boolean speltCorrectly = false;
+static String[] splitInput;
+static boolean oneWordWrong;
+ 
+    //---------------------------------------------------------------------------------------------------------------------------- 
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
   public ChatBot(){
 
-    JFrame frame = new JFrame();
-    frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    //getting the laptop screen size, and setting the frame to be full screen
+    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    GraphicsDevice device = graphics.getDefaultScreenDevice();
+    frame = new JFrame("Fullscreen");
+    device.setFullScreenWindow(frame);
+        panel = new JPanel();
+        
+        image = new ImageIcon("ryan_reynolds.jpg");
+        
+        chatArea = new JTextArea(50,90);
+        chatField = new JTextField(40);
+        scrollBar = new JScrollBar();
+       
+        button = new JButton("Ask:");
+
+        
+       
+  }
+
+  public void setUpMyGUI(){
+
+    panel.setBackground(Color.red);
+
+    frame.add(panel);
+    
+   
+    button.addActionListener(this);
+    chatArea.setBackground(Color.black);
+    chatArea.setForeground(Color.yellow);
+    chatArea.setLineWrap(true);
+
+
+    chatField.setBackground(Color.black);
+    chatField.setForeground(Color.yellow);
+
+    panel.add(chatArea);
+    panel.add(button);
+    panel.add(chatField);
+    
+
+    frame.setIconImage(image.getImage()); //changes icon of frame
+    frame.setTitle("Ryan Reynold's ChatBot");
+   
     frame.setVisible(true);
-    frame.setLayout(null);
-    frame.setSize(600,600);
-    frame.setBackground(new Color(0,0,0));
-    frame.setTitle("Ryan Reynolds Chat Bot");
-    frame.add(chatArea);
-    frame.add(chatField);
+    frame.setResizable(false);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    //this is for the text area formatting
-    chatArea.setSize(800,500);
-    chatArea.setLocation(2,2);
 
-    //this is for the text field
-    chatField.setSize(540,30);
-    chatField.setLocation(2, 500);
+}
+    
 
-    chatField.addActionListener(new ActionListener(){
+
+    //----------------------------------------------------------------------------------------------------------------------------
+    // HERE WE ARE CREATING AN ACTION LISTENER AND MAKING AN ACTION PERFORMED METHOD WHICH INCLUDES ALL OF OUR MAIN CODE
+    //EXCEPT FOR THE METHODS USED IN THE CODE WHICH ARE OUTSIDE THIS ACTION PERFORMED METHOD
+    
 
     public void actionPerformed(ActionEvent e){
 
-
+      
+     if(e.getSource()==button){
+      
+     
+        
+    
  // initializing the greeting repsonse list
  greetingResponses.add("hi");
  greetingResponses.add("hello");
@@ -202,17 +266,49 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     // here we are initializing the personal question map
     fillInPersonalMap(personalQuestionMap);
 
+
+
+    // here we are setting up the possible business questions, and the possible business
+    // to be asked about
+   // Initializing business Questions ArrayList
+    // businessQuestion.add("business name");
+    businessQuestion.add("year");
+    businessQuestion.add("location");
+    businessQuestion.add("position");
+
+
+    // Initializing the list of business
+    listOfBusiness.add(r.getMintMoblie());
+    listOfBusiness.add(r.getMaximumEffort());
+    listOfBusiness.add(r.getAviationAmericanGin());
+    listOfBusiness.add(r.getwrexhamAFC());
+    listOfBusiness.add(r.getgroupEffortInitiative());
+    listOfBusiness.add(r.getMNTN());
+   
+
+    // Initializing the businessName map
+    // fillInBusinessMap(businessNameMap, "business name");
+    // Initializing the yearStarted map
+    fillInBusinessMap(yearStartedMap, "year");
+    // Initializing the businessLocation map
+    fillInBusinessMap(businessLocationMap, "location");
+    // Initializing the businessPosition map
+    fillInBusinessMap(businessPositionMap, "position");
+
+
+    // ---------------------------------------------------------------------------------------------------------
+
    
     if (startUp == true){
     // a cool feature saying the chatbot is booting up for a delay of 2 seconds
-    chatArea.append("Ryan Reynolds Chat bot booting up...\n");
+    chatArea.setText("Ryan Reynolds Chat bot booting up...\n");
     try {
       TimeUnit.SECONDS.sleep(2); // delaying the program for 2 seconds
     } catch (Exception g) {
-      chatArea.append("Error Occurred"); // catching an error
+      chatArea.setText("Error Occurred"); // catching an error
     }
     // prompt for user and creating scanner
-    chatArea.append("Ryan Reynolds: " + 
+    chatArea.setText("Ryan Reynolds: " + 
         "Hello! Nice to meet you! I am Ryan Reynolds, but in chat bot form...\nAsk me a question about myself or my movies!\n");
         startUp = false;
   }
@@ -224,19 +320,29 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     // Continually ask for user input and store it
     
       // if the bot asked a question, reply with cool and take the input
-      if (askAQuestion == true) {
-        
-        chatArea.append("Ryan Reynolds: Really!\n");
-      }
-      // then reset question to false
+      
+      //otherwise, re prompt for input and repeat
       askAQuestion = false;
-
       // print new line
       chatArea.append("\n");
       // grab user input
       userInputUnformatted = chatField.getText();
       userInput = chatField.getText().toLowerCase();
+
+    // TODO: Specify your translation requirements here:
+    String fromLang = "es";
+    String toLang = "en";
+    try{
+    userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+    // System.out.println(userInput);
+    }catch(Exception g){
+      return;
+    }
+
+      chatField.setText("");
       chatArea.append("You: " + userInputUnformatted+"\n"); 
+      
+      
       
       // if the user input equals end, then engaged is set to true, the scanner
       // closes, and we break from the loop to end conversation
@@ -263,21 +369,21 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
 
   }
-  });
+}
 
-  }
-
- 
-
-  
 
   // --------------------------------------------------------------------------------------------------
   public static void main(String[] args) {
 
-    //GUI STUFF
-    new ChatBot();
+    //USE THIS TO ENSURE JAVA IMAGE ICON WORKS, make sure image is in here!
+    //String dir = System.getProperty("user.dir");
+  // directory from where the program was launched
+  //System.out.println(dir);
 
-   
+    //GUI STUFF
+    ChatBot gui = new ChatBot();
+    gui.setUpMyGUI();
+
 
   }
 
@@ -426,6 +532,39 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     }
   }
 
+
+
+  // ---------------------------------------------------------------------------------------------------------
+   // this is a method which fills in the business map with its respective key and
+  // value depending on which map it is
+  // via a process of elimination by if and else which determines what the key
+  // will be
+  public static void fillInBusinessMap(HashMap<String, String> map, String value) {
+
+    // this loops through each movie object, and initializes the respective map with
+    // this movie key
+    for (int i = 0; i < listOfBusiness.size(); i++) {
+
+      // if (value == "business name") {
+      //   map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "Ryan Reynolds is the " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName().toLowerCase());
+
+      // } else 
+      if (value == "year") {
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), "The year that Ryan Reynolds started " + listOfBusiness.get(i).getbusinessName().toLowerCase() + " is " + listOfBusiness.get(i).getyearStarted());
+
+      } else if (value == "location") {
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The location is " + listOfBusiness.get(i).getbusinessLocation().toLowerCase());
+      
+      } else if (value == "position") {
+        map.put(listOfBusiness.get(i).getbusinessName().toLowerCase(), " The position is " + listOfBusiness.get(i).getbusinessPosition().toLowerCase() + " of " + listOfBusiness.get(i).getbusinessName());
+      } else {
+
+        return;
+      }
+      
+    }
+  }
+
   // ------------------------------------------------------------------------------------------------------------------
   // below is the chatbot and analyze function methods to determine chatbots
   // reponse
@@ -433,7 +572,14 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
   // this method is the chatbot method which calls the analyze function method to
   // determine the chatbot response
   public static void chatBot(String userInput) {
+
+    wordForWord(userInput);
+
+    if(speltCorrectly == true){
     analyzeInput(userInput);
+  }else{
+    chatArea.append("Your message is spelt wrong! Try again.\n");
+  }
   }
 
   // this method takes in the users input and directs how the robot is going to
@@ -466,7 +612,7 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
       }
     }
 
-    // if the userInput does not contain a movie title,
+    // if the userInput does not contain a movie title but contains a personal question,
     // we segregate the users query to being about the bots personal life
     for (int k = 0; k < personalQuestion.size(); k++) {
 
@@ -477,6 +623,21 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
         // the robots reponse
         personalChatFunction(userInput, personalQuestionAsked);
         return;
+      }
+    }
+
+    // if the userInput contains a business name , we segregate ithe users query to
+    // being about business
+    for (int j = 0; j < listOfBusiness.size(); j++) {
+      if (userInput.contains(listOfBusiness.get(j).getbusinessName().toLowerCase())) {
+        businesNameAsked = listOfBusiness.get(j).getbusinessName().toLowerCase();
+
+        // then we send the user input and the movie title asked about to a chat
+        // function which determines
+        // the robots reponse
+        businessChatFunction(userInput, businesNameAsked);
+        return;
+
       }
     }
 
@@ -499,39 +660,39 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(1))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(2))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
         break;
 
-      } else if (userInput.contains(movieQuestion.get(3))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(4))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(5))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(6))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(7))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(8))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(9))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(10))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
         break;
-      } else if (userInput.contains(movieQuestion.get(11))) {
+      } else if (userInput.contains(movieQuestion.get(i))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
         break;
       } else {
@@ -608,6 +769,41 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
 
   }
 
+   // ---------------------------------------------------------------------------------------------------------
+  // This is the business chat function for the chatbot, which loops through the
+  // business questions and determines
+  // depending on which question is asked how the bot will respond using the
+  // corresponding map and key value pair
+  public static void businessChatFunction(String userInput, String businessNameAsked) {
+
+    for (int i = 0; i < businessQuestion.size(); i++) {
+      // if (userInput.contains(businessQuestion.get(0))) {
+
+      //   System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
+      //   break;
+
+      // } else 
+      if (userInput.contains(businessQuestion.get(i))) {
+       chatArea.append("Ryan Reynolds: " + yearStartedMap.get(businessNameAsked) +"\n");
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(i))) {
+        chatArea.append("Ryan Reynolds: " +businessLocationMap.get(businessNameAsked)+"\n");
+        break;
+
+      } else if (userInput.contains(businessQuestion.get(i))) {
+        chatArea.append("Ryan Reynolds: " +businessPositionMap.get(businessNameAsked)+"\n");
+        break;
+      } else {
+
+        return;
+      }
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------------------------------------
+
   // ------------------------------------------------------------------------------------------------------------------
   // below is the ask a question method which determines if the bot asks the
   // question back to the user or not
@@ -616,8 +812,12 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
     int random = (int) (Math.random() * 6); // 1/6 of the time the chat bot asks a question back to the user
 
     if (random == 1) {
-      chatArea.append("Ryan Reynolds: " + "\nHow about you?"+"\n");
-      askAQuestion = true;
+      chatArea.append("Ryan Reynolds: " + "How about you?"+"\n");
+        userInputUnformatted = chatField.getText();
+        chatField.setText("");
+        chatArea.append("You: " + userInputUnformatted+"\n");
+        chatArea.append("Ryan Reynolds: Really!\n");
+      
 
     } else {
       return;
@@ -656,4 +856,75 @@ static HashMap<String, String> budgetMap = new HashMap<String, String>();
       }
   }
 
+//--------------------------------------------------------------------------------------------------------
+
+  public static void wordForWord(String userInput) {
+    splitInput = userInput.split(" ");
+    oneWordWrong = false;
+    for(int i=0; i<splitInput.length;i++) {
+      if(oneWordWrong == false){
+      isMySpellingRight(splitInput[i],"dictonary.txt");
+      }else{
+        break;
+      }
+    }
+    
+  }
+  
+  public static void isMySpellingRight(String userInput, String filePath) {
+    
+    try{
+     FileReader fr = new FileReader(filePath);
+     BufferedReader in = new BufferedReader(fr);
+     
+     String word;
+     while((word = in.readLine())!= null) {
+       
+       if(userInput.equals(word)) {
+         speltCorrectly = true;
+         oneWordWrong = false;
+         break;
+       }else {
+         speltCorrectly = false;
+         oneWordWrong = true;
+       }
+     }
+     in.close();}catch(Exception e){
+       return;
+     }
+  }
+  
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
