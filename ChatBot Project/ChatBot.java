@@ -99,9 +99,11 @@ public static JPanel panel;
 public static JTextArea chatArea;
 public static JTextField chatField;
 public static JScrollBar scrollBar;
+public static JScrollPane scrollPane;
 public static JButton button;
 public static ImageIcon image;
-
+public static JPanel panel2;
+public static JPanel panel3;
 static boolean speltCorrectly = false;
 static String[] splitInput;
 static boolean oneWordWrong;
@@ -120,38 +122,56 @@ static boolean oneWordWrong;
     frame.setSize(500, 500);
 
         panel = new JPanel();
-        
+        panel2 = new JPanel();
+        panel3 = new JPanel();
         image = new ImageIcon("ryan_reynolds.jpg");
         
-        chatArea = new JTextArea(50,90);
-        chatField = new JTextField(40);
-        scrollBar = new JScrollBar();
        
+        chatArea = new JTextArea(36,130);
+        // chatArea = new JTextArea();
+        chatField = new JTextField();
         button = new JButton("Ask:");
-
+        scrollPane = new JScrollPane(chatArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+       
+        
         
        
   }
 
   public void setUpMyGUI(){
 
-    panel.setBackground(Color.red);
-
-    frame.add(panel);
     
-   
     button.addActionListener(this);
+
+
+    
     chatArea.setBackground(Color.black);
     chatArea.setForeground(Color.yellow);
     chatArea.setLineWrap(true);
 
-
+    chatField = new JTextField(40);
     chatField.setBackground(Color.black);
     chatField.setForeground(Color.yellow);
 
-    panel.add(chatArea);
-    panel.add(button);
-    panel.add(chatField);
+    // navy blue is #00117
+    panel2.setBackground(Color.decode("#8b1a1a"));
+    panel.setBackground(Color.decode("#8b1a1a"));
+    panel.add(scrollPane);
+    panel2.add(button);
+    panel2.add(chatField);
+
+    
+
+    
+    frame.add(panel,BorderLayout.CENTER);
+    frame.add(panel2, BorderLayout.PAGE_END);
+    
+   
+    
+
+    // panel.add(chatArea);
+    // panel.add(button);
+    // panel.add(chatField);
     
 
     frame.setIconImage(image.getImage()); //changes icon of frame
@@ -160,6 +180,7 @@ static boolean oneWordWrong;
     frame.setVisible(true);
     frame.setResizable(true);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
 
 
 }
