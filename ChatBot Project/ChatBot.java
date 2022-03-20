@@ -99,9 +99,11 @@ public static JPanel panel;
 public static JTextArea chatArea;
 public static JTextField chatField;
 public static JScrollBar scrollBar;
+public static JScrollPane scrollPane;
 public static JButton button;
 public static ImageIcon image;
-
+public static JPanel panel2;
+public static JPanel panel3;
 static boolean speltCorrectly = false;
 static String[] splitInput;
 static boolean oneWordWrong;
@@ -110,52 +112,75 @@ static boolean oneWordWrong;
   //BELOW WE ARE CREATING A GUI FOR THE CHATBOT
   public ChatBot(){
 
-    //getting the laptop screen size, and setting the frame to be full screen
-    GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    GraphicsDevice device = graphics.getDefaultScreenDevice();
-    frame = new JFrame("Fullscreen");
-    device.setFullScreenWindow(frame);
+    // //getting the laptop screen size, and setting the frame to be full screen
+    // GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    // GraphicsDevice device = graphics.getDefaultScreenDevice();
+    // frame = new JFrame("Fullscreen");
+    frame = new JFrame();
+    // device.setFullScreenWindow(frame);
+
+    frame.setSize(500, 500);
+
         panel = new JPanel();
-        
+        panel2 = new JPanel();
+        panel3 = new JPanel();
         image = new ImageIcon("ryan_reynolds.jpg");
         
-        chatArea = new JTextArea(50,90);
-        chatField = new JTextField(40);
-        scrollBar = new JScrollBar();
        
+        chatArea = new JTextArea(36,130);
+        // chatArea = new JTextArea();
+        chatField = new JTextField();
         button = new JButton("Ask:");
-
+        scrollPane = new JScrollPane(chatArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+       
+        
         
        
   }
 
   public void setUpMyGUI(){
 
-    panel.setBackground(Color.red);
-
-    frame.add(panel);
     
-   
     button.addActionListener(this);
+
+
+    
     chatArea.setBackground(Color.black);
     chatArea.setForeground(Color.yellow);
     chatArea.setLineWrap(true);
 
-
+    chatField = new JTextField(40);
     chatField.setBackground(Color.black);
     chatField.setForeground(Color.yellow);
 
-    panel.add(chatArea);
-    panel.add(button);
-    panel.add(chatField);
+    // navy blue is #00117
+    panel2.setBackground(Color.decode("#8b1a1a"));
+    panel.setBackground(Color.decode("#8b1a1a"));
+    panel.add(scrollPane);
+    panel2.add(button);
+    panel2.add(chatField);
+
+    
+
+    
+    frame.add(panel,BorderLayout.CENTER);
+    frame.add(panel2, BorderLayout.PAGE_END);
+    
+   
+    
+
+    // panel.add(chatArea);
+    // panel.add(button);
+    // panel.add(chatField);
     
 
     frame.setIconImage(image.getImage()); //changes icon of frame
     frame.setTitle("Ryan Reynold's ChatBot");
    
     frame.setVisible(true);
-    frame.setResizable(false);
+    frame.setResizable(true);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
 
 
 }
@@ -375,10 +400,10 @@ static boolean oneWordWrong;
   // --------------------------------------------------------------------------------------------------
   public static void main(String[] args) {
 
-    //USE THIS TO ENSURE JAVA IMAGE ICON WORKS, make sure image is in here!
-    //String dir = System.getProperty("user.dir");
-  // directory from where the program was launched
-  //System.out.println(dir);
+    //USE THIS TO ENSURE JAVA IMAGE ICON AND DICTONARY WORKS, make sure image is in here!
+  //   String dir = System.getProperty("user.dir");
+  // // directory from where the program was launched
+  // System.out.println(dir);
 
     //GUI STUFF
     ChatBot gui = new ChatBot();
@@ -654,52 +679,52 @@ static boolean oneWordWrong;
   // corresponding map and key value pair
   public static void movieChatFunction(String userInput, String movieTitleAsked) {
 
-    for (int i = 0; i < movieQuestion.size(); i++) {
+    
       if (userInput.contains(movieQuestion.get(0))) {
 
        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
-        break;
+       return;
 
-      } else if (userInput.contains(movieQuestion.get(i))) {
+      } else if (userInput.contains(movieQuestion.get(1))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
-        break;
+        return;
 
-      } else if (userInput.contains(movieQuestion.get(i))) {
+      } else if (userInput.contains(movieQuestion.get(2))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
-        break;
+        return;
 
-      } else if (userInput.contains(movieQuestion.get(i))) {
+      } else if (userInput.contains(movieQuestion.get(3))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(4))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(5))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(6))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(7))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(8))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(9))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(10))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
-        break;
-      } else if (userInput.contains(movieQuestion.get(i))) {
+        return;
+      } else if (userInput.contains(movieQuestion.get(11))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
-        break;
+        return;
       } else {
 
         return;
       }
-    }
+    
 
   }
 
@@ -776,29 +801,23 @@ static boolean oneWordWrong;
   // corresponding map and key value pair
   public static void businessChatFunction(String userInput, String businessNameAsked) {
 
-    for (int i = 0; i < businessQuestion.size(); i++) {
-      // if (userInput.contains(businessQuestion.get(0))) {
-
-      //   System.out.println(businessNameAsked + " " + businessNameMap.get(businessNameAsked));
-      //   break;
-
-      // } else 
-      if (userInput.contains(businessQuestion.get(i))) {
+    
+      if (userInput.contains(businessQuestion.get(0))) {
        chatArea.append("Ryan Reynolds: " + yearStartedMap.get(businessNameAsked) +"\n");
-        break;
+       return;
 
-      } else if (userInput.contains(businessQuestion.get(i))) {
+      } else if (userInput.contains(businessQuestion.get(1))) {
         chatArea.append("Ryan Reynolds: " +businessLocationMap.get(businessNameAsked)+"\n");
-        break;
+        return;
 
-      } else if (userInput.contains(businessQuestion.get(i))) {
+      } else if (userInput.contains(businessQuestion.get(2))) {
         chatArea.append("Ryan Reynolds: " +businessPositionMap.get(businessNameAsked)+"\n");
-        break;
+        return;
       } else {
 
         return;
       }
-    }
+    
 
   }
 
