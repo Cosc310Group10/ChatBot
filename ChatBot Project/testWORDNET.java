@@ -1,4 +1,3 @@
-import edu.mit.jwi;
 import java.net.URL;
 import java.io.File;
 import java.io.IOException;
