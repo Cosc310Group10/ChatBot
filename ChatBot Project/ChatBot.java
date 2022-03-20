@@ -539,9 +539,9 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
   public static void main(String[] args) {
 
     //USE THIS TO ENSURE JAVA IMAGE ICON AND DICTONARY WORKS, make sure image is in here!
-  //   String dir = System.getProperty("user.dir");
-  // // directory from where the program was launched
-  // System.out.println(dir);
+    String dir = System.getProperty("user.dir");
+  // directory from where the program was launched
+  System.out.println(dir);
 
 
   SwingUtilities.invokeLater(new Runnable() {
