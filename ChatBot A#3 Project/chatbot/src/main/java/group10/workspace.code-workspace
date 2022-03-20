@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\ChatBot Project\\edu.mit.jwi_2.4.0_src"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\ChatBot Project\\stanford-ner-2020-11-17"
+		},
+		{
+			"name": "chatbot",
+			"path": "..\\..\\..\\.."
+		}
+	]
+}
