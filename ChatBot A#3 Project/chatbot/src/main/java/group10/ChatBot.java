@@ -543,7 +543,7 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
     //USE THIS TO ENSURE JAVA IMAGE ICON AND DICTONARY WORKS, make sure image is in here!
   //   String dir = System.getProperty("user.dir");
   // // directory from where the program was launched
-  // System.out.println(dir);
+  // System.out.println("Directory to go to-->"+dir);
 
 
   SwingUtilities.invokeLater(new Runnable() {
