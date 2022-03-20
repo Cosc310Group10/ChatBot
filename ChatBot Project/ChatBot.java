@@ -869,13 +869,13 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
       } else if (userInput.contains(movieQuestion.get(8))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
         return;
-      } else if (userInput.contains(movieQuestion.get(9))) {
+      } else if (userInput.contains(movieQuestion.get(9)) || userInput.contains(movieQuestion.get(10))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
         return;
-      } else if (userInput.contains(movieQuestion.get(10))) {
+      } else if (userInput.contains(movieQuestion.get(11)) || userInput.contains(movieQuestion.get(12))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
         return;
-      } else if (userInput.contains(movieQuestion.get(11))) {
+      } else if (userInput.contains(movieQuestion.get(13))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
         return;
       } else {
