@@ -774,11 +774,16 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
   // determine the chatbot response
   public static void chatBot(String userInput) {
 
-    //checking that the probability of each POS tag is >0.15
-    checkPOSProbability(POSTagging.probs);
+    
 
+    
+    if(checkPOSProbAndTag(POSTagging.probs) == false){
+    
     //FURTHER checking spelling of phrase using the tokens
     wordForWord(Tokenizer.tokens);
+    }else{
+      speltCorrectly = true;
+    }
 
     
 
@@ -1102,23 +1107,13 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
 
 
   //checking that the probability of each POS tag is >0.15
-  public static void checkPOSProbability(double[] prob){
+  public static boolean checkPOSProbAndTag(double[] prob){
     for(int i=0; i<prob.length;i++){
-      if(prob[i]<0.15){
-        speltCorrectly = false;
+      if(prob[i]<0.90){
+        return false;
       }
     }
-  }
-
-  //checking POS tags for nouns and verbs
-  public static void checkPOSTags(String[] tags){
-
-    for(int i=0; i<tags.length;i++){
-      if(tags[i].equals("NNP") || tags[i].equals("VBZ") || tags[i].equals("NNS") || tags[i].equals("")){
-
-      }
-    }
-
+    return true;
   }
   
 
