@@ -110,7 +110,7 @@ static boolean speltCorrectly = false;
 static String[] splitInput;
 static boolean oneWordWrong;
 public static Font font;
-
+public static Tokenizer t = new Tokenizer();
 
  //creating variables
  JTextField  userName;
@@ -504,6 +504,22 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
     //   return;
     // }
 
+    
+    try {
+      Tokenizer.createAToken(userInput);
+    } catch (IOException e1) {
+      
+      e1.printStackTrace();
+    }
+
+    try {
+      POSTagging.posTag(Tokenizer.tokens);
+    } catch (IOException e1) {
+      // TODO Auto-generated catch block
+      e1.printStackTrace();
+    }
+   
+
       chatField.setText("");
       chatArea.append(name+": " + userInputUnformatted+"\n"); 
       
@@ -758,7 +774,16 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
   // determine the chatbot response
   public static void chatBot(String userInput) {
 
-    wordForWord(userInput);
+    //checking that the probability of each POS tag is >0.15
+    checkPOSProbability(POSTagging.probs);
+
+    //FURTHER checking spelling of phrase using the tokens
+    wordForWord(Tokenizer.tokens);
+
+    
+
+    //checking POS tags for nouns and verbs
+    // checkPOSTags(POSTagging.tags);
 
     if(speltCorrectly == true){
     analyzeInput(userInput);
@@ -1037,12 +1062,12 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
 
 //--------------------------------------------------------------------------------------------------------
 
-  public static void wordForWord(String userInput) {
-    splitInput = userInput.split(" ");
+  public static void wordForWord(String[] userInput) {
+    
     oneWordWrong = false;
-    for(int i=0; i<splitInput.length;i++) {
+    for(int i=0; i<userInput.length;i++) {
       if(oneWordWrong == false){
-      isMySpellingRight(splitInput[i],"dictonary.txt");
+      isMySpellingRight(userInput[i],"dictonary.txt");
       }else{
         break;
       }
@@ -1071,6 +1096,29 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
      in.close();}catch(Exception e){
        return;
      }
+  }
+
+
+
+
+  //checking that the probability of each POS tag is >0.15
+  public static void checkPOSProbability(double[] prob){
+    for(int i=0; i<prob.length;i++){
+      if(prob[i]<0.15){
+        speltCorrectly = false;
+      }
+    }
+  }
+
+  //checking POS tags for nouns and verbs
+  public static void checkPOSTags(String[] tags){
+
+    for(int i=0; i<tags.length;i++){
+      if(tags[i].equals("NNP") || tags[i].equals("VBZ") || tags[i].equals("NNS") || tags[i].equals("")){
+
+      }
+    }
+
   }
   
 
