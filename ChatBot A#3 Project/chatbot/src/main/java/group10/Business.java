@@ -1,4 +1,8 @@
+<<<<<<< HEAD:ChatBot Project/Business.java
+
+=======
 package group10;
+>>>>>>> main:ChatBot A#3 Project/chatbot/src/main/java/group10/Business.java
 public class Business {
     // Attributes below(referring to business)
     //name of business
@@ -49,4 +53,8 @@ public class Business {
     public void setbusinessPosition(String businessPosition){
         this.businessPosition = businessPosition;
     }
+<<<<<<< HEAD:ChatBot Project/Business.java
+    
+=======
+>>>>>>> main:ChatBot A#3 Project/chatbot/src/main/java/group10/Business.java
 }

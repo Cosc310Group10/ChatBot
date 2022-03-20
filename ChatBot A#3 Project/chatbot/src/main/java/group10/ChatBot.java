@@ -244,18 +244,24 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
     frame = new JFrame();
     // device.setFullScreenWindow(frame);
 
-    frame.setSize(500, 500);
+    frame.setSize(600, 500);
 
         panel = new JPanel();
         panel2 = new JPanel();
         panel3 = new JPanel();
         image = new ImageIcon("ryan_reynolds.jpg");
         
+<<<<<<< HEAD:ChatBot Project/ChatBot.java
+        chatArea = new JTextArea(50,90);
+        chatField = new JTextField(40);
+        //scrollBar = new JScrollBar();
+=======
         font = new Font("Monospaced", Font.PLAIN, 12);
         chatArea = new JTextArea(36,130);
         chatArea.setFont(font);
         // chatArea = new JTextArea();
         chatField = new JTextField();
+>>>>>>> main:ChatBot A#3 Project/chatbot/src/main/java/group10/ChatBot.java
        
         button = new JButton("Ask:");
         scrollPane = new JScrollPane(chatArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
@@ -494,7 +500,7 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
       userInputUnformatted = chatField.getText();
       userInput = chatField.getText().toLowerCase();
 
-    // TODO: Specify your translation requirements here:
+    //TODO: Specify your translation requirements here:
     String fromLang = "es";
     String toLang = "en";
     // try{
