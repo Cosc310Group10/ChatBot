@@ -329,6 +329,13 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
      if(e.getSource()==button){
       
      
+        if (chatField.getText().length() < 1) {
+            // do nothing
+        } else if (chatField.getText().equals(".clear")) {
+            chatArea.setText("Cleared all messages\n");
+            chatField.setText("");
+        } else {
+            
         
     
  // initializing the greeting repsonse list
@@ -488,12 +495,12 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
     // TODO: Specify your translation requirements here:
     String fromLang = "es";
     String toLang = "en";
-    try{
-    userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
-    // System.out.println(userInput);
-    }catch(Exception g){
-      return;
-    }
+    // try{
+    // userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+    // // System.out.println(userInput);
+    // }catch(Exception g){
+    //   return;
+    // }
 
       chatField.setText("");
       chatArea.append(name+": " + userInputUnformatted+"\n"); 
@@ -521,7 +528,7 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
       }
 
     
-    
+        }
 
 
   }
