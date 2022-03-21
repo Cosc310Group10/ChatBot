@@ -1,6 +1,6 @@
 package group10;
 
-// GROUP 10 COSC 310 Movie Class
+// GROUP 10 COSC 310 Movie Class ** Finished ** 
 // **A#3 FINISHED VERSION**
 /*
 By:
