@@ -22,7 +22,7 @@
  <h2>The Translate Class</h2>
  <p> This class contains an API to WhatsMate Translator. There is a small sample program in the main, fromLang is used to specify the input langaue while toLang is used to specify the output language. The string text contains the string youd like to translate. For our purposes, the method translate() is called on every user input to ensure all text is in english before processing begins. All credit for this API goes to WhatsMate and their team, please see refrences file for more information.</p></p>
 
- <h2>The POSTagging Class</p>
+ <h2>The POSTagging Class</h2>
  <p> The POSTagging class is an implementation of an API from OpenNLP. The purpose of this class is to recognize and 'tag' each word within the user input and assign it the proper part of speech; along with a probability threshold of how accurate the POS assignment was.</p>
 
  <h2>The Tokenizer Class</h2>
@@ -43,4 +43,8 @@ To end the conversation, simply input "End"</p>
 <p>Feature 2: Translation<p>
 <br><br>
 <p>The translation API that has been added effectively allows the system to take in user input in Spanish, translate it to english and respond. This allows our chat bot to respond to a wider variety of input, making the implementation of it more applicabile to a "real world" setting</p>
+<br><br>
+<p> Feature 3: Tokenizer</p>
+<br><br>
+<p> The addition of the Tokenizer toolkit allows for our code to flow smoother. The tokenizer breaks down the users input into single word strings placed into an array. This implementation allows the system to already know the key word being searched for instead of scanning through the users entire input. </p>
 
