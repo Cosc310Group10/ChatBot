@@ -32,8 +32,17 @@ public class ChatBot extends JFrame implements ActionListener {
     //----------------------------------------------------------------------------------------------------------------------------
 
 // creating a static ryan reynolds object so its accessible by all methods
-static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
+public static RyanReynolds r = new RyanReynolds("6ft 2", 190, "hazel", "light brown", "male", "Vancouver", "October 23 1976",
 "Blake Lively","@vancityreynolds", 18900000, 41600000, 18700000, "$150 M", "Scarlett Johansson");
+
+
+public static String userTest;
+
+public static boolean greetingTest;
+public static boolean movieTest;
+public static boolean personalTest;
+public static boolean businessTest;
+public static boolean defaultTest;
 
 // boolean to keep track if the bot asked a question
 static boolean askAQuestion = false;
@@ -777,7 +786,7 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
     
 
     
-    if(checkPOSProbAndTag(POSTagging.probs) == false){
+    if(checkPOSProb(POSTagging.probs) == false){
     
     //FURTHER checking spelling of phrase using the tokens
     wordForWord(Tokenizer.tokens);
@@ -808,6 +817,10 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
       // respond
       if (userInput.contains(greetingResponses.get(i).toLowerCase())) {
         greetingChatFunction();
+        greetingTest = true;
+        return;
+      }else{
+        greetingTest = false;
         return;
       }
     }
@@ -837,6 +850,10 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
         // function which determines
         // the robots reponse
         personalChatFunction(userInput, personalQuestionAsked);
+        personalTest = true;
+        return;
+      }else{
+        personalTest = false;
         return;
       }
     }
@@ -858,6 +875,7 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
 
     // otherwise we call the default response
     defaultResponse();
+    defaultTest = true;
     return;
 
   }
@@ -873,45 +891,56 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
       if (userInput.contains(movieQuestion.get(0))) {
 
        chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + imdbMap.get(movieTitleAsked)+"\n");
+       movieTest = true;
        return;
 
       } else if (userInput.contains(movieQuestion.get(1))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + yearMap.get(movieTitleAsked)+"\n");
+        movieTest = true;
         return;
 
       } else if (userInput.contains(movieQuestion.get(2))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + ratingMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
 
       } else if (userInput.contains(movieQuestion.get(3))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + castMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(4))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + directorMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(5))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + genreMap.get(movieTitleAsked)+"\n");
         return;
       } else if (userInput.contains(movieQuestion.get(6))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + awardsMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(7))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + boxOfficeMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(8))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + locationMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(9)) || userInput.contains(movieQuestion.get(10))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + timeToFilmMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(11)) || userInput.contains(movieQuestion.get(12))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + durationMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else if (userInput.contains(movieQuestion.get(13))) {
         chatArea.append("Ryan Reynolds: " + movieTitleAsked + " " + budgetMap.get(movieTitleAsked)+"\n");
-        return;
+        movieTest = true;
+       return;
       } else {
-
+        movieTest = false;
         return;
       }
     
@@ -925,7 +954,7 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
   // that gets the key of the question asked and prints the value of that key
   // value pair
   public static void personalChatFunction(String userInput, String personalQuestionAsked) {
-
+   
     chatArea.append("Ryan Reynolds: " + personalQuestionMap.get(personalQuestionAsked)+"\n");
     askAQuestionResponse(); // asks a question back to the user
   }
@@ -994,17 +1023,21 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
     
       if (userInput.contains(businessQuestion.get(0))) {
        chatArea.append("Ryan Reynolds: " + yearStartedMap.get(businessNameAsked) +"\n");
+       businessTest = true;
        return;
 
       } else if (userInput.contains(businessQuestion.get(1))) {
         chatArea.append("Ryan Reynolds: " +businessLocationMap.get(businessNameAsked)+"\n");
+        businessTest = true;
         return;
 
       } else if (userInput.contains(businessQuestion.get(2))) {
         chatArea.append("Ryan Reynolds: " +businessPositionMap.get(businessNameAsked)+"\n");
+        businessTest = true;
         return;
       } else {
 
+        businessTest = false;
         return;
       }
     
@@ -1107,9 +1140,9 @@ class ryanReynoldsChatBotButtonListener implements ActionListener {
 
 
   //checking that the probability of each POS tag is >0.15
-  public static boolean checkPOSProbAndTag(double[] prob){
+  public static boolean checkPOSProb(double[] prob){
     for(int i=0; i<prob.length;i++){
-      if(prob[i]<0.90){
+      if(prob[i]<0.60){
         return false;
       }
     }
