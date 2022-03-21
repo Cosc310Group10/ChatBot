@@ -23,7 +23,7 @@ public class checkPOSProbTest {
     @Test
     @DisplayName("Repeated Testing")
     @ParameterizedTest
-    @ValueSource(strings = { "who is your wife", "what is deadpools imdb" }) // add a whole bunch of tests
+    @ValueSource(strings = { "who is your wife", "what is deadpools imdb",  "how many awards has free guy received", "how old are you", "how many kids do you have", "how many twitter followers do you have", "what is your eye colour", "what is your height", "what is your net worth", "what is your birthdate", "what is the cast of changeup", "what location was deadpool2 filmed in" }) // add a whole bunch of tests
                                                                              // HERE*******************
     public void checkPOSProbIsTRUE(String input) throws IOException {
         // calling the tokenizer method with the input to initialize that token variable
@@ -41,7 +41,7 @@ public class checkPOSProbTest {
     @Test
     @DisplayName("Repeated Testing")
     @ParameterizedTest
-    @ValueSource(strings = { "who si your wfee", "what is dedpooools cst" }) // add a whole bunch of tests
+    @ValueSource(strings = { "who si your wfee", "what is dedpooools cst", "how many awads has free guy received", "how oldd are you", "how many kds do you have", "how many twiter followes do you have", "what is your eye ecolour", "what isyourheight", "what is your pet worth", "what is your birdthdate", "what is the castf changeup", "what location was dedpool2 filmed in"}) // add a whole bunch of tests
     public void checkPOSProbIsFALSE(String input) throws IOException {
         // calling the tokenizer method with the input to initialize that token variable
         Tokenizer.createAToken(input);
