@@ -1,5 +1,11 @@
 package group10;
-
+// GROUP 10 COSC 310 check tokenizer test
+// **A#3 FINISHED VERSION**
+/*
+By:
+LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
+GRIFFIN WILCHUK, STUDENT #75303370 CARLA MATHER, STUDENT #22779193
+*/
 import static org.junit.Assert.*;
 
 import java.io.IOException;
@@ -13,7 +19,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 
-public class analyzeInputTest {
+public class tokenizerTest {
     
     
     @Test

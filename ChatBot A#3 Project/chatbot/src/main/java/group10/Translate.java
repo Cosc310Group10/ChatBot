@@ -5,7 +5,13 @@ import java.io.OutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+// GROUP 10 COSC 310 Translate Class
+// **A#3 FINISHED VERSION**
+/*
+By:
+LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
+GRIFFIN WILCHUK, STUDENT #75303370 CARLA MATHER, STUDENT #22779193
+*/
 public class Translate {
   // TODO: If you have your own Premium account credentials, put them down here:
 
