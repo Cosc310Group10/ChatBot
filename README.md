@@ -30,9 +30,17 @@
  <br>
  <h2>How to Compile and Run Code:</h2>
  <p>Before compiling this project, please ensure your device has the latest version of Java downloaded. <br><br>
-Download all three files from this repository to an appropriate location on your device, this includes Main.java, Movie.java, and RyanReynolds.java <br><br>
-Open your IDE of choice, Load all three files, and run the program! <br><br>
+Download all files from this repository to an appropriate location on your device. <br><br>
+Open your IDE of choice, Load all files, and run the program! <br><br>
 To end the conversation, simply input "End"</p>
  
-  <h2>Additional Information:</h2>
- <p>This Chat-Robot is still underway for future improvements as this course term progresses! Stay tuned for updates, more efficient and less redundant code, and an overall more intelligent Ryan Reynolds chat robot!</p>
+ <h2>Additional Features Added</h2>
+ <br>
+ <p>Feature 1: Spellcheck</p>
+ <br><br>
+ <p>An additional feature added within this assignment was a spellcheck function, which takes the user input and scans it against a  ictionary containing over 100000 words. If the word is matched within the dictionary, the system presumes it has been spelt correctly. If any of the user input is decalred to be spelt incorrectly, the system will output a default message letting the user know they have mispelled their input</p>
+ <br><br>
+<p>Feature 2: Translation<p>
+<br><br>
+<p>The translation API that has been added effectively allows the system to take in user input in Spanish, translate it to english and respond. This allows our chat bot to respond to a wider variety of input, making the implementation of it more applicabile to a "real world" setting</p>
+
