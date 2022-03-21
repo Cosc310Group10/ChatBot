@@ -38,13 +38,15 @@ To end the conversation, simply input "End"</p>
  <br>
  <p>Feature 1: Spellcheck</p>
  <br><br>
- <p>An additional feature added within this assignment was a spellcheck function, which takes the user input and scans it against a  ictionary containing over 100000 words. If the word is matched within the dictionary, the system presumes it has been spelt correctly. If any of the user input is decalred to be spelt incorrectly, the system will output a default message letting the user know they have mispelled their input</p>
+ <p>An additional feature added within this assignment was a spellcheck function. This function takes the user input and scans it against a  ictionary containing over 100000 words. If each word from the user input is matched within the dictionary, the system presumes the user input has been spelt correctly. If any of the user input is decalred to be spelt incorrectly, the system will output a default message from this function letting the user know they have mispelled their input. As a result, when the user mispells their input our system will not just reply with a default message saying it does not understand; but will provide more direction to the user by letting them know something has been misspelt.</p>
  <br><br>
 <p>Feature 2: Translation<p>
 <br><br>
-<p>The translation API that has been added effectively allows the system to take in user input in Spanish, translate it to english and respond. This allows our chat bot to respond to a wider variety of input, making the implementation of it more applicabile to a "real world" setting</p>
+<p>The translation API that has been added, effectively allows the system to take in user input in Spanish, translate it to english and respond. This allows our chat bot to respond to a wider variety of input, making the implementation of it more applicabile to a "real world" setting.</p>
 <br><br>
 <p> Feature 3: Tokenizer</p>
 <br><br>
-<p> The addition of the Tokenizer toolkit allows for our code to flow smoother. The tokenizer breaks down the users input into single word strings placed into an array. This implementation allows the system to already know the key word being searched for instead of scanning through the users entire input. </p>
+<p> The addition of the Tokenizer toolkit allows for the flow of our program to run smoother. The tokenizer breaks down the users input into single word strings placed into index's within an array. This implementation allows the system to detect the key word being searched for within the hashmaps instead of scanning through the users entire input. </p>
+
+
 
