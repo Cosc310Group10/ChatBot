@@ -43,4 +43,8 @@ To end the conversation, simply input "End"</p>
 <p>Feature 2: Translation<p>
 <br><br>
 <p>The translation API that has been added effectively allows the system to take in user input in Spanish, translate it to english and respond. This allows our chat bot to respond to a wider variety of input, making the implementation of it more applicabile to a "real world" setting</p>
+<br><br>
+<p> Feature 3: Tokenizer</p>
+<br><br>
+<p> The addition of the Tokenizer toolkit allows for our code to flow smoother. The tokenizer breaks down the users input into single word strings placed into an array. This implementation allows the system to already know the key word being searched for instead of scanning through the users entire input. </p>
 
