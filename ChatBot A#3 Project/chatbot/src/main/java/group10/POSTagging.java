@@ -33,10 +33,6 @@ public class POSTagging {
             // Tagger tagging the tokens
             tags = posTagger.tag(tokens);
             probs = posTagger.probs();
-            // System.out.println("Token\t:\tTag\t:\tProbability\n---------------------------------------------");
-            // for(int i=0;i<tokens.length;i++){
-            //     System.out.println(tokens[i]+"\t:\t"+tags[i]+"\t:\t"+probs[i]);
-            // }
 
             return tags;
         }
