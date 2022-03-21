@@ -528,7 +528,7 @@ public class ChatBot extends JFrame implements ActionListener {
         String toLang = "en";
         // try{
         // //setting the user input to be the translated text from spanish to english
-        // and as lowercase
+        // //and as lowercase
         // userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
         // // System.out.println(userInput);
         // }catch(Exception g){

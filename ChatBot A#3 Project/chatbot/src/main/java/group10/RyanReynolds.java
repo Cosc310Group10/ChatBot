@@ -242,7 +242,7 @@ public class RyanReynolds {
     }
 
     // Maximum Effort
-    private Business maximumEffortInfo = new Business("Maximum Effort ", 2018, "New York, New York", "Co-Founder");
+    private Business maximumEffortInfo = new Business("Maximum Effort", 2018, "New York, New York", "Co-Founder");
 
     // getter for Maximum Effort
     public Business getMaximumEffort() {
