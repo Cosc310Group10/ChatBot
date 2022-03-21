@@ -30,7 +30,7 @@ public class Translate {
   // this is the main method to specify the translation requirements and test the
   // functionality within this method if needed
   // public static void main(String[] args) throws Exception {
-  // // TODO: Specify your translation requirements here:
+  // Specify your translation requirements here:
   // String fromLang = "es";
   // String toLang = "en";
   // String text = "hola como se llama tu esposa";
@@ -44,7 +44,7 @@ public class Translate {
   // This method translates the user input from the language it comes in as, into
   // the language wanted
   public static String translate(String fromLang, String toLang, String text) throws Exception {
-    // TODO: Should have used a 3rd party library to make a JSON string from an
+    // Should have used a 3rd party library to make a JSON string from an
     // object
     // builds the JSON data to send to translate below
     String jsonPayload = new StringBuilder()

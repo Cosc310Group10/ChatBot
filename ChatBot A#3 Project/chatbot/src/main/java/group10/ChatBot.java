@@ -21,8 +21,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import java.io.BufferedReader;
-import java.io.File; // importing in case we need
-import java.io.FileNotFoundException; // importing in case we need
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -398,8 +396,9 @@ public class ChatBot extends JFrame implements ActionListener {
         movieQuestion.add("budget");
 
         // Initializing the list of movies
-        listOfMovies.add(r.getDeadpool());
         listOfMovies.add(r.getDeadpool2());
+        listOfMovies.add(r.getDeadpool());
+        
         listOfMovies.add(r.getFreeGuy());
         listOfMovies.add(r.getRIPD());
         listOfMovies.add(r.getGreenLantern());
@@ -526,14 +525,14 @@ public class ChatBot extends JFrame implements ActionListener {
         // Specify your translation requirements here:
         String fromLang = "es";
         String toLang = "en";
-        // try{
-        // //setting the user input to be the translated text from spanish to english
-        // //and as lowercase
-        // userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
-        // // System.out.println(userInput);
-        // }catch(Exception g){
-        // return;
-        // }
+        try{
+        //setting the user input to be the translated text from spanish to english
+        //and as lowercase
+        userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+        // System.out.println(userInput);
+        }catch(Exception g){
+        return;
+        }
 
         // Here we then use our second toolkit API to tokenize our user input after it
         // has been translated
