@@ -2,12 +2,16 @@
 <h2 align="center"> COSC 310 - Group 10</h2>
 <h3 align="center">Lance Rogan, Blake Ablitt, Ben Van Bergeyk, <br>Griffin Wilchuk, and Carla Mather </h3>
 <p align="center">
-<img src="images/ryan_reynolds.jpg" alt="hiking" width="350" height="400" />
-<img src="images/chat_bot.jpg" alt="hiking" width="350" height="400" />
+<img src="images/ryan_reynolds.jpg" alt="ryanreynolds" width="350" height="400" />
+<img src="images/chat_bot.jpg" alt="bot" width="350" height="400" />
   
  <p align = "center"><a href="https://www.imdb.com/name/nm0005351/">Learn more about Ryan Reynolds</a>
  <h2>About the Project:</h2>
  <p>This project is a chatbot which takes user inputs and responds as though it is the famous actor Ryan Reynolds. It can handle a wide variety of questions, languages such as spanish, and spelling errors about Ryan Reynolds’ personal life, movies acted in, or businesses. The program will boot up a pre GUI and main GUI and then be ready for the user to ask any question they like. If the chatbot version of Ryan Reynolds knows the answer via array lists and hash mapping then the user will see the response on screen, but if the chatbot version of Ryan Reynolds does not know the answer then the user will see a variety of messages explaining that the chatbot can’t answer their question. Occasionally, if the question is appropriate for a return question, the Ryan Reynolds chatbot will sometimes ask a question back to the user. This will be a response question. This back and forth between the user and the Ryan Reynolds chatbot will go on for an infinite amount of time before the user chooses to end the program with a simple trigger word "Goodbye".</p>
+ <br>
+ <h2>Demonstration</h2>
+ <img src="images/preGUI.PNG" alt="pregui" width="350" height="400" />
+ <img src="images/mainGUIExample.PNG" alt="gui" width="350" height="400" />
  <br>
  <h3>Class Organization:</h3>
  <p>The Class organization of this Chat-Robot is detailed. We have a Business.java class, Movie.java Class, and RyanReynolds.java class which specify the attributes, movies, and businesses that the actor Ryan Renyolds is associated with. Next we have the ChatBot.java class which is the main functionality of this chat bot and is the main class you want to run to run this program. Furthermore, we also have our Tokenizer.java, Translate.java, and POSTagging.java classes which are our 3 toolkit API classes. Lastly, we have our three test cases, checkPOSPRobTest.java, tokenizerTest.java, and wordForWordTest.java which is a unit test for each critical functionality method we implemented.</p>
