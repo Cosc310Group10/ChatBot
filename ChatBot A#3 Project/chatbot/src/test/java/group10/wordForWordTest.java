@@ -1,5 +1,5 @@
 package group10;
-// GROUP 10 COSC 310 check word for word test
+// GROUP 10 COSC 310 check word for word test ** Finished **
 
 // **A#3 FINISHED VERSION**
 /*
@@ -41,7 +41,7 @@ public class wordForWordTest {
     @Test
     @DisplayName("Repeated Testing")
     @ParameterizedTest
-    @ValueSource(strings = { "who is your wief", "what is dedools imdb", "how many awards has freee guy received", "how old are u", "how many kidq do you have", "how many twiter followers do you have", "what is your eye coloour", "what is your heght", "what is your net woirth", "what is your birthdaate", "what is the cas of changeup", "what location was deapool2 filmed in"  }) // add a whole bunch of tests
+    @ValueSource(strings = { "who is your wief", "what is dedools imdb", "how many awards has freee guy received", "howww olddas aree uyuo", "how many kidq do you have", "how many twiteer followerse do you have", "what is your eye coloour", "what is your heght", "what is your net woirth", "what is your birthdaate", "wat is the cas of changeup", "what location was deapool2 filmed in"  }) // add a whole bunch of tests
     public void testWordForWordIsFALSE(String input) throws IOException {
         // create a tokenized array with the input
         Tokenizer.createAToken(input);
@@ -49,7 +49,7 @@ public class wordForWordTest {
         ChatBot.wordForWord(Tokenizer.tokens);
         // check the speltCorrectly boolean after checking, and see if this matches to
         // false
-        assertEquals(ChatBot.speltCorrectly, true);
+        assertEquals(ChatBot.speltCorrectly, false);
 
     }
 }

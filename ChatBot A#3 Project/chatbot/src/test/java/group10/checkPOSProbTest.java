@@ -1,5 +1,5 @@
 package group10;
-// GROUP 10 COSC 310 check probability test class
+// GROUP 10 COSC 310 check probability test class ** Finished **
 
 // **A#3 FINISHED VERSION**
 /*
@@ -23,7 +23,7 @@ public class checkPOSProbTest {
     @Test
     @DisplayName("Repeated Testing")
     @ParameterizedTest
-    @ValueSource(strings = { "who is your wife", "what is deadpools imdb",  "how many awards has free guy received", "how old are you", "how many kids do you have", "how many twitter followers do you have", "what is your eye colour", "what is your height", "what is your net worth", "what is your birthdate", "what is the cast of changeup", "what location was deadpool2 filmed in" }) // add a whole bunch of tests
+    @ValueSource(strings = { "who is your wife", "what are your kids names",  "how many awards has free guy received", "what location was the proposal filmed in", "how many kids do you have", "how many instagram followers do you have", "what is your eye colour", "what is your height", "what is your net worth", "How many other awards have you received", "what is the cast of changeup", "what location was buried filmed in" }) // add a whole bunch of tests
                                                                              // HERE*******************
     public void checkPOSProbIsTRUE(String input) throws IOException {
         // calling the tokenizer method with the input to initialize that token variable
@@ -41,7 +41,7 @@ public class checkPOSProbTest {
     @Test
     @DisplayName("Repeated Testing")
     @ParameterizedTest
-    @ValueSource(strings = { "who si your wfee", "what is dedpooools cst", "how many awads has free guy received", "how oldd are you", "how many kds do you have", "how many twiter followes do you have", "what is your eye ecolour", "what isyourheight", "what is your pet worth", "what is your birdthdate", "what is the castf changeup", "what location was dedpool2 filmed in"}) // add a whole bunch of tests
+    @ValueSource(strings = { "who si your wfee", "what is dedpooools cst", "howwd manady awadds hass freee gguy reecceived", "how oldd are you", "hoow maanny kds do you haave", "how many twiter followes do you have", "wha is yoour eyeee ecolour", "what isyourheight", "wha si your pett worrth", "what is your birdthdate", "whaa iss thhe casttf changeeup", "what location was dedpool2 filmed in"}) // add a whole bunch of tests
     public void checkPOSProbIsFALSE(String input) throws IOException {
         // calling the tokenizer method with the input to initialize that token variable
         Tokenizer.createAToken(input);
@@ -50,6 +50,6 @@ public class checkPOSProbTest {
         POSTagging.posTag(Tokenizer.tokens);
         // check if the probability method with the probs double[] array returns false,
         // and check if it matches false to indicate test passed with incorrect input
-        assertEquals(ChatBot.checkPOSProb(POSTagging.probs), true);
+        assertEquals(ChatBot.checkPOSProb(POSTagging.probs), false);
     }
 }

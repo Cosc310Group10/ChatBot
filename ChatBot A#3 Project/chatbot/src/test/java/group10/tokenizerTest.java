@@ -1,5 +1,5 @@
 package group10;
-// GROUP 10 COSC 310 check tokenizer test
+// GROUP 10 COSC 310 check tokenizer test ** Finished **
 
 // **A#3 FINISHED VERSION**
 /*
@@ -24,7 +24,7 @@ public class tokenizerTest {
     @Test
     @DisplayName("Repeated Testing")
     @ParameterizedTest
-    @ValueSource(strings = { "who is your wife",  "how many awards has free guy received", "how old are you", "how many kids do you have", "how many twitter followers do you have", "what is your eye colour", "what is your height", "what is your net worth", "what is your birthdate", "what is the cast of changeup", "what location was deadpool2 filmed in" }) // add a whole bunch of tests,
+    @ValueSource(strings = { "who is your wife",  "how many awards has free guy received", "how old are you", "how many kids do you have", "how many twitter followers do you have", "what is your eye colour", "what is your height", "what is your net worth", "what is your birthdate", "what is the cast of changeup", "what location was deadpool filmed in" }) // add a whole bunch of tests,
                                                    // **********************************************NOTE THIS WONT WORK
                                                    // WITH PERIODS ETC
     public void testTokenizeIsTRUE(String input) throws IOException {
