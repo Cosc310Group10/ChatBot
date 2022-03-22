@@ -35,10 +35,19 @@
  <p>Please see our documentation / report submitted with a description of our test cases</p>
  <br>
  <h2>How to Compile and Run Code:</h2>
- <p>Before compiling this project, please ensure your device has the latest version of Java downloaded. <br><br>
-Download all files from this repository to an appropriate location on your device. <br><br>
+ <p>Before compiling this project, please ensure your device has the latest version of Java downloaded, and proper Maven and Java extensions downloaded on VS Code or your chosen IDE. <br><br>
+ What you will need to do is to copy this repository / clone this repository to a selected folder / space in your computer. One you do this you can open this Maven/Java project in VS Code or your chosen IDE. After doing this, PLEASE MAKE SURE THE dictonary.txt, en-pos-maxent.bin, and ryan_reynolds.jpg file are placed in the correct directory. For example, I have code commented out with the following message <br><br>
+    // *****USE THIS TO ENSURE JAVA IMAGE ICON, BIN FILE, AND DICTONARY WORKS, make
+    // sure image and txt files are in here!*****
+    // String dir = System.getProperty("user.dir");
+    // // directory from where the program was launched
+    // System.out.println("Directory to go to-->"+dir);
+    // if these three files are not in here it will not work
+    <br><br>
+Here you will want to make sure those specified files are placed wherever this prints out aka where the VS Code or IDE is running from. To allow this to work, move these files into this directory, compile, and run.<br><br>
+Mainly, you just need to download all files from this repository to an appropriate location on your device. <br><br>
 Open your IDE of choice, Load all files, and run the program! <br><br>
-To end the conversation, simply input "End"</p>
+To end the conversation, simply input "Goodbye", and to clear input, type ".clear". Furthermore, please note that the translation feature is limited to 100 translations an hour, so if you are receiving errors, this is due to the translations running out.</p>
  
  <h2>Additional Features Added</h2>
  <br>
