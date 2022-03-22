@@ -23,7 +23,7 @@
 
   
   
- <h3>4.)The Translate Class</h3>
+ <h3>5.)The Translate Class</h3>
  <p> This class contains an API to WhatsMate Translator. There is a small sample program in the main, fromLang is used to specify the input langaue while toLang is used to specify the output language. The string text contains the string youd like to translate. For our purposes, the method translate() is called on every user input to ensure all text is in english before processing begins. All credit for this API goes to WhatsMate and their team, please see refrences file for more information.</p></p>
 
  <h3>6.)The POSTagging Class</h3>
@@ -31,18 +31,18 @@
 
  <h3>7.)The Tokenizer Class</h3>
  <p>The Tokenizer class is another API implementation from OpenNLP. The tokenizer function will take the user input and turn it into an array where each index is one word from the user input. This class has assisted with the spellcheck function developed by our group, passing the tokenized array of the user input and comparing each index to a dictionary</p>
- <h3>8,9,10 - Test Cases</h3>
+ <h3>8.),9.),10.) - Test Cases</h3>
  <p>Please see our documentation / report submitted with a description of our test cases</p>
  <br>
  <h2>How to Compile and Run Code:</h2>
  <p>Before compiling this project, please ensure your device has the latest version of Java downloaded, and proper Maven and Java extensions downloaded on VS Code or your chosen IDE. <br><br>
  What you will need to do is to copy this repository / clone this repository to a selected folder / space in your computer. One you do this you can open this Maven/Java project in VS Code or your chosen IDE. After doing this, PLEASE MAKE SURE THE dictonary.txt, en-pos-maxent.bin, and ryan_reynolds.jpg file are placed in the correct directory. For example, I have code commented out with the following message <br><br>
     // *****USE THIS TO ENSURE JAVA IMAGE ICON, BIN FILE, AND DICTONARY WORKS, make
-    // sure image and txt files are in here!*****
-    // String dir = System.getProperty("user.dir");
-    // // directory from where the program was launched
-    // System.out.println("Directory to go to-->"+dir);
-    // if these three files are not in here it will not work
+    <br>// sure image and txt files are in here!*****
+    <br>// String dir = System.getProperty("user.dir");
+    <br>// // directory from where the program was launched
+    <br>// System.out.println("Directory to go to-->"+dir);
+    <br>// if these three files are not in here it will not work
     <br><br>
 Here you will want to make sure those specified files are placed wherever this prints out aka where the VS Code or IDE is running from. To allow this to work, move these files into this directory, compile, and run.<br><br>
 Mainly, you just need to download all files from this repository to an appropriate location on your device. <br><br>
