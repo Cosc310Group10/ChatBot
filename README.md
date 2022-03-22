@@ -69,5 +69,6 @@ To end the conversation, simply input "Goodbye", and to clear input, type ".clea
 <h3>Feature 3: Tokenizer</h3>
 <p> The addition of the Tokenizer toolkit allows for the flow of our program to run smoother. The tokenizer breaks down the users input into single word strings placed into index's within an array. This implementation allows the system to detect the key word being searched for within the hashmaps instead of scanning through the users entire input. </p>
 
-
-
+<h3>Feature 4: POS Tagging and Probability toolkit</h3>
+<p>The POS tagging API has been added, but what is used is the Probaility of these POS tags being accurate. This probability is used to make a quick descision on whether or not the input from the user has been spelt correctly. This is done by making sure the probability that the POS tag was correct is good enough, so that it can be ensured it is actually a word. </p>
+<br><br>
