@@ -987,14 +987,6 @@ public class ChatBot extends JFrame implements ActionListener {
   // 10 and determines how the chatbot would
   // respond to the user saying hello
   public static void greetingChatFunction() {
-
-    HttpClient client = HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://en.wikipedia.org/w/api.php")).build();
-    client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-    .thenApply(HttpResponse::Body)
-    .thenAccept(System.out.println())
-    .join();
-
     // generate random number from 0 to 10
     int randomNumber = (int) (Math.random() * 11);
 
@@ -1096,6 +1088,13 @@ public class ChatBot extends JFrame implements ActionListener {
   // this is a method that is called as a default response if the chat bot is
   // unable to determine how to respond
   public static void defaultResponse() {
+
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://en.wikipedia.org/w/api.php")).build();
+    client.sendAsync(request, HttpResponse.BodyHandlers.ofString()).join();
+    request.get("api.php?action=opensearch&search=Hampi&limit=10&namespace=0&format=json");
+
+
     // If all else fails and the chat bot does not not how to respond, we have these
     // 5 statements set as
     // the chat bot's default responses to any questions it does not know
