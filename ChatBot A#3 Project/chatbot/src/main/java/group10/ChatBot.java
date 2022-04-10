@@ -24,6 +24,10 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 //----------------------------------------------------------------------------------------------------------------------------
 // our class ChatBot which extends JFrame and implements the action listener
@@ -983,6 +987,13 @@ public class ChatBot extends JFrame implements ActionListener {
   // 10 and determines how the chatbot would
   // respond to the user saying hello
   public static void greetingChatFunction() {
+
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://en.wikipedia.org/w/api.php")).build();
+    client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+    .thenApply(HttpResponse::Body)
+    .thenAccept(System.out.println())
+    .join();
 
     // generate random number from 0 to 10
     int randomNumber = (int) (Math.random() * 11);
