@@ -513,7 +513,6 @@ public class ChatBot extends JFrame implements ActionListener {
         // lowercase
         userInputUnformatted = chatField.getText();
         userInput = chatField.getText().toLowerCase();
-
         // here we first translate our user input from spanish to english via our
         // toolkit API
         // if the input is already in english, this step is quick and the input will be
@@ -523,17 +522,17 @@ public class ChatBot extends JFrame implements ActionListener {
         // *************NOTE: This API allows 100 requests per hour, so comment this out
         // for testing at great amounts****************
 
-        // Specify your translation requirements here:
-        String fromLang = "es";
-        String toLang = "en";
-        try{
-        //setting the user input to be the translated text from spanish to english
-        //and as lowercase
-        userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
-        // System.out.println(userInput);
-        }catch(Exception g){
-        return;
-        }
+        //Specify your translation requirements here:
+        // String fromLang = "es";
+        // String toLang = "en";
+        // try{
+        // //setting the user input to be the translated text from spanish to english
+        // //and as lowercase
+        // userInput = Translate.translate(fromLang, toLang, userInput).toLowerCase();
+        // // System.out.println(userInput);
+        // }catch(Exception g){
+        // return;
+        // }
 
         // Here we then use our second toolkit API to tokenize our user input after it
         // has been translated
