@@ -71,4 +71,7 @@ To end the conversation, simply input "Goodbye", and to clear input, type ".clea
 
 <h3>Feature 4: POS Tagging and Probability toolkit</h3>
 <p>The POS tagging API has been added, but what is used is the Probaility of these POS tags being accurate. This probability is used to make a quick descision on whether or not the input from the user has been spelt correctly. This is done by making sure the probability that the POS tag was correct is good enough, so that it can be ensured it is actually a word. </p>
+
+<h3>Individual Project Feature(Ben): Wikipedia API for OpenSearch</h3>
+<p>This wikipedia API is used in the code to search Wikipedia for suggested results when the default response method is called. It uses a URL link: https://en.wikipedia.org/w/api.php with some parameters to specify the openSearch action. Then, this is returned to the user so that they can copy and paste the links they have been suggested. </p>
 <br><br>
