@@ -24,7 +24,11 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -1088,12 +1092,33 @@ public class ChatBot extends JFrame implements ActionListener {
   // this is a method that is called as a default response if the chat bot is
   // unable to determine how to respond
   public static void defaultResponse() {
-
-    HttpClient client = HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://en.wikipedia.org/w/api.php")).build();
-    client.sendAsync(request, HttpResponse.BodyHandlers.ofString()).join();
-    request.get("api.php?action=opensearch&search=Hampi&limit=10&namespace=0&format=json");
-
+    
+    URL obj;
+    try {
+      obj = new URL("https://en.wikipedia.org/w/api.php?action=opensearch&search="+userInput);
+      HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
+      connection.setRequestMethod("GET");
+      int responseCode = connection.getResponseCode();
+      if (responseCode == HttpURLConnection.HTTP_OK) { // success
+        BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+        while ((inputLine = in.readLine()) != null) {
+          response.append(inputLine);
+        }
+        in.close();
+        // print result
+        System.out.println(response.toString());
+      } 
+      // else {
+      //   System.out.println("GET request not worked");
+      // }
+		  // System.out.println("GET Response Code :: " + responseCode);
+    } catch (MalformedURLException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
 
     // If all else fails and the chat bot does not not how to respond, we have these
     // 5 statements set as
