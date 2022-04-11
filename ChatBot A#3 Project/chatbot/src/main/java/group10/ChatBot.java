@@ -1087,17 +1087,44 @@ public class ChatBot extends JFrame implements ActionListener {
   // ----------------------------------------------------------------------------------------------------------------------------
   // this is a method that is called as a default response if the chat bot is
   // unable to determine how to respond
+  // it will then search wikipedia for some recommendations for the user
+  // using the MediaWiki API "https://en.wikipedia.org/w/api.php"
   public static void defaultResponse() {
 
-    URL obj;
+    // the wikipedia API only likes a one word search
+    // so this block here is a quick splitter that identifies the longest
+    // word from the userInput to use as the seach in wikipedia
+    String[] ui = userInput.split(" ");
+    String oneWord = "";
+    for(String w : ui){
+      if(w.equalsIgnoreCase(userInput)){
+        oneWord = w;
+      }else{
+        if(oneWord.length()<=w.length()){
+          oneWord = w;
+        }
+      }
+    }
+
+    // then just making sure it doesn't have punctuation
+    if(oneWord.contains("?")||oneWord.contains(".")||oneWord.contains("!")||oneWord.contains(",")){
+      oneWord = oneWord.substring(0,oneWord.length()-1);
+    }
+    URL obj; // creating a URL object
     try {
-      obj = new URL("https://en.wikipedia.org/w/api.php?action=opensearch&search="+userInput);
+      // this URL object and HttpURLConnection will call
+      // the MediaWiki API's opensearch feature for the user input as one word
+      obj = new URL("https://en.wikipedia.org/w/api.php?action=opensearch&search="+oneWord+"&limit=3");
       HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
+
+      // then use the GET method to retrieve the JSON file
       connection.setRequestMethod("GET");
 
+      // make sure that the HttpURLConnection is working successfully
       int responseCode = connection.getResponseCode();
+      if (responseCode == HttpURLConnection.HTTP_OK) {
 
-      if (responseCode == HttpURLConnection.HTTP_OK) { // success
+        // creating a reader to read the data in the JSON document returned from the API
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String inputLine;
         StringBuffer response = new StringBuffer();
@@ -1106,17 +1133,24 @@ public class ChatBot extends JFrame implements ActionListener {
         }
         in.close();
 
+        // now we have the whole string of the returned file from the MediaWiki API
         String recommend = response.toString();
 
+        // this string will have several caracters that are seperated using \"
         String[] recs = recommend.split("\"");
+
+        // reset the string that will be returned to the user as the recommend string
         recommend = "";
 
+        // all we want are the wikipedia links so split all those and add them to the recommend string
         for(String r : recs){
           if(r.contains("https:")){
             recommend = recommend+r+"\n";
           }
         }
-        int selector = (int) (Math.random() * 5);
+
+    // now randomize some generic responses before giving the wikipedia recommendation
+    int selector = (int) (Math.random() * 5);
 
     switch (selector) {
       // case statements: each is a unique response when the question is not
