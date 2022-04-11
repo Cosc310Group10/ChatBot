@@ -1092,13 +1092,15 @@ public class ChatBot extends JFrame implements ActionListener {
   // this is a method that is called as a default response if the chat bot is
   // unable to determine how to respond
   public static void defaultResponse() {
-    
+
     URL obj;
     try {
       obj = new URL("https://en.wikipedia.org/w/api.php?action=opensearch&search="+userInput);
       HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
       connection.setRequestMethod("GET");
+
       int responseCode = connection.getResponseCode();
+
       if (responseCode == HttpURLConnection.HTTP_OK) { // success
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String inputLine;
@@ -1107,46 +1109,45 @@ public class ChatBot extends JFrame implements ActionListener {
           response.append(inputLine);
         }
         in.close();
-        // print result
-        System.out.println(response.toString());
-      } 
-      // else {
-      //   System.out.println("GET request not worked");
-      // }
-		  // System.out.println("GET Response Code :: " + responseCode);
-    } catch (MalformedURLException e) {
-      e.printStackTrace();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
 
-    // If all else fails and the chat bot does not not how to respond, we have these
-    // 5 statements set as
-    // the chat bot's default responses to any questions it does not know
+        String recommend = response.toString();
 
-    // random value to select a response
-    int selector = (int) (Math.random() * 5);
+        String[] recs = recommend.split("\"");
+        recommend = "";
+
+        for(String r : recs){
+          if(r.contains("https:")){
+            recommend = recommend+r+"\n";
+          }
+        }
+        int selector = (int) (Math.random() * 5);
 
     switch (selector) {
       // case statements: each is a unique response when the question is not
       // understood
       case 0:
-        chatArea.append("Ryan Reynolds: " + "I'm sorry I don't understand the question. Please ask me again!" + "\n");
+        chatArea.append("Ryan Reynolds: " + "I'm sorry I don't understand the question. Here is what I recommend on wikipedia:\n" +recommend+ "\n");
         break;
       case 1:
-        chatArea.append("Ryan Reynolds: " + "Pardon? I didn't quite get that." + "\n");
+        chatArea.append("Ryan Reynolds: " + "Pardon? I didn't quite get that. Here is what I recommend on wikipedia:\n" +recommend+ "\n");
         break;
       case 2:
         chatArea.append("Ryan Reynolds: "
-            + "I'm sorry I don't understand the question. Maybe it's because of your accent hahaha!" + "\n");
+            + "I'm sorry I don't understand the question. Maybe it's because of your accent hahaha! Here is what I recommend on wikipedia:\n" +recommend+ "\n");
         break;
       case 3:
-        chatArea.append("Ryan Reynolds: " + "Sorry, you will have to ask that again." + "\n");
+        chatArea.append("Ryan Reynolds: " + "Sorry, here is what I recommend on wikipedia:\n" +recommend+ "\n");
         break;
       case 4:
-        chatArea.append("Ryan Reynolds: " + "That was a confusing question! Can you ask me again?" + "\n");
+      chatArea.append("Ryan Reynolds: " + "That was a confusing question, but I would recommend checking out these wikipedia sites\n" +recommend+ "\n");
         break;
       default:
+    }
+      }
+    } catch (MalformedURLException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
   }
 
