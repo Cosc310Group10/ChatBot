@@ -1,8 +1,7 @@
 package group10; //importing group10 package for maven project
 
-//FINAL A#3 CODE
+// INDIVIDUAL PROJECT COMPLETED BY BEN
 // GROUP 10 COSC 310 Main ChatBot Class ** Finished ** 
-// **A#3 FINISHED VERSION**
 /*
 By:
 LANCE ROGAN, STUDENT #62708938 BLAKE ABLITT, STUDENT #37099595 BEN VAN BERGEYK, STUDENT #95307054
